@@ -53,6 +53,9 @@ use 'rafamadriz/friendly-snippets'
 --Git
 use 'lewis6991/gitsigns.nvim'
 
+--Markdown
+use 'davidgranstrom/nvim-markdown-preview'
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then

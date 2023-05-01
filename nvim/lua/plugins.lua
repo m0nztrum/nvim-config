@@ -54,7 +54,25 @@ use 'rafamadriz/friendly-snippets'
 use 'lewis6991/gitsigns.nvim'
 
 --Markdown
-use 'davidgranstrom/nvim-markdown-preview'
+--use 'davidgranstrom/nvim-markdown-preview'
+
+-- Live-server
+use("manzeloth/live-server")
+
+
+-- autopair
+use({
+	"windwp/nvim-autopairs",
+	config = function()
+		require("nvim-autopairs").setup({})
+	end,
+})
+
+-- Transparent - allows for toggle
+use ("xiyaowong/nvim-transparent")
+
+--barbar
+use 'romgrk/barbar.nvim'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

@@ -43,6 +43,15 @@ use 'williamboman/mason.nvim'
 use 'williamboman/mason-lspconfig.nvim'
 use 'neovim/nvim-lspconfig'
 
+--Autocompletions and Snippet
+use 'hrsh7th/nvim-cmp'
+use 'hrsh7th/cmp-nvim-lsp'
+use 'L3MON4D3/LuaSnip'
+use 'saadparwaiz1/cmp_luasnip'
+use 'rafamadriz/friendly-snippets'
+
+--Git
+use 'lewis6991/gitsigns.nvim'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

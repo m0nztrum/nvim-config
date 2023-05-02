@@ -46,12 +46,17 @@ use 'neovim/nvim-lspconfig'
 --Autocompletions and Snippet
 use 'hrsh7th/nvim-cmp'
 use 'hrsh7th/cmp-nvim-lsp'
+use 'hrsh7th/cmp-buffer'
+use 'hrsh7th/cmp-path'
 use 'L3MON4D3/LuaSnip'
 use 'saadparwaiz1/cmp_luasnip'
 use 'rafamadriz/friendly-snippets'
 
 --Git
 use 'lewis6991/gitsigns.nvim'
+
+-- Fugitive
+use("tpope/vim-fugitive")
 
 --Markdown
 --use 'davidgranstrom/nvim-markdown-preview'
@@ -73,6 +78,14 @@ use ("xiyaowong/nvim-transparent")
 
 --barbar
 use 'romgrk/barbar.nvim'
+
+--Vgit
+use {
+  'tanvirtin/vgit.nvim',
+  requires = {
+    'nvim-lua/plenary.nvim'
+  }
+}
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

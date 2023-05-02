@@ -119,6 +119,11 @@ _G.packer_plugins = {
     path = "/home/dragon/.local/share/nvim/site/pack/packer/start/gruvbox.nvim",
     url = "https://github.com/ellisonleao/gruvbox.nvim"
   },
+  ["indent-blankline.nvim"] = {
+    loaded = true,
+    path = "/home/dragon/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
+    url = "https://github.com/lukas-reineke/indent-blankline.nvim"
+  },
   ["live-server"] = {
     loaded = true,
     path = "/home/dragon/.local/share/nvim/site/pack/packer/start/live-server",
@@ -190,6 +195,11 @@ _G.packer_plugins = {
     path = "/home/dragon/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  undotree = {
+    loaded = true,
+    path = "/home/dragon/.local/share/nvim/site/pack/packer/start/undotree",
+    url = "https://github.com/mbbill/undotree"
+  },
   ["vgit.nvim"] = {
     loaded = true,
     path = "/home/dragon/.local/share/nvim/site/pack/packer/start/vgit.nvim",
@@ -199,6 +209,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/dragon/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
+  },
+  ["vim-rhubarb"] = {
+    loaded = true,
+    path = "/home/dragon/.local/share/nvim/site/pack/packer/start/vim-rhubarb",
+    url = "https://github.com/tpope/vim-rhubarb"
   }
 }
 

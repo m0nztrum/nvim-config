@@ -22,6 +22,9 @@ use 'ellisonleao/gruvbox.nvim'
 --nvim tree
 use 'nvim-tree/nvim-tree.lua'
 
+-- Undo Tree
+use("mbbill/undotree")
+
 --Web devicons
 use 'nvim-tree/nvim-web-devicons'
 
@@ -57,6 +60,7 @@ use 'lewis6991/gitsigns.nvim'
 
 -- Fugitive
 use("tpope/vim-fugitive")
+use "tpope/vim-rhubarb"
 
 --Markdown
 --use 'davidgranstrom/nvim-markdown-preview'
@@ -86,6 +90,10 @@ use {
     'nvim-lua/plenary.nvim'
   }
 }
+
+--Add indentation guides on even blank lines
+use "lukas-reineke/indent-blankline.nvim"
+
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

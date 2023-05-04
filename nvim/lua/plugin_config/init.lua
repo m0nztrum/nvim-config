@@ -9,3 +9,7 @@ require("plugin_config.gitsigns")
 require("plugin_config.barbar")
 require("plugin_config.vgit")
 require("plugin_config.undotree")
+require("plugin_config.ale")
+--require("plugin_config.VimTex")
+--require("plugin_config.gitgutter")
+

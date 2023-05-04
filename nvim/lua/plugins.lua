@@ -55,8 +55,14 @@ use 'L3MON4D3/LuaSnip'
 use 'saadparwaiz1/cmp_luasnip'
 use 'rafamadriz/friendly-snippets'
 
+-- Ale
+use 'dense-analysis/ale'
+
 --Git
 use 'lewis6991/gitsigns.nvim'
+
+--git gutter
+--use "airblade/vim-gitgutter"
 
 -- Fugitive
 use("tpope/vim-fugitive")
@@ -93,6 +99,9 @@ use {
 
 --Add indentation guides on even blank lines
 use "lukas-reineke/indent-blankline.nvim"
+
+--vimtex
+--use 'lervag/vimtex'
 
 
   -- Automatically set up your configuration after cloning packer.nvim

@@ -1,6 +1,6 @@
 require("mason").setup()
 require("mason-lspconfig").setup{
-    ensure_installed = { "lua_ls", "rust_analyzer"}
+    ensure_installed = { "lua_ls", "rust_analyzer", "clangd"}
 }
 
 
@@ -16,4 +16,7 @@ require("lspconfig").rust_analyzer.setup {
     capabilities = capabilities,
 }
 
+require'lspconfig'.clangd.setup{
 
+    capabilities = capabilities,
+}

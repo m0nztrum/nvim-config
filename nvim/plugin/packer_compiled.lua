@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/home/dragon/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ale = {
+    loaded = true,
+    path = "/home/dragon/.local/share/nvim/site/pack/packer/start/ale",
+    url = "https://github.com/dense-analysis/ale"
+  },
   ["barbar.nvim"] = {
     loaded = true,
     path = "/home/dragon/.local/share/nvim/site/pack/packer/start/barbar.nvim",
@@ -214,6 +219,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/dragon/.local/share/nvim/site/pack/packer/start/vim-rhubarb",
     url = "https://github.com/tpope/vim-rhubarb"
+  },
+  vimtex = {
+    loaded = true,
+    path = "/home/dragon/.local/share/nvim/site/pack/packer/start/vimtex",
+    url = "https://github.com/lervag/vimtex"
   }
 }
 

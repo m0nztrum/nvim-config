@@ -15,8 +15,6 @@
 - [rafamadriz/friendly-snippets](https://github.com/rafamadriz/friendly-snippets)
 - [dense-analysis/ale](https://github.com/dense-analysis/ale)
 
----
-
 ## GIT UTILS
 
 - [airblade/vim-gitgutter](https://github.com/airblade/vim-gitgutter)
@@ -24,11 +22,8 @@
 - [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive)
 - [tpope/vim-rhubarb](https://github.com/tpope/vim-rhubarb)
 
----
-
 ## Colorschemes
 
 - [gruvbox](https://github.com/ellisonleao/gruvbox.nvim)
 - [darkrose](https://github.com/water-sucks/darkrose.nvim)
 
----

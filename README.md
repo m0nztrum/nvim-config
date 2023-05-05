@@ -27,3 +27,6 @@
 - [gruvbox](https://github.com/ellisonleao/gruvbox.nvim)
 - [darkrose](https://github.com/water-sucks/darkrose.nvim)
 
+## MISC
+
+- [Notify](https://github.com/rcarriga/nvim-notify) 

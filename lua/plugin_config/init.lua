@@ -13,6 +13,7 @@ require("plugin_config.ale")
 require("plugin_config.gitgutter")
 require("plugin_config.wilder")
 require("plugin_config.fidget")
+require("plugin_config.lsp_signature")
 require("plugin_config.floatterm")
 --require("plugin_config.VimTex")
 

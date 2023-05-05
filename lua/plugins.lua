@@ -16,17 +16,17 @@ return require('packer').startup(function(use)
 
 -- MY PLUGINS --
 
---Theme
+--          [Theme]
 use 'ellisonleao/gruvbox.nvim'
 use("water-sucks/darkrose.nvim")
 
---nvim tree
+--        [nvim tree]
 use 'nvim-tree/nvim-tree.lua'
 
--- Undo Tree
+--        [Undo Tree]
 use("mbbill/undotree")
 
---Web devicons
+--      [Web devicons]
 use 'nvim-tree/nvim-web-devicons'
 
 --treesitter
@@ -42,12 +42,13 @@ use {
 	requires = { {'nvim-lua/plenary.nvim'} }
 }
 
---LSP
+--          [LSP]
 use 'williamboman/mason.nvim'
 use 'williamboman/mason-lspconfig.nvim'
 use 'neovim/nvim-lspconfig'
+use("ray-x/lsp_signature.nvim") --lsp signature
 
---Autocompletions and Snippet
+--      [Autocompletions and Snippet]
 use 'hrsh7th/nvim-cmp'
 use 'hrsh7th/cmp-nvim-lsp'
 use 'hrsh7th/cmp-buffer'
@@ -56,17 +57,22 @@ use 'L3MON4D3/LuaSnip'
 use 'saadparwaiz1/cmp_luasnip'
 use 'rafamadriz/friendly-snippets'
 
--- Ale
+--          [Ale]
 use 'dense-analysis/ale'
 
---Git
+--          [Git]
 use 'lewis6991/gitsigns.nvim' -- gitsigns
 use "airblade/vim-gitgutter" -- gitgutter
 use("tpope/vim-fugitive") -- fugitive
 use "tpope/vim-rhubarb"
 
 --Markdown
-use 'iamcco/markdown-preview.nvim'
+use({
+	"iamcco/markdown-preview.nvim",
+	run = function()
+		vim.fn["mkdp#util#install"]()
+	end,
+})
 
 -- Live-server
 use("manzeloth/live-server")
@@ -121,10 +127,15 @@ use "lukas-reineke/indent-blankline.nvim"
 -- Notify
 use 'rcarriga/nvim-notify'
 
--- Games
-use 'eandrju/cellular-automaton.nvim' 
+-- [Games] -- for procrastination duhhh
+use 'eandrju/cellular-automaton.nvim'
 
-
+--          [ WEB ]
+use { --  live edit html, css, and javascript in vim
+		'turbio/bracey.vim',
+		 run =  'npm install --prefix server',
+		 ft = {'html', 'css', 'javascript'}
+}
 
 --vimtex
 --use 'lervag/vimtex'

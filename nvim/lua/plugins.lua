@@ -14,7 +14,7 @@ local packer_bootstrap = ensure_packer()
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
--- My plugins
+-- MY PLUGINS --
 
 --Theme
 use 'ellisonleao/gruvbox.nvim'
@@ -70,7 +70,7 @@ use("tpope/vim-fugitive")
 use "tpope/vim-rhubarb"
 
 --Markdown
---use 'davidgranstrom/nvim-markdown-preview'
+use 'davidgranstrom/nvim-markdown-preview'
 
 -- Live-server
 use("manzeloth/live-server")
@@ -119,6 +119,9 @@ use("gelguy/wilder.nvim")
 
 --Add indentation guides on even blank lines
 use "lukas-reineke/indent-blankline.nvim"
+
+-- Notify
+use 'rcarriga/nvim-notify'
 
 --vimtex
 --use 'lervag/vimtex'

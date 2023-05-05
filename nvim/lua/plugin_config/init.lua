@@ -12,7 +12,7 @@ require("plugin_config.undotree")
 require("plugin_config.ale")
 require("plugin_config.gitgutter")
 require("plugin_config.wilder")
-
+require("plugin_config.fidget")
 --require("plugin_config.VimTex")
 
 

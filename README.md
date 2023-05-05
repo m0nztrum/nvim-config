@@ -29,4 +29,4 @@
 
 ## MISC
 
-- [Notify](https://github.com/rcarriga/nvim-notify) 
+- [Notify](https://github.com/rcarriga/nvim-notify)

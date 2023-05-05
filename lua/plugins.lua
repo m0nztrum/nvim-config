@@ -60,17 +60,13 @@ use 'rafamadriz/friendly-snippets'
 use 'dense-analysis/ale'
 
 --Git
-use 'lewis6991/gitsigns.nvim'
-
---git gutter
-use "airblade/vim-gitgutter"
-
--- Fugitive
-use("tpope/vim-fugitive")
+use 'lewis6991/gitsigns.nvim' -- gitsigns
+use "airblade/vim-gitgutter" -- gitgutter
+use("tpope/vim-fugitive") -- fugitive
 use "tpope/vim-rhubarb"
 
 --Markdown
-use 'davidgranstrom/nvim-markdown-preview'
+use 'iamcco/markdown-preview.nvim'
 
 -- Live-server
 use("manzeloth/live-server")
@@ -112,6 +108,8 @@ use {
     'nvim-lua/plenary.nvim'
   }
 }
+-- Terminal in the floating/popup window.
+use	'voldikss/vim-floaterm'
 
 -- Wilder
 use("gelguy/wilder.nvim")
@@ -122,6 +120,11 @@ use "lukas-reineke/indent-blankline.nvim"
 
 -- Notify
 use 'rcarriga/nvim-notify'
+
+-- Games
+use 'eandrju/cellular-automaton.nvim' 
+
+
 
 --vimtex
 --use 'lervag/vimtex'

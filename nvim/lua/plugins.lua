@@ -16,8 +16,9 @@ return require('packer').startup(function(use)
 
 -- My plugins
 
---Gruvbox theme
+--Theme
 use 'ellisonleao/gruvbox.nvim'
+use("water-sucks/darkrose.nvim")
 
 --nvim tree
 use 'nvim-tree/nvim-tree.lua'
@@ -62,7 +63,7 @@ use 'dense-analysis/ale'
 use 'lewis6991/gitsigns.nvim'
 
 --git gutter
---use "airblade/vim-gitgutter"
+use "airblade/vim-gitgutter"
 
 -- Fugitive
 use("tpope/vim-fugitive")
@@ -74,6 +75,21 @@ use "tpope/vim-rhubarb"
 -- Live-server
 use("manzeloth/live-server")
 
+-- Fidget
+use({
+	"j-hui/fidget.nvim",
+	config = function()
+		require("fidget").setup({
+			text = {
+				spinner = "bouncing_ball",
+			},
+			window = {
+				border = "rounded",
+				blend = 0,
+			},
+		})
+	end,
+})
 
 -- autopair
 use({
@@ -96,6 +112,10 @@ use {
     'nvim-lua/plenary.nvim'
   }
 }
+
+-- Wilder
+use("gelguy/wilder.nvim")
+
 
 --Add indentation guides on even blank lines
 use "lukas-reineke/indent-blankline.nvim"

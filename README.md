@@ -4,7 +4,7 @@
 
 - [Packer](https://github.com/wbthomason/packer.nvim)  
 
-## LSP/ AUTOCOLPETION/CHECKERS/SNIPPET
+## LSP/ AUTOCOLPETION/CHECKERS/SNIPPETS
 
 - [williamboman/Mason](https://github.com/williamboman/mason.nvim)
 - [williamboman/Masonlspconfig](https://github.com/williamboman/mason-lspconfig.nvim)

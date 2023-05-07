@@ -6,6 +6,7 @@ require("barbar").setup({
 	tabpages = true,
 	clickable = true,
 	focus_on_close = "left",
+    transparent = true,
 
 	-- Hide inactive buffers and file extensions. Other options are `alternate`, `current`, and `visible`.
 	hide = { extensions = true, inactive = true },

@@ -60,13 +60,22 @@ use 'rafamadriz/friendly-snippets'
 --          [Ale]
 use 'dense-analysis/ale'
 
+--          [autopair]
+use({
+	"windwp/nvim-autopairs",
+	config = function()
+		require("nvim-autopairs").setup({})
+	end,
+})
+
+
 --          [Git]
 use 'lewis6991/gitsigns.nvim' -- gitsigns
 use "airblade/vim-gitgutter" -- gitgutter
 use("tpope/vim-fugitive") -- fugitive
 use "tpope/vim-rhubarb"
 
---Markdown
+--       [Markdown]
 use({
 	"iamcco/markdown-preview.nvim",
 	run = function()
@@ -74,10 +83,10 @@ use({
 	end,
 })
 
--- Live-server
+--      [Live-server]
 use("manzeloth/live-server")
 
--- Fidget
+--      [Fidget]
 use({
 	"j-hui/fidget.nvim",
 	config = function()
@@ -93,38 +102,31 @@ use({
 	end,
 })
 
--- autopair
-use({
-	"windwp/nvim-autopairs",
-	config = function()
-		require("nvim-autopairs").setup({})
-	end,
-})
 
--- Transparent - allows for toggle
+--      [Transparent - allows for toggle]
 use ("xiyaowong/nvim-transparent")
 
---barbar
+--          [barbar]
 use 'romgrk/barbar.nvim'
 
---Vgit
+--          [Vgit]
 use {
   'tanvirtin/vgit.nvim',
   requires = {
     'nvim-lua/plenary.nvim'
   }
 }
--- Terminal in the floating/popup window.
+--  [Terminal in the floating/popup window.]
 use	'voldikss/vim-floaterm'
 
--- Wilder
+--      [Wilder]
 use("gelguy/wilder.nvim")
 
 
---Add indentation guides on even blank lines
+--  [Add indentation guides on even blank lines]
 use "lukas-reineke/indent-blankline.nvim"
 
--- Notify
+--      [Notify]
 use 'rcarriga/nvim-notify'
 
 -- [Games] -- for procrastination duhhh

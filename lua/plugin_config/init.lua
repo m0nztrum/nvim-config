@@ -1,6 +1,5 @@
 require("plugin_config.lualine")
 require("plugin_config.nvim-tree")
-require("plugin_config.gruvbox")
 require("plugin_config.colorscheme")
 require("plugin_config.treesitter")
 require("plugin_config.telescope")
@@ -16,5 +15,6 @@ require("plugin_config.wilder")
 require("plugin_config.fidget")
 require("plugin_config.lsp_signature")
 require("plugin_config.floatterm")
-require("plugin_config.startup")
+--     [Themes]
+require("plugin_config.gruvbox")
 

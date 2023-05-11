@@ -127,7 +127,7 @@ _G.packer_plugins = {
     url = "https://github.com/water-sucks/darkrose.nvim"
   },
   ["fidget.nvim"] = {
-    config = { "\27LJ\2\nä\1\0\0\4\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0025\3\6\0=\3\a\2B\0\2\1K\0\1\0\vwindow\1\0\2\nblend\3\0\vborder\frounded\ttext\1\0\0\1\0\1\fspinner\18bouncing_ball\nsetup\vfidget\frequire\0" },
+    config = { "\27LJ\2\nä\1\0\0\4\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0025\3\6\0=\3\a\2B\0\2\1K\0\1\0\vwindow\1\0\2\vborder\frounded\nblend\3\0\ttext\1\0\0\1\0\1\fspinner\18bouncing_ball\nsetup\vfidget\frequire\0" },
     loaded = true,
     path = "/home/dragon/.local/share/nvim/site/pack/packer/start/fidget.nvim",
     url = "https://github.com/j-hui/fidget.nvim"
@@ -182,6 +182,11 @@ _G.packer_plugins = {
     path = "/home/dragon/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
+  ["nightfox.nvim"] = {
+    loaded = true,
+    path = "/home/dragon/.local/share/nvim/site/pack/packer/start/nightfox.nvim",
+    url = "https://github.com/EdenEast/nightfox.nvim"
+  },
   ["nvim-autopairs"] = {
     config = { "\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0" },
     loaded = true,
@@ -233,12 +238,6 @@ _G.packer_plugins = {
     path = "/home/dragon/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
-  ["startup.nvim"] = {
-    config = { "\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fstartup\frequire\0" },
-    loaded = true,
-    path = "/home/dragon/.local/share/nvim/site/pack/packer/start/startup.nvim",
-    url = "https://github.com/startup-nvim/startup.nvim"
-  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/dragon/.local/share/nvim/site/pack/packer/start/telescope.nvim",
@@ -282,25 +281,21 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: startup.nvim
-time([[Config for startup.nvim]], true)
-try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fstartup\frequire\0", "config", "startup.nvim")
-time([[Config for startup.nvim]], false)
 -- Config for: nvim-autopairs
 time([[Config for nvim-autopairs]], true)
 try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
 time([[Config for nvim-autopairs]], false)
 -- Config for: fidget.nvim
 time([[Config for fidget.nvim]], true)
-try_loadstring("\27LJ\2\nä\1\0\0\4\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0025\3\6\0=\3\a\2B\0\2\1K\0\1\0\vwindow\1\0\2\nblend\3\0\vborder\frounded\ttext\1\0\0\1\0\1\fspinner\18bouncing_ball\nsetup\vfidget\frequire\0", "config", "fidget.nvim")
+try_loadstring("\27LJ\2\nä\1\0\0\4\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0025\3\6\0=\3\a\2B\0\2\1K\0\1\0\vwindow\1\0\2\vborder\frounded\nblend\3\0\ttext\1\0\0\1\0\1\fspinner\18bouncing_ball\nsetup\vfidget\frequire\0", "config", "fidget.nvim")
 time([[Config for fidget.nvim]], false)
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Filetype lazy-loads
 time([[Defining lazy-load filetype autocommands]], true)
+vim.cmd [[au FileType css ++once lua require("packer.load")({'bracey.vim'}, { ft = "css" }, _G.packer_plugins)]]
 vim.cmd [[au FileType javascript ++once lua require("packer.load")({'bracey.vim'}, { ft = "javascript" }, _G.packer_plugins)]]
 vim.cmd [[au FileType html ++once lua require("packer.load")({'bracey.vim'}, { ft = "html" }, _G.packer_plugins)]]
-vim.cmd [[au FileType css ++once lua require("packer.load")({'bracey.vim'}, { ft = "css" }, _G.packer_plugins)]]
 time([[Defining lazy-load filetype autocommands]], false)
 vim.cmd("augroup END")
 

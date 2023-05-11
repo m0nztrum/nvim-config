@@ -18,7 +18,8 @@ return require('packer').startup(function(use)
 
 --          [Theme]
 use 'ellisonleao/gruvbox.nvim'
-use("water-sucks/darkrose.nvim")
+use 'water-sucks/darkrose.nvim'
+use 'EdenEast/nightfox.nvim'
 
 --        [nvim tree]
 use 'nvim-tree/nvim-tree.lua'
@@ -138,16 +139,6 @@ use { --  live edit html, css, and javascript in vim
 		 run =  'npm install --prefix server',
 		 ft = {'html', 'css', 'javascript'}
 }
-
---          [startup]
-use {
-  "startup-nvim/startup.nvim",
-  requires = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"},
-  config = function()
-    require"startup".setup()
-  end
-}
-
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then

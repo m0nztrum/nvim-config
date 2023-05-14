@@ -2,7 +2,7 @@
 ---------
 require("barbar").setup({
 	animation = true,
-	auto_hide = true,
+	auto_hide = false,
 	tabpages = true,
 	clickable = true,
 	focus_on_close = "left",

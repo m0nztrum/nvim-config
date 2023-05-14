@@ -28,3 +28,7 @@ require'lspconfig'.cssls.setup {
 require'lspconfig'.tsserver.setup{
     capabilities = capabilities,
 }
+
+require'lspconfig'.html.setup{
+    capabilities = capabilities
+}

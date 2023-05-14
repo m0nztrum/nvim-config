@@ -118,7 +118,7 @@ use {
   }
 }
 --  [Terminal in the floating/popup window.]
-use	'voldikss/vim-floaterm'
+use	'akinsho/toggleterm.nvim'
 
 --      [Wilder]
 use("gelguy/wilder.nvim")

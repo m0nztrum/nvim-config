@@ -130,8 +130,6 @@ use "lukas-reineke/indent-blankline.nvim"
 --      [Notify]
 use 'rcarriga/nvim-notify'
 
--- [Games] -- for procrastination duhhh
-use 'eandrju/cellular-automaton.nvim'
 
 --          [ WEB ]
 use { --  live edit html, css, and javascript in vim
@@ -140,11 +138,6 @@ use { --  live edit html, css, and javascript in vim
 		 ft = {'html', 'css', 'javascript'}
 }
 
-
-
-
-
---use 'MarcHamamji/runner.nvim'
 
 
 

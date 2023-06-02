@@ -22,12 +22,17 @@ require("lualine").setup({
 	},
 	sections = {
 		lualine_a = { "mode" },
-		lualine_b = { "branch", "diff", "diagnostics" },
+		lualine_b = { "branch", "diff" },
 		lualine_c = { { "filename" ,
         file_status = true,
         path = 0
     } },
-		lualine_x = { "encoding", "fileformat", "filetype" },
+		lualine_x = {
+           {'diagnostics', symbols = {error = ' ', warn = ' ', info = ' ',
+             hint = '' } },
+            "encoding",
+            "filetype"
+        },
 		lualine_y = { "progress" },
 		lualine_z = { "location" },
 	},

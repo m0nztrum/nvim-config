@@ -13,6 +13,8 @@ require'nvim-treesitter.configs'.setup {
       "bash",
       "html",
       "python",
+      "markdown",
+      "tsx",
   },
 
   -- Install parsers synchronously (only applied to `ensure_installed`)

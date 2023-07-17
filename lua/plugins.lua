@@ -88,21 +88,7 @@ use({
 use("manzeloth/live-server")
 
 --      [Fidget]
-use({
-	"j-hui/fidget.nvim",
-	config = function()
-		require("fidget").setup({
-			text = {
-				spinner = "bouncing_ball",
-			},
-			window = {
-				border = "rounded",
-				blend = 0,
-			},
-		})
-	end,
-})
-
+use 'j-hui/fidget.nvim'
 
 --      [Transparent - allows for toggle]
 use ("xiyaowong/nvim-transparent")

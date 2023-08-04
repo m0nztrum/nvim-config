@@ -88,7 +88,15 @@ use({
 use("manzeloth/live-server")
 
 --      [Fidget]
-use 'j-hui/fidget.nvim'
+--use {
+  --'j-hui/fidget.nvim',
+ -- tag = 'legacy',
+ -- config = function()
+   -- require("fidget").setup {
+      -- options
+  --  }
+ -- end,
+--}
 
 --      [Transparent - allows for toggle]
 use ("xiyaowong/nvim-transparent")

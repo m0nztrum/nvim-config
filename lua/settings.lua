@@ -84,3 +84,6 @@ vim.opt.cursorline = true
 -- Whitespace chars
 vim.opt.listchars = { tab = ">-", trail = "~", space = "·", eol = "↵" }
 vim.opt.whichwrap = "<,>,h,l,[,]"
+
+-- vim notify
+vim.notify = require("notify")

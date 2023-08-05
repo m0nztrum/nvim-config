@@ -32,3 +32,8 @@ require'lspconfig'.tsserver.setup{
 require'lspconfig'.html.setup{
     capabilities = capabilities
 }
+
+require('lspconfig').pylsp.setup {
+
+    capabilities = capabilities
+}

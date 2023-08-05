@@ -1,6 +1,6 @@
 local lualine = require("lualine")
 
-local colorscheme = require("darkrose")
+local colorscheme = require("gruvbox")
 
 
 colorscheme.setup({
@@ -16,7 +16,7 @@ lualine.setup{
     }
 }
 
-vim.cmd [[ colorscheme darkrose ]]
+vim.cmd [[ colorscheme gruvbox ]]
 
 vim.o.termguicolors = true
 

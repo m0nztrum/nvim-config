@@ -15,6 +15,7 @@ require("plugin_config.notify")
 require("plugin_config.wilder")
 require("plugin_config.lsp_signature")
 require("plugin_config.toggleterm")
+require("plugin_config.which-key")
 --     [Themes]
 require("plugin_config.gruvbox")
 

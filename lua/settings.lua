@@ -87,3 +87,7 @@ vim.opt.whichwrap = "<,>,h,l,[,]"
 
 -- vim notify
 vim.notify = require("notify")
+
+-- whick key
+local wk = require("which-key")
+wk.register(mappings, opts)

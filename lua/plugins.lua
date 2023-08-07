@@ -21,7 +21,7 @@ use 'ellisonleao/gruvbox.nvim'
 use 'water-sucks/darkrose.nvim'
 use 'EdenEast/nightfox.nvim'
 use ({'rose-pine/neovim', as = 'rose-pine'})
-use 'catpuccin/nvim'
+use 'catppuccin/nvim'
 use 'davidosomething/vim-colors-meh'
 
 --        [nvim tree]
@@ -91,7 +91,7 @@ use({
 use 'romainl/vim-cool'
 
 --      [Live-server]
-use("manzeloth/live-server")
+-- use("manzeloth/live-server")
 
 --      [Transparent - allows for toggle]
 use ("xiyaowong/nvim-transparent")
@@ -112,6 +112,8 @@ use	'akinsho/toggleterm.nvim'
 --      [Wilder]
 use("gelguy/wilder.nvim")
 
+--      [Smoothie]
+use 'psliwka/vim-smoothie'
 
 --  [Add indentation guides on even blank lines]
 use "lukas-reineke/indent-blankline.nvim"
@@ -119,6 +121,13 @@ use "lukas-reineke/indent-blankline.nvim"
 --      [Notify]
 use 'rcarriga/nvim-notify'
 
+--      [Whick key]
+use {'folke/which-key.nvim',
+    config = function ()
+        vim.o.timeout = true
+        vim.o.timeoutlen = 300
+    end
+}
 
 --          [ WEB ]
 use { --  live edit html, css, and javascript in vim

@@ -20,6 +20,9 @@ return require('packer').startup(function(use)
 use 'ellisonleao/gruvbox.nvim'
 use 'water-sucks/darkrose.nvim'
 use 'EdenEast/nightfox.nvim'
+use ({'rose-pine/neovim', as = 'rose-pine'})
+use 'catpuccin/nvim'
+use 'davidosomething/vim-colors-meh'
 
 --        [nvim tree]
 use 'nvim-tree/nvim-tree.lua'
@@ -30,7 +33,7 @@ use("mbbill/undotree")
 --      [Web devicons]
 use 'nvim-tree/nvim-web-devicons'
 
---treesitter
+--      [treesitter]
 use 'nvim-treesitter/nvim-treesitter'
 
 --lua line
@@ -84,19 +87,11 @@ use({
 	end,
 })
 
+--      [vim cool]
+use 'romainl/vim-cool'
+
 --      [Live-server]
 use("manzeloth/live-server")
-
---      [Fidget]
---use {
-  --'j-hui/fidget.nvim',
- -- tag = 'legacy',
- -- config = function()
-   -- require("fidget").setup {
-      -- options
-  --  }
- -- end,
---}
 
 --      [Transparent - allows for toggle]
 use ("xiyaowong/nvim-transparent")

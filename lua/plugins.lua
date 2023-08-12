@@ -129,12 +129,13 @@ use {'folke/which-key.nvim',
     end
 }
 
---          [ WEB ]
-use { --  live edit html, css, and javascript in vim
+--[[ WEB 
+--use { --  live edit html, css, and javascript in vim
 		'turbio/bracey.vim',
 		 run =  'npm install --prefix server',
 		 ft = {'html', 'css', 'javascript'}
 }
+]]
 
 
 

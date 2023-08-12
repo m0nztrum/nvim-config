@@ -143,6 +143,9 @@ return require("packer").startup(function(use)
 	--      [Vim Tex]
 	use("lervag/vimtex")
 
+	--      [zen]
+	use("folke/zen-mode.nvim")
+
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if packer_bootstrap then

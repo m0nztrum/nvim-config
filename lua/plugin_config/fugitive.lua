@@ -1,5 +1,5 @@
--- VIM FUGITIVE 
+-- VIM FUGITIVE
 ---------------
 
 -- Keybindings
-vim.keymap.set("n", "<leader>fg", vim.cmd.Git);
+vim.keymap.set("n", "<leader>fg", vim.cmd.Git)

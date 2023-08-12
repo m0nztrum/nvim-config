@@ -16,7 +16,7 @@ lualine.setup{
     }
 }
 
-vim.cmd [[ colorscheme gruvbox ]]
+vim.cmd [[ colorscheme rose-pine ]]
 
 vim.o.termguicolors = true
 

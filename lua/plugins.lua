@@ -45,24 +45,31 @@ use {
 	tag = '0.1.0',
 	requires = { {'nvim-lua/plenary.nvim'} }
 }
+--      [Lsp signature]
+use("ray-x/lsp_signature.nvim")
 
 --          [LSP]
-use 'williamboman/mason.nvim'
-use 'williamboman/mason-lspconfig.nvim'
-use 'neovim/nvim-lspconfig'
-use("ray-x/lsp_signature.nvim") --lsp signature
-
---      [Autocompletions and Snippet]
-use 'hrsh7th/nvim-cmp'
-use 'hrsh7th/cmp-nvim-lsp'
-use 'hrsh7th/cmp-buffer'
-use 'hrsh7th/cmp-path'
-use 'L3MON4D3/LuaSnip'
-use 'saadparwaiz1/cmp_luasnip'
-use 'rafamadriz/friendly-snippets'
-
---          [Ale]
-use 'dense-analysis/ale'
+	use({
+		"VonHeikemen/lsp-zero.nvim",
+		branch = "v1.x",
+		requires = {
+			-- LSP Support
+			{ "neovim/nvim-lspconfig" }, -- Required
+			{ "williamboman/mason.nvim" }, -- Optional
+			{ "williamboman/mason-lspconfig.nvim" }, -- Optional
+			-- Autocompletion
+			{ "hrsh7th/nvim-cmp" }, -- Required
+			{ "hrsh7th/cmp-nvim-lsp" }, -- Required
+			{ "hrsh7th/cmp-buffer" }, -- Optional
+			{ "hrsh7th/cmp-path" }, -- Optional
+			{ "saadparwaiz1/cmp_luasnip" }, -- Optional
+			{ "hrsh7th/cmp-nvim-lua" }, -- Optional
+			-- Snippets
+			{ "L3MON4D3/LuaSnip" }, -- Required
+			{ "rafamadriz/friendly-snippets" }, -- Optional
+			{ "jose-elias-alvarez/null-ls.nvim" },
+		},
+	})
 
 --          [autopair]
 use({
@@ -128,6 +135,9 @@ use {'folke/which-key.nvim',
         vim.o.timeoutlen = 300
     end
 }
+
+--      [commentry]
+use 'tpope/vim-commentary'
 
 --[[ WEB 
 --use { --  live edit html, css, and javascript in vim

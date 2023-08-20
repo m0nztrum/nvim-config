@@ -35,7 +35,7 @@ return require("packer").startup(function(use)
 	use("nvim-tree/nvim-web-devicons")
 
 	--      [treesitter]
-	use("nvim-treesitter/nvim-treesitter")
+	use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
 
 	--lua line
 	use("nvim-lualine/lualine.nvim")
@@ -145,6 +145,9 @@ return require("packer").startup(function(use)
 
 	--      [zen]
 	use("folke/zen-mode.nvim")
+
+	--      [Hologram - Image Viewer]
+	use("edluffy/hologram.nvim")
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins

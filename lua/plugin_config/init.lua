@@ -17,5 +17,6 @@ require("plugin_config.toggleterm")
 require("plugin_config.vimtex")
 require("plugin_config.zenmode")
 require("plugin_config.formatter")
+require("plugin_config.hologram")
 --     [Themes]
 require("plugin_config.gruvbox")

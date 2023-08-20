@@ -22,13 +22,13 @@ local sources = {
 	}),
 	formatting.black, -- python
 	formatting.autopep8,
-	formatting.clang_format, -- c/cpp
+	-- formatting.clang_format, -- c/cpp
 	formatting.deno_fmt, -- ts ,js , ts<REACT> , js<REACT>, md ,json , jsonc
 	formatting.stylua,
 	formatting.latexindent, -- latex
 	formatting.rustfmt, -- rust
-   -- formatting.pylsp, -- work to be done here
- --    formatting
+	-- formatting.pylsp, -- work to be done here
+	--    formatting
 	formatting.shfmt.with({
 		filetypes = { "sh", "zsh" },
 	}),

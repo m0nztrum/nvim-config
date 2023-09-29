@@ -21,7 +21,7 @@ local sources = {
 		filetypes = { "asm", "S", "nasm", "fasm", "yasm" },
 	}),
 	formatting.black, -- python
-	formatting.autopep8,
+	formatting.autopep8, -- python
 	-- formatting.clang_format, -- c/cpp
 	formatting.deno_fmt, -- ts ,js , ts<REACT> , js<REACT>, md ,json , jsonc
 	formatting.stylua,

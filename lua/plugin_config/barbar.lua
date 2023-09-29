@@ -6,10 +6,10 @@ require("barbar").setup({
 	tabpages = true,
 	clickable = true,
 	focus_on_close = "left",
-    transparent = true,
+	transparent = true,
 
 	-- Hide inactive buffers and file extensions. Other options are `alternate`, `current`, and `visible`.
-	hide = { extensions = true, inactive = true },
+	hide = { extensions = true, inactive = false },
 
 	-- Disable highlighting alternate buffers
 	highlight_alternate = false,
@@ -32,6 +32,11 @@ require("barbar").setup({
 			[vim.diagnostic.severity.INFO] = { enabled = true },
 			[vim.diagnostic.severity.HINT] = { enabled = true },
 		},
+		gitsigns = {
+			added = { enabled = true, icon = "+" },
+			changed = { enabled = true, icon = "~" },
+			deleted = { enabled = true, icon = "-" },
+		},
 		filetype = {
 			-- Sets the icon's highlight group.
 			-- If false, will use nvim-web-devicons colors
@@ -46,6 +51,9 @@ require("barbar").setup({
 		-- Supports all the base icon options.
 		modified = { button = "●" },
 		pinned = { button = "車", filename = true, separator = { right = "" } },
+
+		-- Use a preconfigured buffer appearance can be 'default' 'powerline' or 'slanted'
+		preset = "default",
 
 		-- Configure the icons on the bufferline based on the visibility of a buffer.
 		-- Supports all the base icon options, plus `modified` and `pinned`.

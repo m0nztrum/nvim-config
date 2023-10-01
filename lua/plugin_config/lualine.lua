@@ -7,7 +7,9 @@ require("lualine").setup({
 		component_separators = { left = "", right = "" },
 		section_separators = { left = "", right = "" },
 		disabled_filetypes = {
-			statusline = {},
+			statusline = {
+				"NvimTree",
+			},
 			winbar = {},
 		},
 		ignore_focus = {},
@@ -18,21 +20,23 @@ require("lualine").setup({
 			tabline = 1000,
 			winbar = 1000,
 		},
-		theme = "gruvbox",
+		theme = "auto",
 	},
 	sections = {
-		lualine_a = { "mode" },
+		lualine_a = { { "mode", icons_enabled = true } },
 		lualine_b = { "branch", "diff" },
-		lualine_c = { { "filename" ,
-        file_status = true,
-        path = 0
-    } },
+		lualine_c = { { "filename", file_status = true, path = 0 }, "searchcount" },
 		lualine_x = {
-           {'diagnostics', symbols = {error = ' ', warn = ' ', info = ' ',
-             hint = '' } },
-            "encoding",
-            "filetype"
-        },
+			{
+				"diagnostics",
+				always_visible = false,
+				update_in_insert = true,
+				symbols = { error = " " },
+				-- symbols = { error = " ", warn = " ", info = " ", hint = "" },
+			},
+			"encoding",
+			"filetype",
+		},
 		lualine_y = { "progress" },
 		lualine_z = { "location" },
 	},

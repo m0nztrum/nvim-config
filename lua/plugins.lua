@@ -103,6 +103,12 @@ return require("packer").startup(function(use)
 	--      [Transparent - allows for toggle]
 	use("xiyaowong/nvim-transparent")
 
+	--      [hlslens]
+	-- use({ "kevinhwang91/nvim-hlslens" })
+
+	--      [diffview]
+	use("sindrets/diffview.nvim")
+
 	--          [barbar]
 	use("romgrk/barbar.nvim")
 

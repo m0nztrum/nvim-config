@@ -7,7 +7,9 @@ require("lualine").setup({
 		component_separators = { left = "", right = "" },
 		section_separators = { left = "", right = "" },
 		disabled_filetypes = {
-			statusline = {},
+			statusline = {
+				"NvimTree",
+			},
 			winbar = {
 				"NvimTree",
 			},
@@ -23,8 +25,11 @@ require("lualine").setup({
 		theme = "auto",
 	},
 	sections = {
-		lualine_a = { { "mode", icons_enabled = true } },
-		lualine_b = { "branch", { "diff", colored = true } },
+		lualine_a = { { "mode", icons_enabled = true, icon = { "" } } },
+		lualine_b = {
+			{ "branch" },
+			{ "diff", colored = true },
+		},
 		lualine_c = { { "filename", file_status = true, path = 0, newfile_status = true }, "searchcount" },
 		lualine_x = {
 			{
@@ -38,8 +43,8 @@ require("lualine").setup({
 			{ "filetype", icon_only = false, colored = true },
 			"fileformat",
 		},
-		lualine_y = { "progress" },
-		lualine_z = { "location" },
+		lualine_y = { { "progress", icon = { "", align = "left" } } },
+		lualine_z = { { "location", icon = { "", align = "left" } } },
 	},
 	inactive_sections = {
 		lualine_a = {},

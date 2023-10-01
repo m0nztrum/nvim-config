@@ -1,10 +1,6 @@
-# My Neovim Config
-Just the basics to grant a nice ide functionality
-
-
 ## PLUGIN MANAGER
 
-- [Packer](https://github.com/wbthomason/packer.nvim)  
+- [Packer](https://github.com/wbthomason/packer.nvim)
 
 ## Plugins
 
@@ -13,7 +9,7 @@ Just the basics to grant a nice ide functionality
 - [neovim/nvim lsp](https://github.com/neovim/nvim-lspconfig)
 - [hrsh7th/nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
 - [hrsh7th/cmp-buffer](https://github.com/hrsh7th/cmp-buffer)
-- [L3MON4D3/LuaSnip](https://github.com/L3MON4D3/LuaSnip)  
+- [L3MON4D3/LuaSnip](https://github.com/L3MON4D3/LuaSnip)
 - [rafamadriz/friendly-snippets](https://github.com/rafamadriz/friendly-snippets)
 - [dense-analysis/ale](https://github.com/dense-analysis/ale)
 
@@ -24,6 +20,5 @@ Just the basics to grant a nice ide functionality
 
 - [gruvbox](https://github.com/ellisonleao/gruvbox.nvim)
 - [darkrose](https://github.com/water-sucks/darkrose.nvim)
-
 
 - [Notify](https://github.com/rcarriga/nvim-notify)

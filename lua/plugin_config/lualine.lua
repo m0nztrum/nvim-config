@@ -8,7 +8,9 @@ require("lualine").setup({
 		section_separators = { left = "", right = "" },
 		disabled_filetypes = {
 			statusline = {},
-			winbar = {},
+			winbar = {
+				"NvimTree",
+			},
 		},
 		ignore_focus = {},
 		always_divide_middle = true,
@@ -50,8 +52,8 @@ require("lualine").setup({
 	tabline = {},
 	winbar = {
 		lualine_a = {},
-		lualine_b = { "buffer_number" },
-		lualine_c = {},
+		lualine_b = {},
+		lualine_c = { { "filename", path = 2 } },
 		lualine_x = {},
 		lualine_y = {},
 		lualine_z = {},

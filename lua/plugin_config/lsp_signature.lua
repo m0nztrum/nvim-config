@@ -1,4 +1,3 @@
-
 --━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━--
 --─────────────────────────────────────────────────--
 --   Plugin:    lsp_signature.nvim
@@ -9,17 +8,14 @@
 --─────────────────────────────────────────────────--
 --━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━--
 
-
-
-
-
 --━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━--
 --━━━━━━━━━━━━━━━━━━━❰ configs ❱━━━━━━━━━━━━━━━━━━━--
 --━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━--
 
 local import_signature, lsp_signature = pcall(require, "lsp_signature")
-if not import_signature then return end
-
+if not import_signature then
+	return
+end
 
 local cfg = {
 	debug = false, -- set to true to enable debug logging
@@ -75,10 +71,8 @@ local cfg = {
 	move_cursor_key = nil, -- imap, use nvim_set_current_win to move cursor between current win and floating
 }
 
--- require'lspconfig'.gopls.setup()
 lsp_signature.setup(cfg)
 
 --━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━--
 --━━━━━━━━━━━━━━━━━❰ end configs ❱━━━━━━━━━━━━━━━━━--
 --━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━--
-

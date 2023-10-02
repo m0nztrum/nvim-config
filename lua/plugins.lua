@@ -51,6 +51,7 @@ return require("packer").startup(function(use)
 
     --          [LSP]
     use('onsails/lspkind-nvim')
+    use('nvimdev/lspsaga.nvim') -- LSP UIs
     use({
         "VonHeikemen/lsp-zero.nvim",
         branch = "v1.x",

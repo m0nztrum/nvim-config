@@ -1,163 +1,164 @@
 local ensure_packer = function()
-	local fn = vim.fn
-	local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
-	if fn.empty(fn.glob(install_path)) > 0 then
-		fn.system({ "git", "clone", "--depth", "1", "https://github.com/wbthomason/packer.nvim", install_path })
-		vim.cmd([[packadd packer.nvim]])
-		return true
-	end
-	return false
+    local fn = vim.fn
+    local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
+    if fn.empty(fn.glob(install_path)) > 0 then
+        fn.system({ "git", "clone", "--depth", "1", "https://github.com/wbthomason/packer.nvim", install_path })
+        vim.cmd([[packadd packer.nvim]])
+        return true
+    end
+    return false
 end
 
 local packer_bootstrap = ensure_packer()
 
 return require("packer").startup(function(use)
-	use("wbthomason/packer.nvim")
+    use("wbthomason/packer.nvim")
 
-	-- MY PLUGINS --
+    -- MY PLUGINS --
 
-	--          [Theme]
-	use("ellisonleao/gruvbox.nvim")
-	use("water-sucks/darkrose.nvim")
-	use("EdenEast/nightfox.nvim")
-	use({ "rose-pine/neovim", as = "rose-pine" })
-	use("catppuccin/nvim")
-	use("davidosomething/vim-colors-meh")
-	use("projekt0n/github-nvim-theme")
+    --          [Theme]
+    use("ellisonleao/gruvbox.nvim")
+    use("water-sucks/darkrose.nvim")
+    use("EdenEast/nightfox.nvim")
+    use({ "rose-pine/neovim", as = "rose-pine" })
+    use("catppuccin/nvim")
+    use("davidosomething/vim-colors-meh")
+    use("projekt0n/github-nvim-theme")
 
-	--        [nvim tree]
-	use("nvim-tree/nvim-tree.lua")
+    --        [nvim tree]
+    use("nvim-tree/nvim-tree.lua")
 
-	--        [Undo Tree]
-	use("mbbill/undotree")
+    --        [Undo Tree]
+    use("mbbill/undotree")
 
-	--      [Web devicons]
-	use("nvim-tree/nvim-web-devicons")
+    --      [Web devicons]
+    use("nvim-tree/nvim-web-devicons")
 
-	--      [treesitter]
-	use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
+    --      [treesitter]
+    use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
 
-	--lua line
-	use("nvim-lualine/lualine.nvim")
+    --lua line
+    use("nvim-lualine/lualine.nvim")
 
-	-- Telescope
-	use({
-		"nvim-telescope/telescope.nvim",
-		tag = "0.1.0",
-		requires = { { "nvim-lua/plenary.nvim" } },
-	})
-	--      [Lsp signature]
-	use("ray-x/lsp_signature.nvim")
+    -- Telescope
+    use({
+        "nvim-telescope/telescope.nvim",
+        tag = "0.1.0",
+        requires = { { "nvim-lua/plenary.nvim" } },
+    })
+    --      [Lsp signature]
+    use("ray-x/lsp_signature.nvim")
 
-	--          [LSP]
-	use({
-		"VonHeikemen/lsp-zero.nvim",
-		branch = "v1.x",
-		requires = {
-			-- LSP Support
-			{ "neovim/nvim-lspconfig" }, -- Required
-			{ "williamboman/mason.nvim" }, -- Optional
-			{ "williamboman/mason-lspconfig.nvim" }, -- Optional
-			-- Autocompletion
-			{ "hrsh7th/nvim-cmp" }, -- Required
-			{ "hrsh7th/cmp-nvim-lsp" }, -- Required
-			{ "hrsh7th/cmp-buffer" }, -- Optional
-			{ "hrsh7th/cmp-path" }, -- Optional
-			{ "saadparwaiz1/cmp_luasnip" }, -- Optional
-			{ "hrsh7th/cmp-nvim-lua" }, -- Optional
-			-- Snippets
-			{ "L3MON4D3/LuaSnip" }, -- Required
-			{ "rafamadriz/friendly-snippets" }, -- Optional
-			{ "jose-elias-alvarez/null-ls.nvim" },
-		},
-	})
+    --          [LSP]
+    use('onsails/lspkind-nvim')
+    use({
+        "VonHeikemen/lsp-zero.nvim",
+        branch = "v1.x",
+        requires = {
+            -- LSP Support
+            { "neovim/nvim-lspconfig" },             -- Required
+            { "williamboman/mason.nvim" },           -- Optional
+            { "williamboman/mason-lspconfig.nvim" }, -- Optional
+            -- Autocompletion
+            { "hrsh7th/nvim-cmp" },                  -- Required
+            { "hrsh7th/cmp-nvim-lsp" },              -- Required
+            { "hrsh7th/cmp-buffer" },                -- Optional
+            { "hrsh7th/cmp-path" },                  -- Optional
+            { "saadparwaiz1/cmp_luasnip" },          -- Optional
+            { "hrsh7th/cmp-nvim-lua" },              -- Optional
+            -- Snippets
+            { "L3MON4D3/LuaSnip" },                  -- Required
+            { "rafamadriz/friendly-snippets" },      -- Optional
+            { "jose-elias-alvarez/null-ls.nvim" },
+        },
+    })
 
-	--          [autopair]
-	use({
-		"windwp/nvim-autopairs",
-		config = function()
-			require("nvim-autopairs").setup({})
-		end,
-	})
+    --          [autopair]
+    use({
+        "windwp/nvim-autopairs",
+        config = function()
+            require("nvim-autopairs").setup({})
+        end,
+    })
 
-	--          [Git]
-	use("lewis6991/gitsigns.nvim") -- gitsigns
-	use("airblade/vim-gitgutter") -- gitgutter
-	use("tpope/vim-fugitive") -- fugitive
-	use("tpope/vim-rhubarb")
+    --          [Git]
+    use("lewis6991/gitsigns.nvim") -- gitsigns
+    use("airblade/vim-gitgutter")  -- gitgutter
+    use("tpope/vim-fugitive")      -- fugitive
+    use("tpope/vim-rhubarb")
 
-	--       [Markdown]
-	use({
-		"iamcco/markdown-preview.nvim",
-		run = function()
-			vim.fn["mkdp#util#install"]()
-		end,
-	})
+    --       [Markdown]
+    use({
+        "iamcco/markdown-preview.nvim",
+        run = function()
+            vim.fn["mkdp#util#install"]()
+        end,
+    })
 
-	--      [vim cool]
-	use("romainl/vim-cool")
+    --      [vim cool]
+    use("romainl/vim-cool")
 
-	--      [Live-server]
-	-- use("manzeloth/live-server")
+    --      [Live-server]
+    -- use("manzeloth/live-server")
 
-	--      [Transparent - allows for toggle]
-	use("xiyaowong/nvim-transparent")
+    --      [Transparent - allows for toggle]
+    use("xiyaowong/nvim-transparent")
 
-	--      [hlslens]
-	-- use({ "kevinhwang91/nvim-hlslens" })
+    --      [hlslens]
+    -- use({ "kevinhwang91/nvim-hlslens" })
 
-	--      [diffview]
-	use("sindrets/diffview.nvim")
+    --      [diffview]
+    use("sindrets/diffview.nvim")
 
-	--          [barbar]
-	use("romgrk/barbar.nvim")
+    --          [barbar]
+    use("romgrk/barbar.nvim")
 
-	--          [Vgit]
-	use({
-		"tanvirtin/vgit.nvim",
-		requires = {
-			"nvim-lua/plenary.nvim",
-		},
-	})
-	--  [Terminal in the floating/popup window.]
-	use("akinsho/toggleterm.nvim")
+    --          [Vgit]
+    use({
+        "tanvirtin/vgit.nvim",
+        requires = {
+            "nvim-lua/plenary.nvim",
+        },
+    })
+    --  [Terminal in the floating/popup window.]
+    use("akinsho/toggleterm.nvim")
 
-	--      [Wilder]
-	use("gelguy/wilder.nvim")
+    --      [Wilder]
+    use("gelguy/wilder.nvim")
 
-	--      [Smoothie]
-	use("psliwka/vim-smoothie")
+    --      [Smoothie]
+    use("psliwka/vim-smoothie")
 
-	--  [Add indentation guides on even blank lines]
-	use("lukas-reineke/indent-blankline.nvim")
+    --  [Add indentation guides on even blank lines]
+    use("lukas-reineke/indent-blankline.nvim")
 
-	--      [Notify]
-	use("rcarriga/nvim-notify")
+    --      [Notify]
+    use("rcarriga/nvim-notify")
 
-	--      [Whick key]
-	use({
-		"folke/which-key.nvim",
-		config = function()
-			vim.o.timeout = true
-			vim.o.timeoutlen = 300
-		end,
-	})
+    --      [Whick key]
+    use({
+        "folke/which-key.nvim",
+        config = function()
+            vim.o.timeout = true
+            vim.o.timeoutlen = 300
+        end,
+    })
 
-	--      [commentry]
-	use("tpope/vim-commentary")
+    --      [commentry]
+    use("tpope/vim-commentary")
 
-	--      [Vim Tex]
-	use("lervag/vimtex")
+    --      [Vim Tex]
+    use("lervag/vimtex")
 
-	--      [zen]
-	use("folke/zen-mode.nvim")
+    --      [zen]
+    use("folke/zen-mode.nvim")
 
-	--      [Hologram - Image Viewer]
-	use("edluffy/hologram.nvim")
+    --      [Hologram - Image Viewer]
+    use("edluffy/hologram.nvim")
 
-	-- Automatically set up your configuration after cloning packer.nvim
-	-- Put this at the end after all plugins
-	if packer_bootstrap then
-		require("packer").sync()
-	end
+    -- Automatically set up your configuration after cloning packer.nvim
+    -- Put this at the end after all plugins
+    if packer_bootstrap then
+        require("packer").sync()
+    end
 end)

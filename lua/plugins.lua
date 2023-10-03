@@ -23,6 +23,7 @@ return require("packer").startup(function(use)
 	use({ "rose-pine/neovim", as = "rose-pine" })
 	use("catppuccin/nvim")
 	use("davidosomething/vim-colors-meh")
+	use("rebelot/kanagawa.nvim")
 	use("projekt0n/github-nvim-theme")
 
 	--        [nvim tree]

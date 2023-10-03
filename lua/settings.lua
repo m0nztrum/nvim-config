@@ -12,7 +12,6 @@ vim.opt.nu = true
 
 -- Relative line numbers
 vim.opt.relativenumber = true
-vim.opt.cursorline = true
 
 -- Width of numbers
 vim.opt.numberwidth = 1
@@ -79,7 +78,6 @@ vim.wo.signcolumn = "yes"
 
 -- cursor line
 vim.opt.cursorline = true
-
 
 -- Whitespace chars
 vim.opt.listchars = { tab = ">-", trail = "~", space = "·", eol = "↵" }

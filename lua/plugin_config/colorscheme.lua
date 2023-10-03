@@ -15,6 +15,6 @@ lualine.setup({
 	},
 })
 
-vim.cmd([[ colorscheme catppuccin-mocha ]])
+vim.cmd([[ colorscheme kanagawa ]])
 
 vim.o.termguicolors = true

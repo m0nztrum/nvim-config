@@ -18,6 +18,7 @@ require("plugin_config.zenmode")
 require("plugin_config.formatter")
 require("plugin_config.markdown")
 require("plugin_config.mason")
+require("plugin_config.lspkind")
 --require("plugin_config.hlslens")
 
 --     [Themes]

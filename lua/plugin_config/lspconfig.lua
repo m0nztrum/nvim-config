@@ -39,6 +39,7 @@ nvim_lsp.bashls.setup({
 --      [python]
 nvim_lsp.pylsp.setup({
 	capabilities = capabilities,
+	autostart = true,
 })
 
 --      [typescript]

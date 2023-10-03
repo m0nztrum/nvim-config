@@ -24,6 +24,5 @@ require("plugin_config.lspsaga")
 require("plugin_config.colorizer")
 require("plugin_config.lspconfig")
 --require("plugin_config.hlslens")
-
 --     [Themes]
 require("plugin_config.gruvbox")

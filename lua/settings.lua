@@ -1,12 +1,14 @@
 -- VIM SETTINGS
 ---------------
+local wo = vim.wo
 local opt = vim.opt -- for conciseness
+local g = vim.g
 
 opt.autoread = true
 opt.autowrite = true
 
 --Netrw
-vim.g.netrw_liststyle = 1
+g.netrw_liststyle = 1
 
 -- Line numbers
 opt.nu = true
@@ -75,7 +77,7 @@ opt.sidescroll = 1
 --setup for vgit
 vim.o.updatetime = 300
 vim.o.incsearch = false
-vim.wo.signcolumn = "yes"
+wo.signcolumn = "yes"
 
 -- cursor line
 opt.cursorline = true

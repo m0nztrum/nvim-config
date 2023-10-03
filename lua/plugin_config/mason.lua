@@ -22,3 +22,12 @@ lspconfig.setup({
 	ensure_installed = { "lua_ls", "rust_analyzer", "pylsp" },
 	automatic_installation = true,
 })
+
+local status3, mason_tool = pcall(require, "mason-tool-installer")
+if not status3 then
+	return
+end
+
+mason_tool.setup({
+	run_on_start = true,
+})

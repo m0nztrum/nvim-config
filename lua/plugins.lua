@@ -55,6 +55,7 @@ return require("packer").startup(function(use)
 	use("neovim/nvim-lspconfig") -- Required
 	use("williamboman/mason.nvim") -- Optional
 	use({ "williamboman/mason-lspconfig.nvim" }) -- Optional
+	use("whoIsSethDaniel/mason-tool-installer.nvim")
 	-- Autocompletion
 	use("hrsh7th/nvim-cmp") -- Required
 	use("hrsh7th/cmp-nvim-lsp") -- Required

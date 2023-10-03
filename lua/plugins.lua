@@ -67,6 +67,8 @@ return require("packer").startup(function(use)
 	use("jose-elias-alvarez/null-ls.nvim")
 	use("onsails/lspkind-nvim")
 
+	use("nvimdev/lspsaga.nvim") -- LSP UIs
+
 	--          [autopair]
 	use("windwp/nvim-autopairs")
 

@@ -21,6 +21,7 @@ require("plugin_config.mason")
 require("plugin_config.lspkind")
 require("plugin_config.autopairs")
 require("plugin_config.colorizer")
+require("plugin_config.lspconfig")
 --require("plugin_config.hlslens")
 
 --     [Themes]

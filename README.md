@@ -1,9 +1,9 @@
-![nvim screenshot](./images/nvimconf.png)
+![nvim screenshot](./images/image1.png)
 
-![nvim-tree screenshot](./images/nvimtree.png)
+![nvim-tree screenshot](./images/image2.png)
 
-![code example](./images/code.png)
+![code example](./images/image3.png)
 
 ## PLUGIN MANAGER
 
-- [Packer](https://github.com/wbthomason/packer.nvim)
+[Packer](https://github.com/wbthomason/packer.nvim)

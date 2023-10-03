@@ -19,6 +19,8 @@ require("plugin_config.formatter")
 require("plugin_config.markdown")
 require("plugin_config.mason")
 require("plugin_config.lspkind")
+require("plugin_config.autopairs")
+require("plugin_config.colorizer")
 --require("plugin_config.hlslens")
 
 --     [Themes]

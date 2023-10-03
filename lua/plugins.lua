@@ -68,12 +68,7 @@ return require("packer").startup(function(use)
 	use("onsails/lspkind-nvim")
 
 	--          [autopair]
-	use({
-		"windwp/nvim-autopairs",
-		config = function()
-			require("nvim-autopairs").setup({})
-		end,
-	})
+	use("windwp/nvim-autopairs")
 
 	--          [Git]
 	use("lewis6991/gitsigns.nvim") -- gitsigns
@@ -94,6 +89,7 @@ return require("packer").startup(function(use)
 
 	--      [Live-server]
 	-- use("manzeloth/live-server")
+	use("norcalli/nvim-colorizer.lua")
 
 	--      [Transparent - allows for toggle]
 	use("xiyaowong/nvim-transparent")

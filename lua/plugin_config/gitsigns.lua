@@ -1,5 +1,6 @@
-require('gitsigns').setup({
-    signs = {
-        untracked = {text = '|'},
-    },
-})
+local status, gitsigns = pcall(require, "gitsigns")
+if not status then
+	return
+end
+
+gitsigns.setup({})

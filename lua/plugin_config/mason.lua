@@ -12,6 +12,13 @@ mason.setup({
 		border = "none",
 	},
 })
-require("mason-lspconfig").setup({
-	ensure_installed = { "lua_ls", "rust_analyzer", "clangd" },
+
+local status2, lspconfig = pcall(require, "mason-lspconfig")
+if not status2 then
+	return
+end
+
+lspconfig.setup({
+	ensure_installed = { "lua_ls", "rust_analyzer", "pylsp" },
+	automatic_installation = true,
 })

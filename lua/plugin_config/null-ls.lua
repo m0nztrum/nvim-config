@@ -20,14 +20,14 @@ local sources = {
 	formatting.asmfmt.with({ -- asm
 		filetypes = { "asm", "S", "nasm", "fasm", "yasm" },
 	}),
-	-- formatting.black, -- python
+	formatting.black, -- python
 	formatting.autopep8,
 	formatting.clang_format, -- c/cpp
 	formatting.deno_fmt, -- ts ,js , ts<REACT> , js<REACT>, md ,json , jsonc
 	formatting.stylua,
 	formatting.latexindent, -- latex
 	formatting.rustfmt, -- rust
- --    formatting
+	--    formatting
 	formatting.shfmt.with({
 		filetypes = { "sh", "zsh" },
 	}),

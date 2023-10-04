@@ -28,12 +28,14 @@ cmp.setup({
 		}),
 	}),
 	sources = cmp.config.sources({
-		{ name = "nvim_lsp" },
-		{ name = "buffer" }, -- text within current buffer
+		{ name = "nvim_lsp", keyword_length = 1 },
+		{ name = "buffer", keyword_length = 3 }, -- text within current buffer
 		{ name = "path" }, -- file system paths
-		{ name = "luasnip" },
+		{ name = "luasnip", keyword_length = 2 },
+		{ name = "nvim_lua" },
 	}),
 	formatting = {
+		fields = { "menu", "abbr", "kind" },
 		format = lspkind.cmp_format({
 			maxwidth = 50,
 			ellipsis_char = "...",

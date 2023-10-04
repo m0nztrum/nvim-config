@@ -19,7 +19,11 @@ if not status2 then
 end
 
 lspconfig.setup({
-	ensure_installed = { "lua_ls", "rust_analyzer", "pylsp" },
+	ensure_installed = {
+        "lua_ls",
+        "rust_analyzer",
+        "pylsp", "html",
+        "cssls", "pyright", },
 	automatic_installation = true,
 })
 

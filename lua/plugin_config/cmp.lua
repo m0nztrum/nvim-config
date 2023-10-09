@@ -34,6 +34,10 @@ cmp.setup({
 		{ name = "luasnip", keyword_length = 2 },
 		{ name = "nvim_lua" },
 	}),
+	experimental = {
+		native_menu = false,
+		ghost_text = true,
+	},
 	formatting = {
 		fields = { "menu", "abbr", "kind" },
 		format = lspkind.cmp_format({

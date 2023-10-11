@@ -76,6 +76,13 @@ nvim_lsp.tsserver.setup({
 	capabilities = capabilities,
 })
 
+vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
+	underline = true,
+	update_in_insert = false,
+	virtual_text = { spacing = 4, prefix = "\u{ea71}" },
+	severity_sort = true,
+})
+
 -- Diagnostic symbols in the sign column (gutter)
 local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
 for type, icon in pairs(signs) do

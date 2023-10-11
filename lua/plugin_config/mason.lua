@@ -20,10 +20,14 @@ end
 
 lspconfig.setup({
 	ensure_installed = {
-        "lua_ls",
-        "rust_analyzer",
-        "pylsp", "html",
-        "cssls", "pyright", },
+		"lua_ls",
+		"rust_analyzer",
+		"pylsp",
+		"html",
+		"cssls",
+		"pyright",
+        'clangd',
+	},
 	automatic_installation = true,
 })
 

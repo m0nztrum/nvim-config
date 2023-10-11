@@ -44,7 +44,7 @@ return require("packer").startup(function(use)
 	-- Telescope
 	use({
 		"nvim-telescope/telescope.nvim",
-		tag = "0.1.0",
+		tag = "0.1.3",
 		requires = { { "nvim-lua/plenary.nvim" } },
 	})
 	--      [Lsp signature]
@@ -67,7 +67,7 @@ return require("packer").startup(function(use)
 	use("L3MON4D3/LuaSnip") -- Required
 	use("rafamadriz/friendly-snippets") -- Optional
 	use("jose-elias-alvarez/null-ls.nvim")
-	use("onsails/lspkind-nvim")
+	use("onsails/lspkind-nvim") -- vscode like pictograms
 
 	use("nvimdev/lspsaga.nvim") -- LSP UIs
 

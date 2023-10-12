@@ -1,5 +1,3 @@
-local lualine = require("lualine")
-
 local colorscheme = require("gruvbox")
 
 colorscheme.setup({
@@ -8,13 +6,4 @@ colorscheme.setup({
 	},
 })
 
-lualine.setup({
-	options = {
-		theme = "auto",
-		transparent = true,
-	},
-})
-
-vim.cmd([[ colorscheme rose-pine ]])
-
-vim.o.termguicolors = true
+vim.cmd([[ colorscheme gruvbox ]])

@@ -147,9 +147,6 @@ return require("packer").startup(function(use)
 	--      [zen]
 	use("folke/zen-mode.nvim")
 
-	--      [Hologram - Image Viewer]
-	use("edluffy/hologram.nvim")
-
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if packer_bootstrap then

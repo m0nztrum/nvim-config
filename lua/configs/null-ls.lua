@@ -1,48 +1,11 @@
 -- FORMATTER
-local null_ls = require("null-ls")
 -- code action sources
 -- local code_actions = null_ls.builtins.code_actions
--- diagnostic sources
--- local diagnostics = null_ls.builtins.diagnostics
--- formatting sources
--- hover sources
 -- local hover = null_ls.builtins.hover
--- completion sources
 -- local completion = null_ls.builtins.completion
-local formatting = null_ls.builtins.formatting
-
---[[
-should echo 1 if available (and 0 if not)
-:echo executable("stylua")
---]]
-
-local sources = {
-	formatting.asmfmt.with({ -- asm
-		filetypes = { "asm", "S", "nasm", "fasm", "yasm" },
-	}),
-	formatting.black, -- python
-	formatting.autopep8,
-	formatting.clang_format, -- c/cpp
-	formatting.deno_fmt, -- ts ,js , ts<REACT> , js<REACT>, md ,json , jsonc
-	formatting.stylua,
-	formatting.latexindent, -- latex
-	formatting.rustfmt, -- rust
-	--    formatting
-	formatting.shfmt.with({
-		filetypes = { "sh", "zsh" },
-	}),
-	formatting.prettierd.with({
-		disabled_filetypes = {
-			"javascript",
-			"javascriptreact",
-			"typescript",
-			"typescriptreact",
-			"json",
-			"jsonc",
-			"markdown",
-		},
-	}),
-}
+local null_ls = require("null-ls")
+local formatting = null_ls.builtins.formatting -- formatting sources
+local diagnostics = null_ls.builtins.diagnostics -- diagnostics sources
 
 local lsp_formatting = function(bufnr)
 	vim.lsp.buf.format({
@@ -72,6 +35,20 @@ local on_attach = function(client, bufnr)
 end
 
 null_ls.setup({
-	sources = sources,
+	sources = {
+		--  formatting
+		formatting.black, -- python
+		formatting.autopep8,
+		-- formatting.clang_format, -- c/cpp
+		formatting.deno_fmt, -- ts ,js , ts<REACT> , js<REACT>, md ,json , jsonc
+		formatting.stylua,
+		formatting.latexindent, -- latex
+		formatting.rustfmt, -- rust
+		formatting.shfmt.with({
+			filetypes = { "sh", "zsh" },
+		}),
+		--  diagnostic
+		-- diagnostics.flake8, -- python
+	},
 	on_attach = on_attach,
 })

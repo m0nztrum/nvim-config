@@ -13,5 +13,5 @@ gitsigns.setup({
 		untracked = { text = "┆" },
 	},
 	signcolumn = true, -- Toggle with ':Gitsigns toggle_signs'
-	current_line_blame = false,
+	current_line_blame = true,
 })

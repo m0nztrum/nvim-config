@@ -1,6 +1,8 @@
 -- Barbar Setup
 ---------
-require("barbar").setup({
+local bar = require("barbar")
+
+bar.setup({
 	animation = true,
 	auto_hide = false,
 	tabpages = true,

@@ -23,7 +23,10 @@ local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 -- add to your shared on_attach callback
 local on_attach = function(client, bufnr)
 	if client.supports_method("textDocument/formatting") then
-		vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
+		vim.api.nvim_clear_autocmds({
+			group = augroup,
+			buffer = bufnr,
+		})
 		vim.api.nvim_create_autocmd("BufWritePre", {
 			group = augroup,
 			buffer = bufnr,
@@ -38,8 +41,8 @@ null_ls.setup({
 	sources = {
 		--  formatting
 		formatting.black, -- python
-		formatting.autopep8,
-		-- formatting.clang_format, -- c/cpp
+		-- formatting.autopep8,
+		formatting.clang_format, -- c/cpp
 		formatting.deno_fmt, -- ts ,js , ts<REACT> , js<REACT>, md ,json , jsonc
 		formatting.stylua,
 		formatting.latexindent, -- latex
@@ -48,7 +51,7 @@ null_ls.setup({
 			filetypes = { "sh", "zsh" },
 		}),
 		--  diagnostic
-		-- diagnostics.flake8, -- python
+		diagnostics.pylint, -- python
 	},
 	on_attach = on_attach,
 })

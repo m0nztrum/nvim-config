@@ -3,7 +3,7 @@ local telescope = require("telescope")
 
 telescope.setup({
 	defaults = {
-		layout_strategy = "vertical",
+		layout_strategy = "horizontal",
 		disable_devicons = false,
 		color_devicons = true,
 		layout_config = { preview_cutoff = 0 },

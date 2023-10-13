@@ -26,7 +26,7 @@ lspconfig.setup({
 		"html",
 		"cssls",
 		"pyright",
-        'clangd',
+		"clangd",
 	},
 	automatic_installation = true,
 })

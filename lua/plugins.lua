@@ -16,7 +16,7 @@ local plugins = {
 	"ellisonleao/gruvbox.nvim",
 	"water-sucks/darkrose.nvim",
 	"EdenEast/nightfox.nvim",
-	{ "rose-pine/neovim", name = "rose-pine" },
+	{ "rose-pine/neovim", name = "rose-pine", priority = 1000 },
 	"catppuccin/nvim",
 	"davidosomething/vim-colors-meh",
 	"rebelot/kanagawa.nvim",
@@ -42,8 +42,6 @@ local plugins = {
 		version = "0.1.3",
 		dependencies = { { "nvim-lua/plenary.nvim" } },
 	},
-	--      [Lsp signature]
-	"ray-x/lsp_signature.nvim",
 
 	--          [LSP]
 	-- LSP Support

@@ -1,8 +1,8 @@
-![nvim screenshot](./images/image1.png)
+![lazy screenshot](./Images/lazy.png)
 
-![nvim-tree screenshot](./images/image2.png)
+![nvim-tree screenshot](./Images/nvim-tree.png)
 
-![code example](./images/image3.png)
+![telescope screenshot](./Images/telescope.png)
 
 ## Neovim setup
 

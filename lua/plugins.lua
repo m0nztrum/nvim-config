@@ -61,7 +61,6 @@ local plugins = {
 	"rafamadriz/friendly-snippets", -- Optional
 	"jose-elias-alvarez/null-ls.nvim",
 	"onsails/lspkind-nvim", -- vscode like pictograms
-
 	"nvimdev/lspsaga.nvim", -- LSP UIs
 
 	--          [autopair]

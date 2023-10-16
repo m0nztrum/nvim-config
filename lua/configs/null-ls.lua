@@ -1,7 +1,8 @@
 -- FORMATTER
 -- code action sources
 -- local code_actions = null_ls.builtins.code_actions
--- local hover = null_ls.builtins.hover
+--
+--local hover = null_ls.builtins.hover
 -- local completion = null_ls.builtins.completion
 local null_ls = require("null-ls")
 local formatting = null_ls.builtins.formatting -- formatting sources

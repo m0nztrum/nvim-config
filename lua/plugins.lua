@@ -64,8 +64,7 @@ local plugins = {
 
 	"nvimdev/lspsaga.nvim", -- LSP UIs
 
-	--          [autopair]
-	"windwp/nvim-autopairs",
+	"windwp/nvim-autopairs", -- [autopairs]
 
 	--          [Git]
 	"lewis6991/gitsigns.nvim", -- gitsigns
@@ -73,7 +72,7 @@ local plugins = {
 	"tpope/vim-fugitive", -- fugitive
 	"tpope/vim-rhubarb",
 
-	--       [Markdown]
+	--       [Markdown preview]
 	{
 		"iamcco/markdown-preview.nvim",
 		build = function()
@@ -85,7 +84,13 @@ local plugins = {
 	"romainl/vim-cool",
 
 	--      [Live-server]
-	-- "manzeloth/live-server"
+	{
+		"aurum77/live-server.nvim",
+		build = function()
+			require("live_server.util").install()
+		end,
+		cmd = { "LiveServer", "LiveServerStart", "LiveServerStop" },
+	},
 
 	--      [colorizer]
 	"norcalli/nvim-colorizer.lua",

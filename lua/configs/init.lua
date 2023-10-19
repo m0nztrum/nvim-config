@@ -31,3 +31,6 @@ require("configs.autopairs")
 require("configs.lspsaga")
 require("configs.colorizer")
 require("configs.lspconfig")
+
+--      [live server]
+require("configs.live-server")

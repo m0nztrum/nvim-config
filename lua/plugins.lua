@@ -32,7 +32,15 @@ local plugins = {
 	"nvim-tree/nvim-web-devicons",
 
 	--      [treesitter]
-	{ { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" } },
+	{
+		{
+			"nvim-treesitter/nvim-treesitter",
+			dependencies = {
+				{ "windwp/nvim-ts-autotag" },
+			},
+			build = ":TSUpdate",
+		},
+	},
 	--lua line
 	"nvim-lualine/lualine.nvim",
 

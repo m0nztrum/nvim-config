@@ -1,8 +1,7 @@
 -- FORMATTER
 -- code action sources
 -- local code_actions = null_ls.builtins.code_actions
---
---local hover = null_ls.builtins.hover
+-- local hover = null_ls.builtins.hover
 -- local completion = null_ls.builtins.completion
 local null_ls = require("null-ls")
 local formatting = null_ls.builtins.formatting -- formatting sources
@@ -44,8 +43,9 @@ null_ls.setup({
 		formatting.black, -- python
 		-- formatting.autopep8,
 		formatting.clang_format, -- c/cpp
-		formatting.deno_fmt, -- ts ,js , ts<REACT> , js<REACT>, md ,json , jsonc
+		-- formatting.deno_fmt, -- ts ,js , ts<REACT> , js<REACT>, md ,json , jsonc
 		formatting.stylua,
+		formatting.prettierd,
 		formatting.latexindent, -- latex
 		formatting.rustfmt, -- rust
 		formatting.shfmt.with({
@@ -53,6 +53,7 @@ null_ls.setup({
 		}),
 		--  diagnostic
 		diagnostics.pylint, -- python
+		diagnostics.tidy, -- markup languages
 	},
 	on_attach = on_attach,
 })

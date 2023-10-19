@@ -76,6 +76,11 @@ nvim_lsp.tsserver.setup({
 	capabilities = capabilities,
 })
 
+--      [SQL]
+nvim_lsp.sqlls.setup({
+	capabilities = capabilities,
+})
+
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
 	underline = true,
 	update_in_insert = false,

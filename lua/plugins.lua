@@ -72,7 +72,8 @@ local plugins = {
 
 	"nvimdev/lspsaga.nvim", -- LSP UIs
 
-	"windwp/nvim-autopairs", -- [autopairs]
+	--      [autopairs]
+	{ "windwp/nvim-autopairs", event = "InsertEnter" },
 
 	--          [Git]
 	"lewis6991/gitsigns.nvim", -- gitsigns

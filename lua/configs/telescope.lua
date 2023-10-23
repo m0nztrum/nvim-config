@@ -36,7 +36,7 @@ telescope.setup({
 -- Keymaps
 keymap.set("n", "<space>ff", builtin.find_files, { desc = "find files" }) --find files
 keymap.set("n", "<Space><Space>", builtin.oldfiles, {}) --olf files
-keymap.set("n", "<Space>lg", builtin.live_grep, {})
+keymap.set("n", "<Space>lg", builtin.live_grep, { desc = "Live grep" })
 keymap.set("n", "<Space>fh", builtin.help_tags, { desc = "help tags" })
 keymap.set("n", "<Space>gs", builtin.git_files, {})
 keymap.set("n", "<leader>com", builtin.commands, { desc = "Show vim builtin commands" })

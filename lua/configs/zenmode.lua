@@ -16,4 +16,4 @@ zenmode.setup({
 
 keymap.set("n", "<leader>z", function()
 	zenmode.toggle()
-end)
+end, { desc = "Toggle zenmode" })

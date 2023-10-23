@@ -67,10 +67,15 @@ local plugins = {
 	-- Snippets
 	"L3MON4D3/LuaSnip", -- Required
 	"rafamadriz/friendly-snippets", -- Optional
-	"jose-elias-alvarez/null-ls.nvim",
 	"onsails/lspkind-nvim", -- vscode like pictograms
 
 	"nvimdev/lspsaga.nvim", -- LSP UIs
+
+	--      [conform nvim]
+	{ "stevearc/conform.nvim" },
+
+	--      [nvim lint]
+	{ "mfussenegger/nvim-lint", event = { "BufReadPre", "BufNewFile" } },
 
 	--      [autopairs]
 	{ "windwp/nvim-autopairs", event = "InsertEnter" },
@@ -150,4 +155,10 @@ local plugins = {
 
 local opts = {}
 
-require("lazy").setup(plugins, opts)
+require("lazy").setup({ plugins, opts }, {
+	checker = {
+		enabled = true,
+		notify = false,
+	},
+	pills = true,
+})

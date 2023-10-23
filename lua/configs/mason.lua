@@ -39,11 +39,12 @@ end
 mason_tool.setup({
 	run_on_start = true,
 	ensure_installed = {
-		"stylua",
-		"isort",
-		"black",
-		"pylint",
-		"prettier",
+		"stylua", -- lua formatter
+		"isort", -- formatter for sorting import python
+		"black", -- formatter for python
+		"pylint", -- linter for python
+		"prettier", -- formatter
 		"clang-format",
+		"eslint_d",
 	},
 })

@@ -101,4 +101,4 @@ local wk = require("which-key")
 wk.register(mappings, opts)
 
 --  colorscheme
-vim.cmd([[colorscheme gruvbox]])
+vim.cmd([[colorscheme catppuccin]])

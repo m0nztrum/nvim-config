@@ -39,6 +39,6 @@ keymap.set("n", "<Space><Space>", builtin.oldfiles, {}) --olf files
 keymap.set("n", "<Space>lg", builtin.live_grep, {})
 keymap.set("n", "<Space>fh", builtin.help_tags, { desc = "help tags" })
 keymap.set("n", "<Space>gs", builtin.git_files, {})
-keymap.set("n", "<leader>com", builtin.commands, {})
+keymap.set("n", "<leader>com", builtin.commands, { desc = "Show vim builtin commands" })
 keymap.set("n", "<leader>bu", builtin.buffers, { desc = "show buffers" })
 keymap.set("n", "<leader>man", builtin.man_pages, {})

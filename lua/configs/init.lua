@@ -23,7 +23,6 @@ require("configs.toggleterm")
 require("configs.vimtex")
 require("configs.zenmode")
 --      [LSP]
-require("configs.null-ls")
 require("configs.mason")
 require("configs.lspkind")
 require("configs.markdown")
@@ -31,6 +30,8 @@ require("configs.autopairs")
 require("configs.lspsaga")
 require("configs.colorizer")
 require("configs.lspconfig")
+require("configs.formatting")
+require("configs.linting")
 
 --      [live server]
 require("configs.live-server")

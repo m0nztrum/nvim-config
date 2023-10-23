@@ -38,4 +38,12 @@ end
 
 mason_tool.setup({
 	run_on_start = true,
+	ensure_installed = {
+		"stylua",
+		"isort",
+		"black",
+		"pylint",
+		"prettier",
+		"clang-format",
+	},
 })

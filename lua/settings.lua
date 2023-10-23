@@ -11,7 +11,7 @@ opt.autowrite = true
 g.netrw_liststyle = 1
 
 -- Line numbers
-opt.nu = true
+opt.number = true
 
 -- Relative line numbers
 opt.relativenumber = true
@@ -88,6 +88,13 @@ opt.whichwrap = "<,>,h,l,[,]"
 
 -- vim notify
 vim.notify = require("notify")
+
+-- split windows
+opt.splitright = true -- splits vertical window to the right
+opt.splitbelow = true -- splits horizontal window to the bottom
+
+-- turn of swapfile
+opt.swapfile = false
 
 -- whick key
 local wk = require("which-key")

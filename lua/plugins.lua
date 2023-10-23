@@ -13,14 +13,14 @@ vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
 	--          [Theme]
-	"ellisonleao/gruvbox.nvim",
-	"water-sucks/darkrose.nvim",
-	"EdenEast/nightfox.nvim",
+	{ "ellisonleao/gruvbox.nvim", priority = 500 },
+	{ "water-sucks/darkrose.nvim" },
+	{ "EdenEast/nightfox.nvim" },
 	{ "rose-pine/neovim", name = "rose-pine", priority = 1000 },
-	"catppuccin/nvim",
-	"davidosomething/vim-colors-meh",
-	"rebelot/kanagawa.nvim",
-	"projekt0n/github-nvim-theme",
+	{ "catppuccin/nvim" },
+	{ "davidosomething/vim-colors-meh" },
+	{ "rebelot/kanagawa.nvim" },
+	{ "projekt0n/github-nvim-theme" },
 
 	--        [nvim tree]
 	"nvim-tree/nvim-tree.lua",
@@ -102,16 +102,16 @@ local plugins = {
 	},
 
 	--      [colorizer]
-	"norcalli/nvim-colorizer.lua",
+	{ "norcalli/nvim-colorizer.lua", event = { "BufReadPre", "BufNewFile" } },
 
 	--      [Transparent - allows for toggle]
-	"xiyaowong/nvim-transparent",
+	{ "xiyaowong/nvim-transparent" },
 
 	--      [diffview]
-	"sindrets/diffview.nvim",
+	{ "sindrets/diffview.nvim" },
 
 	--          [barbar]
-	"romgrk/barbar.nvim",
+	{ "romgrk/barbar.nvim" },
 
 	--          [Vgit]
 	{

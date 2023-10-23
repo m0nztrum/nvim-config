@@ -1,5 +1,6 @@
 -- VIM FUGITIVE
 ---------------
+local keymap = vim.keymap
 
 -- Keybindings
-vim.keymap.set("n", "<leader>fg", vim.cmd.Git)
+keymap.set("n", "<leader>fg", vim.cmd.Git)

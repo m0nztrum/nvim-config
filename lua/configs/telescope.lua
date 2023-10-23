@@ -1,5 +1,6 @@
 local builtin = require("telescope.builtin")
 local telescope = require("telescope")
+local keymap = vim.keymap
 
 telescope.setup({
 	defaults = {
@@ -33,11 +34,11 @@ telescope.setup({
 })
 
 -- Keymaps
-vim.keymap.set("n", "<space>ff", builtin.find_files, {}) --find files
-vim.keymap.set("n", "<Space><Space>", builtin.oldfiles, {}) --olf files
-vim.keymap.set("n", "<Space>lg", builtin.live_grep, {})
-vim.keymap.set("n", "<Space>fh", builtin.help_tags, {})
-vim.keymap.set("n", "<Space>gs", builtin.git_files, {})
-vim.keymap.set("n", "<leader>com", builtin.commands, {})
-vim.keymap.set("n", "<leader>bu", builtin.buffers, {})
-vim.keymap.set("n", "<leader>man", builtin.man_pages, {})
+keymap.set("n", "<space>ff", builtin.find_files, { desc = "find files" }) --find files
+keymap.set("n", "<Space><Space>", builtin.oldfiles, {}) --olf files
+keymap.set("n", "<Space>lg", builtin.live_grep, {})
+keymap.set("n", "<Space>fh", builtin.help_tags, { desc = "help tags" })
+keymap.set("n", "<Space>gs", builtin.git_files, {})
+keymap.set("n", "<leader>com", builtin.commands, {})
+keymap.set("n", "<leader>bu", builtin.buffers, { desc = "show buffers" })
+keymap.set("n", "<leader>man", builtin.man_pages, {})

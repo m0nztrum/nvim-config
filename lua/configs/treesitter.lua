@@ -7,6 +7,7 @@ require("nvim-treesitter.configs").setup({
 		"rust",
 		"ruby",
 		"vim",
+		"json",
 		"javascript",
 		"typescript",
 		"css",
@@ -15,6 +16,7 @@ require("nvim-treesitter.configs").setup({
 		"python",
 		"markdown",
 		"tsx",
+		"gitignore",
 	},
 
 	-- Install parsers synchronously (only applied to `ensure_installed`)

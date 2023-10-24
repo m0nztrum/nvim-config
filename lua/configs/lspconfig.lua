@@ -17,6 +17,15 @@ local on_attach = function(client, bufnr)
 
 	opts.desc = "Show available code actions"
 	keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts) -- see available code actions
+
+	opts.desc = "Go to previous diagnostic"
+	keymap.set("n", "[d", vim.diagnostic.goto_prev, opts) -- jump to previous diagnostic in buffer
+
+	opts.desc = "Go to next diagnostic"
+	keymap.set("n", "]d", vim.diagnostic.goto_next, opts) -- jump to next diagnostic in buffer
+
+	-- opts.desc = "Show LSP type definitions"
+	-- keymap.set("n", "gd", "<cmd>Telescope lsp_type_definitions<CR>", opts) -- show lsp type definitions
 end
 
 local protocol = require("vim.lsp.protocol")

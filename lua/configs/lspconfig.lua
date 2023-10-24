@@ -3,6 +3,19 @@ if not status then
 	return
 end
 
+local keymap = vim.keymap
+local opts = { noremap = true, silent = true }
+
+local on_attach = function(client, bufnr)
+	opts.buffer = bufnr
+
+	opts.desc = "Restart Lsp"
+	keymap.set("n", "<leader>rs", ":LspRestart<CR>", opts)
+
+	opts.desc = "Show buffer diagnostics"
+	keymap.set("n", "<leader>D", "<cmd>Telescope  diagnostics bufnr=0<CR>", opts)
+end
+
 local protocol = require("vim.lsp.protocol")
 -- Set up completion using nvim_cmp with LSP source
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
@@ -39,6 +52,7 @@ protocol.CompletionItemKind = {
 --      [Lua]
 nvim_lsp.lua_ls.setup({
 	capabilities = capabilities,
+	on_attach = on_attach,
 })
 
 --      [C/C++]
@@ -52,9 +66,9 @@ nvim_lsp.cssls.setup({
 })
 
 --      [rust]
-nvim_lsp.rust_analyzer.setup({
-	capabilities = capabilities,
-})
+-- nvim_lsp.rust_analyzer.setup({
+-- 	capabilities = capabilities,
+-- })
 
 --      [html]
 nvim_lsp.html.setup({
@@ -69,6 +83,7 @@ nvim_lsp.bashls.setup({
 --      [python]
 nvim_lsp.pylsp.setup({
 	capabilities = capabilities,
+	filetypes = { "python" },
 })
 
 --      [typescript]
@@ -77,9 +92,9 @@ nvim_lsp.tsserver.setup({
 })
 
 --      [SQL]
-nvim_lsp.sqlls.setup({
-	capabilities = capabilities,
-})
+-- nvim_lsp.sqlls.setup({
+-- 	capabilities = capabilities,
+-- })
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
 	underline = true,

@@ -160,5 +160,4 @@ require("lazy").setup({ plugins, opts }, {
 		enabled = true,
 		notify = false,
 	},
-	pills = true,
 })

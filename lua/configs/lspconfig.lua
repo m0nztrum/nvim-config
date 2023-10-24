@@ -10,10 +10,13 @@ local on_attach = function(client, bufnr)
 	opts.buffer = bufnr
 
 	opts.desc = "Restart Lsp"
-	keymap.set("n", "<leader>rs", ":LspRestart<CR>", opts)
+	keymap.set("n", "<leader>rs", ":LspRestart<CR>", opts) -- mapping to restart lsp if necessary
 
 	opts.desc = "Show buffer diagnostics"
-	keymap.set("n", "<leader>D", "<cmd>Telescope  diagnostics bufnr=0<CR>", opts)
+	keymap.set("n", "<leader>D", "<cmd>Telescope  diagnostics bufnr=0<CR>", opts) -- show diagnostics for file
+
+	opts.desc = "Show available code actions"
+	keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts) -- see available code actions
 end
 
 local protocol = require("vim.lsp.protocol")
@@ -84,6 +87,7 @@ nvim_lsp.bashls.setup({
 nvim_lsp.pylsp.setup({
 	capabilities = capabilities,
 	filetypes = { "python" },
+	on_attach = on_attach,
 })
 
 --      [typescript]

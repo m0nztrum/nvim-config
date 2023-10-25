@@ -75,10 +75,11 @@ nvim_lsp.lua_ls.setup({
 
 --      [C/C++]
 nvim_lsp.clangd.setup({
-	capabilities = capabilities,
+	capabilities = {
+		offsetEncoding = { "utf-16" },
+	},
 	on_attach = on_attach,
 	cmd = { "clangd" },
-	filetypes = { "c", "cpp", "objc" },
 })
 
 --      [css]

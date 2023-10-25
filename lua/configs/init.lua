@@ -30,8 +30,8 @@ require("configs.autopairs")
 require("configs.lspsaga")
 require("configs.colorizer")
 require("configs.lspconfig")
-require("configs.formatting")
-require("configs.linting")
-
+-- require("configs.formatting")
+-- require("configs.linting")
+require("configs.null-ls")
 --      [live server]
 require("configs.live-server")

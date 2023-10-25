@@ -9,7 +9,7 @@ conform.setup({
 		markdown = { "prettier" },
 		html = { "prettier" },
 		css = { "prettier" },
-		c = { "clang-format" },
+		c = { "clang_format" },
 	},
 
 	format_on_save = {
@@ -21,7 +21,7 @@ conform.setup({
 		conform.format({
 			lsp_fallback = true,
 			async = false,
-			timeout_ms = 500,
+			timeout_ms = 1000,
 		})
 	end, { desc = "Format file or range(in visual mode)" }),
 })

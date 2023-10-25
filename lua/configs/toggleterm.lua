@@ -1,23 +1,22 @@
-vim.keymap.set('n', '<leader>ft', vim.cmd.ToggleTerm)
-
+vim.keymap.set("n", "<leader>ft", vim.cmd.ToggleTerm)
 
 local Direction = {
-  horizontal = "horizontal",
-  vertical = "vertical",
-  tab = "tab",
-  float = "float"
+	horizontal = "horizontal",
+	vertical = "vertical",
+	tab = "tab",
+	float = "float",
 }
 
-require("toggleterm").setup {
-    direction = Direction.float,
-    hide_numbers = true,
-    start_in_insert = true,
-    close_on_exit = true,
-    float_opts = {
-        border = 'curved',
-    }
-}
+require("toggleterm").setup({
+	direction = Direction.float,
+	hide_numbers = true,
+	start_in_insert = true,
+	close_on_exit = true,
+	float_opts = {
+		border = "curved",
+	},
+})
 
-vim.cmd[[
+vim.cmd([[
 tnoremap <ESC> <C-\><C-n>
-]]
+]])

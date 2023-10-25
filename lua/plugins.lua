@@ -74,6 +74,7 @@ local plugins = {
 	--      [conform nvim]
 	{ "stevearc/conform.nvim" },
 
+	{ "jose-elias-alvarez/null-ls.nvim" },
 	--      [nvim lint]
 	{ "mfussenegger/nvim-lint", event = { "BufReadPre", "BufNewFile" } },
 

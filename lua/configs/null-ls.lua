@@ -18,7 +18,9 @@ null_ls.setup({
 		formatting.prettier,
 		formatting.stylua,
 		formatting.isort,
-		formatting.clang_format,
+		formatting.clang_format.with({
+			extra_args = { "-style=", '"{IndentWidth: 4}"' },
+		}),
 		formatting.black,
 		diagnostics.pylint,
 		diagnostics.eslint_d,

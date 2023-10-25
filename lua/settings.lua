@@ -102,3 +102,5 @@ wk.register(mappings, opts)
 
 --  colorscheme
 vim.cmd([[colorscheme catppuccin]])
+
+-- vim.o.cindent = true

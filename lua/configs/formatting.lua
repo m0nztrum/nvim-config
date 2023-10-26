@@ -9,7 +9,7 @@ conform.setup({
 		markdown = { "prettier" },
 		html = { "prettier" },
 		css = { "prettier" },
-		c = { "clang_format" },
+		-- c = { "clang_format" }, -- commented because not really needed
 	},
 
 	format_on_save = {

@@ -4,7 +4,7 @@ local keymap = vim.keymap
 lint.linters_by_ft = {
 	python = { "pylint" },
 	javascript = { "eslint_d" },
-	html = { "markdownlint" },
+	-- html = { "markdownlint" },
 	-- python = { "flake8" },
 }
 

@@ -101,6 +101,6 @@ local wk = require("which-key")
 wk.register(mappings, opts)
 
 --  colorscheme
-vim.cmd([[colorscheme catppuccin]])
+vim.cmd([[colorscheme horizon]])
 
 -- vim.o.cindent = true

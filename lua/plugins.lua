@@ -22,6 +22,14 @@ local plugins = {
 	{ "rebelot/kanagawa.nvim" },
 	{ "projekt0n/github-nvim-theme" },
 
+	--      [startup page]
+	{
+		"goolord/alpha-nvim",
+		config = function()
+			require("alpha").setup(require("alpha.themes.dashboard").config)
+		end,
+	},
+
 	--        [nvim tree]
 	"nvim-tree/nvim-tree.lua",
 

@@ -21,6 +21,7 @@ local plugins = {
 	{ "davidosomething/vim-colors-meh" },
 	{ "rebelot/kanagawa.nvim" },
 	{ "projekt0n/github-nvim-theme" },
+	{ "lunarvim/horizon.nvim" },
 
 	--      [startup page]
 	{
@@ -144,7 +145,7 @@ local plugins = {
 	"psliwka/vim-smoothie",
 
 	--  [Add indentation guides on even blank lines]
-	"lukas-reineke/indent-blankline.nvim",
+	{ "lukas-reineke/indent-blankline.nvim" },
 
 	--      [Notify]
 	"rcarriga/nvim-notify",

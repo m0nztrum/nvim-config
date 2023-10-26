@@ -86,6 +86,7 @@ nvim_lsp.clangd.setup({
 --      [css]
 nvim_lsp.cssls.setup({
 	capabilities = capabilities,
+	on_attach = on_attach,
 })
 
 --      [rust]
@@ -96,23 +97,25 @@ nvim_lsp.cssls.setup({
 --      [html]
 nvim_lsp.html.setup({
 	capabilities = capabilities,
+	on_attach = on_attach,
 })
 
 --      [bash]
 nvim_lsp.bashls.setup({
 	capabilities = capabilities,
+	on_attach = on_attach,
 })
 
 --      [python]
 nvim_lsp.pylsp.setup({
 	capabilities = capabilities,
-	filetypes = { "python" },
 	on_attach = on_attach,
 })
 
 --      [typescript]
 nvim_lsp.tsserver.setup({
 	capabilities = capabilities,
+	on_attach = on_attach,
 })
 
 --      [SQL]

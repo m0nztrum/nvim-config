@@ -77,6 +77,7 @@ nvim_lsp.lua_ls.setup({
 nvim_lsp.clangd.setup({
 	capabilities = {
 		offsetEncoding = { "utf-16" },
+		capabilities, -- for cmp stuff
 	},
 	on_attach = on_attach,
 	cmd = { "clangd" },

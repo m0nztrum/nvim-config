@@ -24,12 +24,7 @@ local plugins = {
 	{ "lunarvim/horizon.nvim" },
 
 	--      [startup page]
-	{
-		"goolord/alpha-nvim",
-		config = function()
-			require("alpha").setup(require("alpha.themes.dashboard").config)
-		end,
-	},
+	{ "goolord/alpha-nvim" },
 
 	--        [nvim tree]
 	"nvim-tree/nvim-tree.lua",

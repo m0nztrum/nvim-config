@@ -46,4 +46,4 @@ require("configs.linting")
 require("configs.live-server")
 
 --      [startup]
--- require("configs.startup")
+require("configs.startup")

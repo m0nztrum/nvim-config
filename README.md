@@ -1,4 +1,4 @@
-![lazy screenshot](./Images/lazy.png)
+![startup page](./Images/startup.png)
 
 ![nvim-tree screenshot](./Images/nvim-tree.png)
 

@@ -48,11 +48,9 @@ dashboard.section.header.val = logo
 dashboard.section.header.opts.hl = pick_color()
 
 dashboard.section.buttons.val = {
-	dashboard.button("<Leader>ff", "  File Explorer"),
-	dashboard.button("<Leader><leader>", "Old Files"),
+	dashboard.button("e", "  File Explorer", ":Telescope find_files<CR>"),
+	dashboard.button("r", " Old Files", ":Telescope oldfiles<CR>"),
 	dashboard.button("q", "  Quit", ":qa<cr>"),
 }
-
-dashboard.section.footer.opts.hl = "Constant"
 
 alpha.setup(dashboard.opts)

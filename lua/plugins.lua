@@ -21,7 +21,7 @@ local plugins = {
 	{ "davidosomething/vim-colors-meh" },
 	{ "rebelot/kanagawa.nvim" },
 	{ "projekt0n/github-nvim-theme" },
-	{ "lunarvim/horizon.nvim" },
+	{ "akinsho/horizon.nvim", version = "*" },
 
 	--      [startup page]
 	{ "goolord/alpha-nvim" },

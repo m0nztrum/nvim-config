@@ -1,5 +1,3 @@
--- GITGUTTER
-------------
-
+local keymap = vim.keymap
 -- Keybindings
-vim.keymap.set("n", "<leader>gg", "<cmd>GitGutterToggle<CR>")
+keymap.set("n", "<leader>gg", "<cmd>GitGutterToggle<CR>")

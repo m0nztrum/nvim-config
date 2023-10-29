@@ -1,5 +1,4 @@
--- UNDOTREE KEYBINDINGS
------------------------
+--      keybinds
 local keymap = vim.keymap
 
 -- Toggle undotree

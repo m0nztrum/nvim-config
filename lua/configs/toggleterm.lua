@@ -1,4 +1,7 @@
-vim.keymap.set("n", "<leader>ft", vim.cmd.ToggleTerm)
+local keymap = vim.keymap
+local toggleterm = require("toggleterm")
+
+keymap.set("n", "<leader>ft", vim.cmd.ToggleTerm)
 
 local Direction = {
 	horizontal = "horizontal",
@@ -7,7 +10,7 @@ local Direction = {
 	float = "float",
 }
 
-require("toggleterm").setup({
+toggleterm.setup({
 	direction = Direction.float,
 	hide_numbers = true,
 	start_in_insert = true,

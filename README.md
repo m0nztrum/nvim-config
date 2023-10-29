@@ -1,12 +1,18 @@
 ![startup page](./Images/startup.png)
 
-![nvim-tree screenshot](./Images/nvim-tree.png)
+![mason](./Images/mason.png)
+
+![cmp](./Images/cmp.png)
+
+![whichkey](./Images/whichkey.png)
+
+![nvim-tree screenshot](./Images/tree.png)
 
 ![telescope screenshot](./Images/telescope.png)
 
 ## Neovim setup
 
-Requires [Neovim](https://neovim.io/) (>= 0.8)
+This setup requires [Neovim](https://neovim.io/) (>= 0.8)
 
 ## List of Plugins
 

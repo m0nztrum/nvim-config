@@ -1,6 +1,3 @@
--- LUALINE
-----------
-
 require("lualine").setup({
 	options = {
 		icons_enabled = true,
@@ -29,9 +26,6 @@ require("lualine").setup({
 		lualine_b = {
 			{ "branch" },
 			{ "diff", colored = true },
-		},
-		lualine_c = { { "filename", file_status = true, path = 0, newfile_status = true }, "searchcount" },
-		lualine_x = {
 			{
 				"diagnostics",
 				always_visible = false,
@@ -39,6 +33,9 @@ require("lualine").setup({
 				symbols = { error = " " },
 				-- symbols = { error = " ", warn = " ", info = " ", hint = "" },
 			},
+		},
+		lualine_c = { { "filename", file_status = true, path = 0, newfile_status = true }, { "searchcount" } },
+		lualine_x = {
 			"encoding",
 			{ "filetype", icon_only = false, colored = true },
 			"fileformat",
@@ -55,15 +52,6 @@ require("lualine").setup({
 		lualine_z = {},
 	},
 	tabline = {},
-	winbar = {
-		-- lualine_a = {},
-		-- lualine_b = {},
-		-- lualine_c = {},
-		-- lualine_x = {},
-		-- lualine_y = {},
-		-- lualine_z = {},
-		--
-	},
 	inactive_winbar = {},
 	extensions = { "fugitive", "nvim-tree" },
 })

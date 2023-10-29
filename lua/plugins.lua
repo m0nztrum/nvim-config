@@ -41,6 +41,7 @@ local plugins = {
 			"nvim-treesitter/nvim-treesitter",
 			dependencies = {
 				{ "windwp/nvim-ts-autotag" },
+				-- { "HiPhish/nvim-ts-rainbow2" },
 			},
 			build = ":TSUpdate",
 		},
@@ -69,6 +70,7 @@ local plugins = {
 	"saadparwaiz1/cmp_luasnip", -- Optional
 	"hrsh7th/cmp-nvim-lua", -- Optional
 	"hrsh7th/cmp-nvim-lsp-signature-help", -- Optional
+	"hrsh7th/cmp-vsnip", -- Optional
 	-- Snippets
 	"L3MON4D3/LuaSnip", -- Required
 	"rafamadriz/friendly-snippets", -- Optional

@@ -33,6 +33,7 @@ cmp.setup({
 		{ name = "path" }, -- file system paths
 		{ name = "luasnip", keyword_length = 2 },
 		{ name = "nvim_lua" },
+		-- { name = "vsnip" },
 		{ name = "nvim_lsp_signature_help" },
 	}),
 	experimental = {

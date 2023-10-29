@@ -25,6 +25,10 @@ require("configs.notify")
 
 --      [wilder]
 require("configs.wilder")
+
+--      [indent blankline]
+require("configs.blankline")
+
 --      [Toggle terminal]
 require("configs.toggleterm")
 require("configs.vimtex")

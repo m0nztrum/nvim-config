@@ -14,6 +14,10 @@
 
 This setup requires [Neovim](https://neovim.io/) (>= 0.8)
 
+## Setup
+
+Just copy the files into your `~/.config/nvim/`
+
 ## Plugins
 
 My config uses [lazy](https://github.com/folke/lazy.nvim) to manage plugins.

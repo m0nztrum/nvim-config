@@ -131,7 +131,7 @@ nvim_lsp.marksman.setup({
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
 	underline = true,
 	update_in_insert = true,
-	virtual_text = { spacing = 4, prefix = "\u{ea71}" },
+	virtual_text = { spacing = 1, prefix = "\u{ea71}" },
 	severity_sort = true,
 })
 
@@ -139,5 +139,5 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagn
 local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
 for type, icon in pairs(signs) do
 	local hl = "DiagnosticSign" .. type
-	vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
+	vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
 end

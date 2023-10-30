@@ -155,7 +155,7 @@ local plugins = {
 	"rcarriga/nvim-notify",
 
 	--      [Whick key]
-	{ "folke/which-key.nvim" },
+	{ "folke/which-key.nvim", event = "VeryLazy" },
 
 	--      [commentry]
 	"tpope/vim-commentary",

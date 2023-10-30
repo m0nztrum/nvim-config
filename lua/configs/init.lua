@@ -51,3 +51,6 @@ require("configs.live-server")
 
 --      [startup]
 require("configs.startup")
+
+--      [whichkey]
+require("configs.whickkey")

@@ -1,56 +1,22 @@
-local alpha = require("alpha")
-local dashboard = require("alpha.themes.dashboard")
+local status_ok, alpha = pcall(require, "alpha")
+if not status_ok then
+	return
+end
 
 local function pick_color()
 	local colors = { "String", "Identifier", "Keyword", "Number" }
 	return colors[math.random(#colors)]
 end
+local dashboard = require("alpha.themes.dashboard")
 
-local logo = {
-
-	"            :h-                                  Nhy`               ",
-	"           -mh.                           h.    `Ndho               ",
-	"           hmh+                          oNm.   oNdhh               ",
-	"          `Nmhd`                        /NNmd  /NNhhd               ",
-	"          -NNhhy                      `hMNmmm`+NNdhhh               ",
-	"          .NNmhhs              ```....`..-:/./mNdhhh+               ",
-	"           mNNdhhh-     `.-::///+++////++//:--.`-/sd`               ",
-	"           oNNNdhhdo..://++//++++++/+++//++///++/-.`                ",
-	"      y.   `mNNNmhhhdy+/++++//+/////++//+++///++////-` `/oos:       ",
-	" .    Nmy:  :NNNNmhhhhdy+/++/+++///:.....--:////+++///:.`:s+        ",
-	" h-   dNmNmy oNNNNNdhhhhy:/+/+++/-         ---:/+++//++//.`         ",
-	" hd+` -NNNy`./dNNNNNhhhh+-://///    -+oo:`  ::-:+////++///:`        ",
-	" /Nmhs+oss-:++/dNNNmhho:--::///    /mmmmmo  ../-///++///////.       ",
-	"  oNNdhhhhhhhs//osso/:---:::///    /yyyyso  ..o+-//////////:/.      ",
-	"   /mNNNmdhhhh/://+///::://////     -:::- ..+sy+:////////::/:/.     ",
-	"     /hNNNdhhs--:/+++////++/////.      ..-/yhhs-/////////::/::/`    ",
-	"       .ooo+/-::::/+///////++++//-/ossyyhhhhs/:///////:::/::::/:    ",
-	"       -///:::::::////++///+++/////:/+ooo+/::///////.::://::---+`   ",
-	"       /////+//++++/////+////-..//////////::-:::--`.:///:---:::/:   ",
-	"       //+++//++++++////+++///::--                 .::::-------::   ",
-	"       :/++++///////////++++//////.                -:/:----::../-   ",
-	"       -/++++//++///+//////////////               .::::---:::-.+`   ",
-	"       `////////////////////////////:.            --::-----...-/    ",
-	"        -///://////////////////////::::-..      :-:-:-..-::.`.+`    ",
-	"         :/://///:///::://::://::::::/:::::::-:---::-.-....``/- -   ",
-	"           ::::://::://::::::::::::::----------..-:....`.../- -+oo/ ",
-	"            -/:::-:::::---://:-::-::::----::---.-.......`-/.      ``",
-	"           s-`::--:::------:////----:---.-:::...-.....`./:          ",
-	"          yMNy.`::-.--::..-dmmhhhs-..-.-.......`.....-/:`           ",
-	"         oMNNNh. `-::--...:NNNdhhh/.--.`..``.......:/-              ",
-	"        :dy+:`      .-::-..NNNhhd+``..`...````.-::-`                ",
-	"                        .-:mNdhh:.......--::::-`                    ",
-	"                           yNh/..------..`                          ",
-	"                                                                    ",
-}
-
-dashboard.section.header.val = logo
+dashboard.section.header.val = require("utils.logo")["random"]
 dashboard.section.header.opts.hl = pick_color()
 
 dashboard.section.buttons.val = {
 	dashboard.button("e", "  File Explorer", ":Telescope find_files<CR>"),
 	dashboard.button("r", " Old Files", ":Telescope oldfiles<CR>"),
 	dashboard.button("q", "  Quit", ":qa<cr>"),
+	dashboard.button("u", "  Update plugins", ":Lazy sync<CR>"),
 }
 
 alpha.setup(dashboard.opts)

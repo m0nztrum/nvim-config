@@ -6,7 +6,7 @@ conform.setup({
 		lua = { "stylua" },
 		python = { "isort", "black" },
 		javascript = { "prettier" },
-		markdown = { "prettier" },
+		markdown = { "markdownlint" },
 		html = { "prettier" },
 		css = { "prettier" },
 		-- c = { "clang_format" }, -- commented because not really needed

@@ -14,4 +14,8 @@ saga.setup({
 	outline = {
 		layout = "float",
 	},
+	lightbulb = {
+		enable = false,
+		sign = false,
+	},
 })

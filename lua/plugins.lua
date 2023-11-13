@@ -79,6 +79,17 @@ local plugins = {
 		},
 		event = "InsertEnter",
 	},
+
+	{
+		"Jezda1337/nvim-html-css",
+		dependencies = {
+			"nvim-treesitter/nvim-treesitter",
+			"nvim-lua/plenary.nvim",
+		},
+		config = function()
+			require("html-css"):setup()
+		end,
+	},
 	-- Snippets Icons
 	"onsails/lspkind-nvim", -- vscode like pictograms
 
@@ -87,7 +98,7 @@ local plugins = {
 	--      [conform nvim]
 	{ "stevearc/conform.nvim" },
 
-	{ "jose-elias-alvarez/null-ls.nvim" },
+	{ "jose-elias-alvarez/null-ls.nvim" }, -- (for backup)
 	--      [nvim lint]
 	{ "mfussenegger/nvim-lint", event = { "BufReadPre", "BufNewFile" } },
 

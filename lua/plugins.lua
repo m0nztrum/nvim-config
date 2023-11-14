@@ -61,7 +61,8 @@ local plugins = {
 	{ "neovim/nvim-lspconfig" }, -- Required
 	{ "williamboman/mason.nvim" }, -- Optional
 	{ "williamboman/mason-lspconfig.nvim" }, -- Optional
-	"whoIsSethDaniel/mason-tool-installer.nvim",
+	{ "whoIsSethDaniel/mason-tool-installer.nvim" },
+	-- { "VonHeikemen/lsp-zero.nvim", branch = "v3.x" },
 
 	-- Autocompletion
 	{

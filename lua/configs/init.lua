@@ -56,3 +56,4 @@ require("configs.startup")
 require("configs.whickkey")
 
 -- require("unused.null-ls")
+-- require('unused.lspzero')

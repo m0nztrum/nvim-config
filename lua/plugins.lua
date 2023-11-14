@@ -74,7 +74,6 @@ local plugins = {
 			{ "saadparwaiz1/cmp_luasnip" }, -- Optional
 			{ "hrsh7th/cmp-nvim-lua" }, -- Optional
 			{ "hrsh7th/cmp-nvim-lsp-signature-help" }, -- Optional
-			{ "hrsh7th/cmp-vsnip" }, -- Optional
 			{ "rafamadriz/friendly-snippets" }, -- Optional
 		},
 		event = "InsertEnter",

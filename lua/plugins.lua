@@ -58,8 +58,8 @@ local plugins = {
 
 	--          [LSP & Completion]
 	--      [LSP Support]
-	"neovim/nvim-lspconfig", -- Required
-	"williamboman/mason.nvim", -- Optional
+	{ "neovim/nvim-lspconfig" }, -- Required
+	{ "williamboman/mason.nvim" }, -- Optional
 	{ "williamboman/mason-lspconfig.nvim" }, -- Optional
 	"whoIsSethDaniel/mason-tool-installer.nvim",
 
@@ -113,6 +113,7 @@ local plugins = {
 	--       [Markdown preview]
 	{
 		"iamcco/markdown-preview.nvim",
+		cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
 		build = function()
 			vim.fn["mkdp#util#install"]()
 		end,
@@ -175,6 +176,15 @@ local plugins = {
 
 	--      [zen]
 	"folke/zen-mode.nvim",
+
+	{
+		"David-Kunz/cmp-npm",
+		dependencies = { "nvim-lua/plenary.nvim" },
+		ft = "json",
+		config = function()
+			require("cmp-npm").setup({})
+		end,
+	},
 }
 
 local opts = {}
@@ -182,6 +192,6 @@ local opts = {}
 require("lazy").setup({ plugins, opts }, {
 	checker = {
 		enabled = true,
-		notify = false,
+		notify = true,
 	},
 })

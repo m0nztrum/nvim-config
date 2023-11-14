@@ -43,6 +43,7 @@ cmp.setup({
 		{ name = "path" }, -- file system paths
 		{ name = "luasnip", keyword_length = 3 },
 		{ name = "nvim_lua" },
+		{ name = "npm", keyword_length = 4 },
 		{ name = "html-css" },
 	}),
 

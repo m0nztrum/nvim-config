@@ -36,7 +36,7 @@ require("lualine").setup({
 		},
 		lualine_c = { { "filename", file_status = true, path = 0, newfile_status = true }, { "searchcount" } },
 		lualine_x = {
-			"encoding",
+			-- "encoding",
 			{ "filetype", icon_only = false, colored = true },
 			"fileformat",
 		},

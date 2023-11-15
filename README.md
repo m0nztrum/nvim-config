@@ -13,8 +13,6 @@
 
 <img alt='mason page' src='./Images/mason.png'>
 
-<img alt='cmp' src='./Images/cmp.png'>
-
 <img alt='whickkey' src='./Images/whichkey.png'>
 
 <img alt='tree' src = './Images/tree.png'>
@@ -80,6 +78,6 @@ Feel free to fork it and customize it to your own liking, or to create PRs with 
 | diffview       |       toggleterm|
 |--------------- | --------------- |
 | <img alt='diffview' src='./Images/diffview.png'> | <img alt='toggleterm' src='./Images/toggleterm.png'>   |
-| **wilder menu**    |            |
-| <img alt='wilder menu' src='./Images/wilder.png'>   | <img alt='' src=''>   |
+| **wilder menu**    |     **cmp**        |
+| <img alt='wilder menu' src='./Images/wilder.png'>   | <img alt='cmp' src='./Images/cmp.png'>   |
 

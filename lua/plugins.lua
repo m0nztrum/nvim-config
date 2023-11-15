@@ -41,7 +41,7 @@ local plugins = {
 			"nvim-treesitter/nvim-treesitter",
 			dependencies = {
 				{ "windwp/nvim-ts-autotag" },
-				-- { "HiPhish/nvim-ts-rainbow2" },
+				{ "p00f/nvim-ts-rainbow" },
 			},
 			build = ":TSUpdate",
 		},

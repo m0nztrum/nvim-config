@@ -47,7 +47,8 @@ keymap.set("n", "<leader>man", builtin.man_pages, { desc = "Show builtin man-pag
 keymap.set("n", "<leader>com", builtin.commands, { desc = "Show vim builtin commands" })
 
 -- git stuff
-keymap.set("n", "<leader>gs", builtin.git_files, {})
+keymap.set("n", "<leader>gf", builtin.git_files, { desc = "Show git files" })
+keymap.set("n", "<leader>gs", builtin.git_status, { desc = "Show git status" })
 
 --  view colorschemes
 keymap.set("n", "<leader>col", builtin.colorscheme, { desc = "Show available colorschemes" })

@@ -11,15 +11,21 @@
 |<img alt='startup page 3' src='./Images/startup3.png'>| <img alt='startup page 4' src='./Images/startup4.png'> |
 
 <h3 align=center>
-    Mason UI
+    Some screenshots
 </h3>
-<img alt='mason page' src='./Images/mason.png'>
 
-<img alt='whickkey' src='./Images/whichkey.png'>
 
-<img alt='tree' src = './Images/tree.png'>
 
-<img alt='telescope' src='./Images/telescope.png'>
+| Mason Ui       | Whickkey UI      |
+|--------------- | --------------- |
+|<img alt='mason page' src='./Images/mason.png'>| <img src='./Images/whichkey.png'> |
+| **Nvim tree**  | **Telescope UI**  |
+| <img alt='tree' src = './Images/tree.png'>| <img alt='telescope' src='./Images/telescope.png'>|
+|**diffview**  | **toggleterm**  |
+| <img alt='diffview' src='./Images/diffview.png'> | <img alt='toggleterm' src='./Images/toggleterm.png'>   |
+| **wilder menu**    |     **cmp**        |
+| <img alt='wilder menu' src='./Images/wilder.png'>   | <img alt='cmp' src='./Images/cmp.png'>   |
+
 
 <h1 align='center'>
     Plugins
@@ -53,7 +59,7 @@ My config uses [lazy](https://github.com/folke/lazy.nvim) to manage plugins.
 - [indent-blankline](https://github.com/lukas-reineke/indent-blankline.nvim) - Show indent guides.
 - [nvim autopairs](https://github.com/windwp/nvim-autopairs) - Auto-pairs for Neovim.
 
-## Lsp Tools(formatters|linters|completion etc.)
+## Lsp Tools(formatting,linting,completion etc.)
 
 - [mason](https://github.com/williamboman/mason.nvim) - Easily install and manage LSP servers,linters and formatters
 - [conform.nvim](https://github.com/stevearc/conform.nvim) - Lightweight yet powerful formatter plugin for neovim
@@ -74,12 +80,3 @@ My config uses [lazy](https://github.com/folke/lazy.nvim) to manage plugins.
 
 This is a personal config, mostly with things that seem to work best for me. However, the repo is always open to good suggestions.
 Feel free to fork it and customize it to your own liking, or to create PRs with improvements.
-
-## More screenshots
-
-| diffview       |       toggleterm|
-|--------------- | --------------- |
-| <img alt='diffview' src='./Images/diffview.png'> | <img alt='toggleterm' src='./Images/toggleterm.png'>   |
-| **wilder menu**    |     **cmp**        |
-| <img alt='wilder menu' src='./Images/wilder.png'>   | <img alt='cmp' src='./Images/cmp.png'>   |
-

@@ -20,4 +20,7 @@ keymap.set("n", "<Down>", ":echo 'use j twat'<CR>")
 keymap.set("n", "<leader>to", "<cmd>tabnew<CR>", { desc = "Open new tab" }) -- open new tab
 keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Close current tab" }) -- close current tab
 keymap.set("n", "<leader>se", "<C-w>=", { desc = "Make splits equal size" })
+
+--  Lazy UI and Mason UI
 keymap.set("n", "<leader>lz", "<cmd>Lazy<CR>", { desc = "Open Lazy UI" })
+keymap.set("n", "<leader>mas", "<cmd>Mason<CR>", { desc = "Open Lazy UI" })

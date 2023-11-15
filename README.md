@@ -10,7 +10,9 @@
 |----------------------------------------------------|------|
 |<img alt='startup page 3' src='./Images/startup3.png'>| <img alt='startup page 4' src='./Images/startup4.png'> |
 
-
+<h3 align=center>
+    Mason UI
+</h3>
 <img alt='mason page' src='./Images/mason.png'>
 
 <img alt='whickkey' src='./Images/whichkey.png'>

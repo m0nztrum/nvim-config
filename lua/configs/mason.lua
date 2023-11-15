@@ -42,7 +42,7 @@ mason_tool.setup({
 		"black", -- formatter for python
 		"pylint", -- linter for python
 		"prettier", -- formatter
-		"clang-format",
+		-- "clang-format",
 		"eslint_d",
 	},
 })

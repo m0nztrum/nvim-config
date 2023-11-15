@@ -18,6 +18,7 @@ null_ls.setup({
 		formatting.prettier,
 		formatting.stylua,
 		formatting.isort,
+		formatting.deno_fmt, --ts, js, ts/js<REACT>, md, json, jsonc
 		formatting.clang_format.with({
 			extra_args = { "-style=", '"{IndentWidth: 4}"' },
 		}),

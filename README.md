@@ -2,9 +2,9 @@
     Dragonixj's Nvim Config
 </h1>
 
-<h2 align=center>
+<h3 align=center>
     Startup page
-</h2>
+</h3>
 
 | <img alt='startup page 1' src='./Images/startup1.png'>| <img alt='startup page 2' src='./Images/startup2.png'>|
 |----------------------------------------------------|------|

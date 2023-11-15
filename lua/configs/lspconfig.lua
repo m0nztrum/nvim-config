@@ -29,9 +29,6 @@ local on_attach = function(client, bufnr)
 
 	opts.desc = "Show documentation for what is under cursor"
 	keymap.set("n", "K", vim.lsp.buf.hover, opts)
-
-	opts.desc = "Show LSP type definitions"
-	keymap.set("n", "gd", "<cmd>Telescope lsp_type_definitions<CR>", opts) -- show lsp type definitions
 end
 
 local protocol = require("vim.lsp.protocol")
@@ -89,11 +86,6 @@ nvim_lsp.cssls.setup({
 	on_attach = on_attach,
 })
 
---      [rust]
--- nvim_lsp.rust_analyzer.setup({
--- 	capabilities = capabilities,
--- })
-
 --      [html]
 nvim_lsp.html.setup({
 	capabilities = capabilities,
@@ -110,6 +102,24 @@ nvim_lsp.bashls.setup({
 nvim_lsp.pylsp.setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
+	settings = {
+		pylsp = {
+			plugins = {
+				-- formatter options
+				black = { enabled = true },
+				isort = { enabled = true }, -- import sorting also
+				-- linter options
+				pylint = { enabled = false },
+				pycodestyle = { enabled = false },
+				-- type checker
+				pylsp_mypy = {
+					enabled = false,
+					report_progress = true,
+					live_mode = false,
+				},
+			},
+		},
+	},
 })
 
 --      [typescript]
@@ -125,7 +135,7 @@ nvim_lsp.marksman.setup({
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
 	underline = true,
-	update_in_insert = true,
+	update_in_insert = false,
 	virtual_text = { spacing = 1, prefix = "\u{ea71}" },
 	severity_sort = true,
 })

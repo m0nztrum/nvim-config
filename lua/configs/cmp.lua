@@ -26,10 +26,17 @@ cmp.setup({
 	},
 
 	mapping = cmp.mapping.preset.insert({
-		["<C-b>"] = cmp.mapping.scroll_docs(-4),
-		["<C-f>"] = cmp.mapping.scroll_docs(4),
+		-- Scroll up and down the completion docs window
+		["<C-u>"] = cmp.mapping.scroll_docs(-4),
+		["<C-d>"] = cmp.mapping.scroll_docs(4),
+
+		-- to trigger completion menu
 		["<C-Space>"] = cmp.mapping.complete(),
+
+		-- to close completion menu
 		["<C-e>"] = cmp.mapping.close(),
+
+		-- 'Enter' key to confirm completion
 		["<CR>"] = cmp.mapping.confirm({
 			behavior = cmp.ConfirmBehavior.Replace,
 			select = true,

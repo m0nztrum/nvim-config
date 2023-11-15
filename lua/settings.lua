@@ -10,10 +10,8 @@ opt.autowrite = true
 --Netrw
 g.netrw_liststyle = 1
 
--- Line numbers
+-- Line numbers (relative)
 opt.number = true
-
--- Relative line numbers
 opt.relativenumber = true
 
 -- Width of numbers
@@ -21,6 +19,7 @@ opt.numberwidth = 1
 
 -- Disable error bells
 opt.errorbells = false
+opt.mouse = ""
 
 -- Tabs widths
 opt.tabstop = 4
@@ -100,7 +99,16 @@ opt.swapfile = false
 local wk = require("which-key")
 wk.register(mappings, opts)
 
---  colorscheme
-vim.cmd([[colorscheme horizon]])
+-- encoding
+opt.encoding = "utf-8"
+opt.fileencoding = "utf-8"
 
--- vim.o.cindent = true
+vim.api.nvim_create_autocmd("TextYankPost", {
+
+	callback = function()
+		vim.highlight.on_yank({
+			higroup = "IncSearch",
+			timeout = 500,
+		})
+	end,
+})

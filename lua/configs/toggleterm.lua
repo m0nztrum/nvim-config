@@ -1,7 +1,7 @@
 local keymap = vim.keymap
 local toggleterm = require("toggleterm")
 
-keymap.set("n", "<leader>ft", vim.cmd.ToggleTerm)
+keymap.set("n", "<leader>ft", vim.cmd.ToggleTerm, { desc = "Open floating term" })
 
 local Direction = {
 	horizontal = "horizontal",

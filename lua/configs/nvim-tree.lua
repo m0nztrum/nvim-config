@@ -7,6 +7,9 @@ nvimtree.setup({
 	auto_reload_on_write = true,
 	sort_by = "name",
 	hijack_cursor = true,
+	actions = {
+		open_file = { quit_on_open = true },
+	},
 	update_focused_file = {
 		enable = true,
 	},

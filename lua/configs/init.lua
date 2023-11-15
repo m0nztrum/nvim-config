@@ -9,6 +9,7 @@ require("configs.undotree")
 --      [colorschemes]
 require("configs.gruvbox")
 require("configs.rose-pine")
+require("configs.colorscheme")
 
 --      [treesitter]
 require("configs.treesitter")

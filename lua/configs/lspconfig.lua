@@ -27,11 +27,11 @@ local on_attach = function(client, bufnr)
 	opts.desc = "Go to next diagnostic"
 	keymap.set("n", "]d", vim.diagnostic.goto_next, opts) -- jump to next diagnostic in buffer
 
-	-- opts.desc = "Show documentation for what is under cursor"
-	-- keymap.set("n", "K", vim.lsp.buf.hover, opts)
+	opts.desc = "Show documentation for what is under cursor"
+	keymap.set("n", "K", vim.lsp.buf.hover, opts)
 
-	-- opts.desc = "Show LSP type definitions"
-	-- keymap.set("n", "gd", "<cmd>Telescope lsp_type_definitions<CR>", opts) -- show lsp type definitions
+	opts.desc = "Show LSP type definitions"
+	keymap.set("n", "gd", "<cmd>Telescope lsp_type_definitions<CR>", opts) -- show lsp type definitions
 end
 
 local protocol = require("vim.lsp.protocol")
@@ -122,11 +122,6 @@ nvim_lsp.marksman.setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
 })
-
---      [SQL]
--- nvim_lsp.sqlls.setup({
--- 	capabilities = capabilities,
--- })
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
 	underline = true,

@@ -25,6 +25,7 @@ lspconfig.setup({
 		"html",
 		"cssls",
 		"clangd",
+		"biome",
 	},
 	automatic_installation = true,
 })
@@ -43,6 +44,5 @@ mason_tool.setup({
 		"pylint", -- linter for python
 		"prettier", -- formatter
 		-- "clang-format",
-		"eslint_d",
 	},
 })

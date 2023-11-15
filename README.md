@@ -6,26 +6,23 @@
     Startup page
 </h3>
 
-| <img alt='startup page 1' src='./Images/startup1.png'>| <img alt='startup page 2' src='./Images/startup2.png'>|
-|----------------------------------------------------|------|
-|<img alt='startup page 3' src='./Images/startup3.png'>| <img alt='startup page 4' src='./Images/startup4.png'> |
+| <img alt='startup page 1' src='./Images/startup1.png'> | <img alt='startup page 2' src='./Images/startup2.png'> |
+| ------------------------------------------------------ | ------------------------------------------------------ |
+| <img alt='startup page 3' src='./Images/startup3.png'> | <img alt='startup page 4' src='./Images/startup4.png'> |
 
 <h3 align=center>
     Some screenshots
 </h3>
 
-
-
-| Mason Ui       | Whickkey UI      |
-|--------------- | --------------- |
-|<img alt='mason page' src='./Images/mason.png'>| <img src='./Images/whichkey.png'> |
-| **Nvim tree**  | **Telescope UI**  |
-| <img alt='tree' src = './Images/tree.png'>| <img alt='telescope' src='./Images/telescope.png'>|
-|**diffview**  | **toggleterm**  |
-| <img alt='diffview' src='./Images/diffview.png'> | <img alt='toggleterm' src='./Images/toggleterm.png'>   |
-| **wilder menu**    |     **cmp**        |
-| <img alt='wilder menu' src='./Images/wilder.png'>   | <img alt='cmp' src='./Images/cmp.png'>   |
-
+| Mason Ui                                          | Whickkey UI                                          |
+| ------------------------------------------------- | ---------------------------------------------------- |
+| <img alt='mason page' src='./Images/mason.png'>   | <img src='./Images/whichkey.png'>                    |
+| **Nvim tree**                                     | **Telescope UI**                                     |
+| <img alt='tree' src = './Images/tree.png'>        | <img alt='telescope' src='./Images/telescope.png'>   |
+| **diffview**                                      | **toggleterm**                                       |
+| <img alt='diffview' src='./Images/diffview.png'>  | <img alt='toggleterm' src='./Images/toggleterm.png'> |
+| **wilder menu**                                   | **cmp**                                              |
+| <img alt='wilder menu' src='./Images/wilder.png'> | <img alt='cmp' src='./Images/cmp.png'>               |
 
 <h1 align='center'>
     Plugins
@@ -45,9 +42,8 @@ My config uses [lazy](https://github.com/folke/lazy.nvim) to manage plugins.
 
 ## Utilities & UI stuff
 
-
 - [alpha-nvim](https://github.com/goolord/alpha-nvim) - A fast and fully programmable greeter/dashboard
-- [whick-key](https://github.com/folke/which-key.nvim)  - displays a popup with possible keybindings of the keys pressed
+- [whick-key](https://github.com/folke/which-key.nvim) - displays a popup with possible keybindings of the keys pressed
 - [barbar.nvim](https://github.com/romgrk/barbar.nvim) - A tabline plugin with amazing features
 - [telescope](https://github.com/nvim-telescope/telescope.nvim) - A highly extendable fuzzy finder
 - [nvim-tree](https://github.com/nvim-tree/nvim-tree.lua) - A files system navigator
@@ -74,7 +70,7 @@ My config uses [lazy](https://github.com/folke/lazy.nvim) to manage plugins.
 
 ## Keymaps
 
-*TODO*
+_TODO_
 
 ## Contributing
 

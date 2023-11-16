@@ -27,15 +27,16 @@ treesitter.setup({
 	highlight = {
 		enable = true,
 	},
+
 	autotag = {
 		enable = true,
 		enable_close = true,
 		enable_rename = true,
 		enable_close_on_slash = true,
 	},
-	rainbow = {
-		enable = true,
-		extended_mode = true,
 
-	},
+	-- 	rainbow = {
+	-- 		enable = true,
+	-- 		extended_mode = true,
+	-- 	},
 })

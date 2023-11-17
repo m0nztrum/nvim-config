@@ -9,6 +9,8 @@ telescope.setup({
 		disable_devicons = false,
 		color_devicons = true,
 		layout_config = { preview_cutoff = 100, width = 0.85 },
+		prompt_prefix = "   ",
+		selection_caret = " ",
 		file_ignore_patterns = {
 			"%git/",
 		},

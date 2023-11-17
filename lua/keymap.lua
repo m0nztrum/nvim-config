@@ -28,7 +28,7 @@ keymap.set("n", "f", "<C-w>w")
 
 --  Lazy UI and Mason UI
 keymap.set("n", "<leader>L", "<cmd>Lazy<CR>", { desc = "Open Lazy UI" })
-keymap.set("n", "<leader>M", "<cmd>Mason<CR>", { desc = "Open Lazy UI" })
+keymap.set("n", "<leader>M", "<cmd>Mason<CR>", { desc = "Open Mason UI" })
 
 --  Some base stuff exit and quit
 keymap.set("n", "<leader>w", "<cmd>w<CR>", { desc = "Save current buffer" })

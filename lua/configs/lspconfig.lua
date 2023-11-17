@@ -106,17 +106,17 @@ nvim_lsp.pylsp.setup({
 		pylsp = {
 			plugins = {
 				-- formatter options
-				black = { enabled = true },
-				isort = { enabled = true }, -- import sorting also
+				-- black = { enabled = true },
+				-- isort = { enabled = true }, -- import sorting also
 				-- linter options
-				pylint = { enabled = false },
-				pycodestyle = { enabled = false },
+				-- pylint = { enabled = false }, -- already working.
+				pycodestyle = { enabled = true },
 				-- type checker
-				pylsp_mypy = {
-					enabled = false,
-					report_progress = true,
-					live_mode = false,
-				},
+				-- pylsp_mypy = {
+				-- 	enabled = false,
+				-- 	report_progress = true,
+				-- 	live_mode = false,
+				-- },
 			},
 		},
 	},
@@ -135,7 +135,7 @@ nvim_lsp.marksman.setup({
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
 	underline = true,
-	update_in_insert = false,
+	update_in_insert = true,
 	virtual_text = { spacing = 1, prefix = "\u{ea71}" },
 	severity_sort = true,
 })

@@ -34,9 +34,4 @@ treesitter.setup({
 		enable_rename = true,
 		enable_close_on_slash = true,
 	},
-
-	-- 	rainbow = {
-	-- 		enable = true,
-	-- 		extended_mode = true,
-	-- 	},
 })

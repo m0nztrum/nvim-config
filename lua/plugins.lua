@@ -41,7 +41,6 @@ local plugins = {
 			"nvim-treesitter/nvim-treesitter",
 			dependencies = {
 				{ "windwp/nvim-ts-autotag" },
-				{ "p00f/nvim-ts-rainbow" },
 			},
 			build = ":TSUpdate",
 		},
@@ -194,4 +193,5 @@ require("lazy").setup({ plugins, opts }, {
 		enabled = true,
 		notify = true,
 	},
+	ui = { border = "rounded" },
 })

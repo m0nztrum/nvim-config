@@ -19,4 +19,6 @@ dashboard.section.buttons.val = {
 	dashboard.button("u", "  Update plugins", ":Lazy sync<CR>"),
 }
 
+-- dashboard.section.footer.val = "It's not a bug its a feature"
+
 alpha.setup(dashboard.opts)

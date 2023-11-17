@@ -9,6 +9,7 @@ conform.setup({
 		markdown = { "prettier" },
 		html = { "prettier" },
 		css = { "prettier" },
+		json = { "prettier" },
 		-- c = { "clang_format" }, -- commented out since builtin into clang server
 	},
 
@@ -26,6 +27,7 @@ conform.setup({
 	end, { desc = "Format file or range(in visual mode)" }),
 })
 
+--  special config for prettier
 require("conform.formatters.prettier").args = function(ctx)
 	local args = { "--stdin-filepath", "$FILENAME" }
 	local localPrettierConfig = vim.fs.find(".prettierrc.json", {

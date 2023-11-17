@@ -5,7 +5,6 @@ lint.linters_by_ft = {
 	python = { "pylint" },
 	javascript = { "biomejs" },
 	-- html = { "markdownlint" },
-	-- python = { "flake8" },
 }
 
 local lint_aurogroup = vim.api.nvim_create_augroup("lint", { clear = true })

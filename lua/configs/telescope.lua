@@ -53,4 +53,8 @@ keymap.set("n", "<leader>gf", builtin.git_files, { desc = "Show git files" })
 keymap.set("n", "<leader>gs", builtin.git_status, { desc = "Show git status" })
 
 --  view colorschemes
-keymap.set("n", "<leader>col", builtin.colorscheme, { desc = "Show available colorschemes" })
+keymap.set("n", "<leader>cs", builtin.colorscheme, { desc = "Show available colorschemes" })
+
+-- search history
+keymap.set("n", "<leader>sh", builtin.search_history, { desc = "Open Search history" })
+keymap.set("n", "<leader>re", builtin.registers, { desc = "Show registers" })

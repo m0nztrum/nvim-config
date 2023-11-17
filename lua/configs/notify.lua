@@ -10,4 +10,7 @@ notify.setup({
 		TRACE = "",
 		WARN = "",
 	},
+	timeout = 1500,
 })
+
+vim.notify = notify

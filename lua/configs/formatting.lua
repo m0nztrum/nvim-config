@@ -25,6 +25,8 @@ conform.setup({
 			timeout_ms = 1000,
 		})
 	end, { desc = "Format file or range(in visual mode)" }),
+
+	notify_on_error = false,
 })
 
 --  special config for prettier

@@ -1,3 +1,3 @@
-vim.cmd([[colorscheme horizon]])
+vim.cmd([[colorscheme gruvbox]])
 
 vim.o.background = "dark"

@@ -24,7 +24,7 @@ require("lualine").setup({
 	sections = {
 		lualine_a = { { "mode", icons_enabled = true, icon = { "" } } },
 		lualine_b = {
-			{ "branch" },
+			{ "branch", icon = "\u{e725}" },
 			{ "diff", colored = true },
 			{
 				"diagnostics",
@@ -34,10 +34,18 @@ require("lualine").setup({
 				-- symbols = { error = " ", warn = " ", info = " ", hint = "" },
 			},
 		},
-		lualine_c = { { "filename", file_status = true, path = 0, newfile_status = true }, { "searchcount" } },
+		lualine_c = {
+			{
+				"filename",
+				file_status = true,
+				path = 0,
+				newfile_status = true,
+			},
+			{ "searchcount" },
+		},
 		lualine_x = {
 			-- "encoding",
-			{ "filetype", icon_only = false, colored = true },
+			{ "filetype", icon_only = true, colored = true },
 			"fileformat",
 		},
 		lualine_y = { { "progress", icon = { "", align = "left" } } },

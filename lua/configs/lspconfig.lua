@@ -105,12 +105,14 @@ nvim_lsp.pylsp.setup({
 	settings = {
 		pylsp = {
 			plugins = {
+				-- pylsp comes with some added plugings
+				-- you can enable or disable them here
 				-- formatter options
 				-- black = { enabled = true },
 				-- isort = { enabled = true }, -- import sorting also
 				-- linter options
 				-- pylint = { enabled = false }, -- already working.
-				pycodestyle = { enabled = true },
+				pycodestyle = { enabled = true, maxLineLength = 100 },
 				-- type checker
 				-- pylsp_mypy = {
 				-- 	enabled = false,

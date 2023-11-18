@@ -109,3 +109,5 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 		})
 	end,
 })
+
+g.python3_host_prog = "/usr/bin/python3.11"

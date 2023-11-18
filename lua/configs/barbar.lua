@@ -1,6 +1,5 @@
--- Barbar Setup
----------
 local bar = require("barbar")
+local diagnostic = vim.diagnostic --for cleanliness
 
 bar.setup({
 	animation = true,
@@ -29,10 +28,10 @@ bar.setup({
 		button = "",
 		-- Enables / disables diagnostic symbols
 		diagnostics = {
-			[vim.diagnostic.severity.ERROR] = { enabled = true, icon = " " },
-			[vim.diagnostic.severity.WARN] = { enabled = true, icon = " " },
-			[vim.diagnostic.severity.INFO] = { enabled = true, icon = " " },
-			[vim.diagnostic.severity.HINT] = { enabled = true, icon = " " },
+			[diagnostic.severity.ERROR] = { enabled = true, icon = " " },
+			[diagnostic.severity.WARN] = { enabled = true, icon = " " },
+			[diagnostic.severity.INFO] = { enabled = true, icon = " " },
+			[diagnostic.severity.HINT] = { enabled = true, icon = " " },
 		},
 		gitsigns = {
 			added = { enabled = true, icon = "+" },

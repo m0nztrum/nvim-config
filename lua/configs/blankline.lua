@@ -26,5 +26,5 @@ local ibl = require("ibl")
 
 ibl.setup({
 	indent = { highlight = highlight, char = "┊" },
-	scope = { enabled = false },
+	scope = { enabled = true },
 })

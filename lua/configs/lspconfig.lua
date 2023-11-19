@@ -130,6 +130,11 @@ nvim_lsp.tsserver.setup({
 	on_attach = on_attach,
 })
 
+nvim_lsp.tailwindcss.setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
+
 nvim_lsp.marksman.setup({
 	capabilities = capabilities,
 	on_attach = on_attach,

@@ -14,13 +14,11 @@ vim.opt.rtp:prepend(lazypath)
 local plugins = {
 	--          [Theme]
 	{ "ellisonleao/gruvbox.nvim", priority = 500 },
-	{ "water-sucks/darkrose.nvim" },
 	{ "EdenEast/nightfox.nvim" },
 	{ "rose-pine/neovim", name = "rose-pine", priority = 1000 },
 	{ "catppuccin/nvim" },
 	{ "davidosomething/vim-colors-meh" },
 	{ "rebelot/kanagawa.nvim" },
-	{ "projekt0n/github-nvim-theme" },
 	{ "akinsho/horizon.nvim", version = "*" },
 
 	--      [startup page]
@@ -52,7 +50,10 @@ local plugins = {
 	{
 		"nvim-telescope/telescope.nvim",
 		version = "0.1.3",
-		dependencies = { { "nvim-lua/plenary.nvim" } },
+		dependencies = {
+			{ "nvim-lua/plenary.nvim" },
+			{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
+		},
 	},
 
 	--          [LSP & Completion]

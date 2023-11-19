@@ -14,6 +14,7 @@ treesitter.setup({
 		"typescript",
 		"css",
 		"bash",
+		"sql",
 		"html",
 		"python",
 		"markdown",

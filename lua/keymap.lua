@@ -33,3 +33,6 @@ keymap.set("n", "<leader>M", "<cmd>Mason<CR>", { desc = "Open Mason UI" })
 --  Some base stuff exit and quit
 keymap.set("n", "<leader>w", "<cmd>w<CR>", { desc = "Save current buffer" })
 keymap.set("n", "<leader>q", "<cmd>q<CR>", { desc = "quit current buffer" })
+
+-- select all
+keymap.set("n", "<C-a>", "gg<S-v>G")

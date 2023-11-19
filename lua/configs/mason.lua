@@ -13,12 +13,12 @@ mason.setup({
 	},
 })
 
-local status2, lspconfig = pcall(require, "mason-lspconfig")
+local status2, mlspconfig = pcall(require, "mason-lspconfig")
 if not status2 then
 	return
 end
 
-lspconfig.setup({
+mlspconfig.setup({
 	ensure_installed = {
 		"lua_ls",
 		"pylsp",
@@ -26,6 +26,7 @@ lspconfig.setup({
 		"cssls",
 		"clangd",
 		"biome",
+		"tailwindcss",
 	},
 	automatic_installation = true,
 })

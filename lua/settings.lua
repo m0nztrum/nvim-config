@@ -3,7 +3,7 @@
 local wo = vim.wo
 local opt = vim.opt -- for conciseness
 local g = vim.g
-
+local o = vim.o
 opt.autoread = true
 opt.autowrite = true
 
@@ -59,7 +59,7 @@ opt.termguicolors = true
 opt.hidden = true
 
 -- Attempts to keep cursor in center of screen
-opt.scrolloff = 999
+opt.scrolloff = 10
 
 -- Keep a left hand column for error icons etc.
 opt.signcolumn = "yes"
@@ -74,8 +74,8 @@ opt.undofile = true
 opt.sidescroll = 1
 
 --setup for vgit
-vim.o.updatetime = 300
-vim.o.incsearch = false
+o.updatetime = 300
+o.incsearch = false
 wo.signcolumn = "yes"
 
 -- cursor line
@@ -99,15 +99,5 @@ wk.register(mappings, opts)
 -- encoding
 opt.encoding = "utf-8"
 opt.fileencoding = "utf-8"
-
-vim.api.nvim_create_autocmd("TextYankPost", {
-
-	callback = function()
-		vim.highlight.on_yank({
-			higroup = "IncSearch",
-			timeout = 500,
-		})
-	end,
-})
 
 g.python3_host_prog = "/usr/bin/python3.11"

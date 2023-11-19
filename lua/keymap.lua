@@ -36,3 +36,6 @@ keymap.set("n", "<leader>q", "<cmd>q<CR>", { desc = "quit current buffer" })
 
 -- select all
 keymap.set("n", "<C-a>", "gg<S-v>G")
+
+-- diffview
+keymap.set("n", "<leader>gd", "<cmd>DiffviewOpen<CR>", { desc = "Open diffview" })

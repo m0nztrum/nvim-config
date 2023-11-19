@@ -1,5 +1,6 @@
 local status, nvim_lsp = pcall(require, "lspconfig")
 if not status then
+	print("lspconfig not installed")
 	return
 end
 

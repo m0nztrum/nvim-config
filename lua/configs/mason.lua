@@ -1,5 +1,6 @@
 local status, mason = pcall(require, "mason")
 if not status then
+	print("Mason not installed")
 	return
 end
 mason.setup({

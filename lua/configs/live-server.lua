@@ -1,5 +1,6 @@
 local status_ok, live_server = pcall(require, "live_server")
 if not status_ok then
+	print("Live-server not installed")
 	return
 end
 

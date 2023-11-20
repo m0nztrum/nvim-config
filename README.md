@@ -28,7 +28,7 @@
     Plugins
 </h1>
 
-My config uses [lazy](https://github.com/folke/lazy.nvim) to manage plugins.
+My config uses [lazy](https://github.com/folke/lazy.nvim) to manage plugins.<br>
 Needed Dependencies
 
 -   fd

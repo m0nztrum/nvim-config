@@ -38,14 +38,14 @@ require("lualine").setup({
 			{
 				"filename",
 				file_status = true,
-				path = 0,
+				path = 1,
 				newfile_status = true,
 			},
 			{ "searchcount" },
 		},
 		lualine_x = {
 			-- "encoding",
-			{ "filetype", icon_only = true, colored = true },
+			{ "filetype", icon_only = false, colored = true },
 			"fileformat",
 		},
 		lualine_y = { { "progress", icon = { "", align = "left" } } },
@@ -54,7 +54,7 @@ require("lualine").setup({
 	inactive_sections = {
 		lualine_a = {},
 		lualine_b = {},
-		lualine_c = { "filename" },
+		lualine_c = { { "filename", file_status = true, path = 1 } },
 		lualine_x = { "location" },
 		lualine_y = {},
 		lualine_z = {},

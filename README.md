@@ -29,6 +29,11 @@
 </h1>
 
 My config uses [lazy](https://github.com/folke/lazy.nvim) to manage plugins.
+Needed Dependencies
+
+-   fd
+-   ripgrep
+-   chafa
 
 ## status line and colorschemes
 

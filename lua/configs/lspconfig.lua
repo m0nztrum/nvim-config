@@ -143,14 +143,21 @@ nvim_lsp.marksman.setup({
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
 	underline = true,
-	update_in_insert = true,
+	update_in_insert = false,
 	virtual_text = { spacing = 1, prefix = "\u{ea71}" },
 	severity_sort = true,
 })
 
 -- Diagnostic symbols in the sign column (gutter)
 local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
-for type, icon in pairs(signs) do
-	local hl = "DiagnosticSign" .. type
+for severity, icon in pairs(signs) do
+	local hl = "DiagnosticSign" .. severity:sub(1, 1) .. severity:sub(2):lower()
 	vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
 end
+
+vim.diagnostic.config({
+	float = {
+		border = "rounded",
+		source = "if_many",
+	},
+})

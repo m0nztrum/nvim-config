@@ -6,7 +6,7 @@ return {
 	event = "VeryLazy",
 
 	config = function()
-		local whickkey = require("whickkey")
+		local whickkey = require("whick-key")
 
 		whickkey.setup({
 
@@ -20,5 +20,9 @@ return {
 				winblend = 0,
 			},
 		})
+		-- whick key
+local wk = require("which-key")
+wk.register(mappings, opts)
+
 	end,
 }

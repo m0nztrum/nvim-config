@@ -92,10 +92,6 @@ opt.splitbelow = true -- splits horizontal window to the bottom
 -- turn of swapfile
 opt.swapfile = false
 
--- whick key
-local wk = require("which-key")
-wk.register(mappings, opts)
-
 -- encoding
 opt.encoding = "utf-8"
 opt.fileencoding = "utf-8"

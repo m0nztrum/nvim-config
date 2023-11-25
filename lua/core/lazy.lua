@@ -21,4 +21,7 @@ require("lazy").setup({
 		enabled = true,
 		notify = true,
 	},
+	ui = {
+		border = "rounded",
+	},
 })

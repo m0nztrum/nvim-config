@@ -3,7 +3,7 @@ local keymap = vim.keymap
 
 lint.linters_by_ft = {
 	python = { "pylint" },
-	javascript = { "biomejs" },
+	javascript = { "eslint_d" },
 	-- html = { "markdownlint" },
 }
 

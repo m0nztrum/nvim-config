@@ -14,6 +14,8 @@ return {
 			ensure_installed = {
 				"c",
 				"cpp",
+				"markdown",
+				"javascript",
 				"lua",
 				"css",
 				"bash",

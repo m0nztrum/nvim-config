@@ -10,7 +10,6 @@ return {
 		local mlspconfig = require("mason-lspconfig")
 
 		mason.setup({
-
 			ui = {
 				icons = {
 					package_installed = "✓",

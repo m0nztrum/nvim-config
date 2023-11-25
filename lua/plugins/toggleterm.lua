@@ -1,6 +1,7 @@
 vim.cmd([[tnoremap <ESC> <C-\><C-n>]])
 
 return {
+	"akinsho/toggleterm.nvim",
 	config = function()
 		local keymap = vim.keymap
 		local toggleterm = require("toggleterm")

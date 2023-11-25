@@ -1,6 +1,7 @@
 return {
+
+	"catppuccin/nvim",
 	config = function()
-		vim.o.background = "dark"
-		vim.cmd([[colorscheme catppuccin-mocha]])
+		vim.cmd.colorscheme("catppuccin")
 	end,
 }

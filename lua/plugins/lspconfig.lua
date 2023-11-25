@@ -85,16 +85,9 @@ return {
 		})
 
 		--      [python]
-		nvim_lsp.pylsp.setup({
+		nvim_lsp.pyright.setup({
 			capabilities = capabilities,
 			on_attach = on_attach,
-			settings = {
-				pylsp = {
-					plugins = {
-						pycodestyle = { enabled = true, maxLineLength = 100 },
-					},
-				},
-			},
 		})
 
 		vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {

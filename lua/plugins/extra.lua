@@ -7,7 +7,6 @@ return {
 	{ "akinsho/horizon.nvim", version = "*" },
 
 	--        [Undo Tree]
-	"mbbill/undotree",
 
 	--      [Web devicons]
 	"nvim-tree/nvim-web-devicons",

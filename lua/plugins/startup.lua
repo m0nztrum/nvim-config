@@ -1,12 +1,3 @@
--- local function pick_color()
--- 	local colors = { "String", "Identifier", "Keyword", "Number" }
--- 	return colors[math.random(#colors)]
--- end
-
--- dashboard.section.header.opts.hl = pick_color()
-
--- dashboard.section.footer.val = "It's not a bug its a feature"
-
 return {
 	"goolord/alpha-nvim",
 

@@ -2,7 +2,7 @@ return {
 	"nvim-telescope/telescope.nvim",
 	version = "0.1.3",
 	dependencies = {
-		{ "nvim-lua/plenary.nvim" },
+		"nvim-lua/plenary.nvim",
 		{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
 	},
 
@@ -63,9 +63,5 @@ return {
 
 		--  view colorschemes
 		keymap.set("n", "<leader>cs", builtin.colorscheme, { desc = "Show available colorschemes" })
-
-		-- search history
-		keymap.set("n", "<leader>sh", builtin.search_history, { desc = "Open Search history" })
-		keymap.set("n", "<leader>re", builtin.registers, { desc = "Show registers" })
 	end,
 }

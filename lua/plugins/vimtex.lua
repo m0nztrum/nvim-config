@@ -1,4 +1,6 @@
-return{
+return {
+	"lervag/vimtex",
+
 	config = function()
 		vim.cmd([[ 
 		filetype plugin indent on
@@ -37,5 +39,5 @@ return{
 
 
 		]])
-	end
+	end,
 }

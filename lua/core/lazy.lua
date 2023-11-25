@@ -14,16 +14,11 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
 	install = {
 		missing = true,
+		colorscheme = { "meh" },
 	},
-    spec = "plugins",
+	spec = "plugins",
 	checker = {
 		enabled = true,
 		notify = true,
-	},
-	ui = {
-		icons = {
-			border = "rounded",
-			task = "",
-		},
 	},
 })

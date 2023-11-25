@@ -1,6 +1,6 @@
 return {
 
-	"williamboman/mason.nvim", -- Optional
+	"williamboman/mason.nvim",
 	"williamboman/mason-lspconfig.nvim", -- Optional
 	"whoIsSethDaniel/mason-tool-installer.nvim",
 
@@ -41,7 +41,6 @@ return {
 				"black", -- formatter for python
 				"pylint", -- linter for python
 				"prettier", -- formatter
-				-- "clang-format",
 			},
 		})
 	end,

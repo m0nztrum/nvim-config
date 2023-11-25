@@ -1,7 +1,6 @@
-return{
+return {
 	config = function()
-		vim.cmd([[colorscheme catppuccin-mocha]])
-	
 		vim.o.background = "dark"
-	end
+		vim.cmd([[colorscheme catppuccin-mocha]])
+	end,
 }

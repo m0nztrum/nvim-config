@@ -28,5 +28,3 @@ return {
 		})
 	end,
 }
-
--- vim.cmd([[colorscheme]])

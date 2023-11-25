@@ -1,6 +1,4 @@
-require("plugins") -- where the plugins are
-require("keymap") -- where the keymaps are
-require("settings") -- where the settings are
-require("configs") -- plug configs
-require("autocmds")
-require("utils") -- for some miscellanous stuff
+require('core.settings')
+require('core.keymap')
+require('core.autocmds')
+require('core.lazy')

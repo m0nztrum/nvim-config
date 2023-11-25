@@ -57,7 +57,7 @@ return {
 				{ name = "nvim_lsp_signature_help" },
 				{ name = "buffer", keyword_length = 3, max_item_count = 3 }, -- text within current buffer
 				{ name = "path", keyword_length = 2, max_item_count = 3 }, -- file system paths
-				{ name = "luasnip", keyword_length = 3 },
+				{ name = "luasnip", keyword_length = 2 },
 				{ name = "nvim_lua" },
 				{ name = "npm", keyword_length = 4 },
 				{ name = "html-css" },

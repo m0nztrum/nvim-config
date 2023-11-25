@@ -1,14 +1,11 @@
-vim.o.timeout = true
-vim.o.timeoutlen = 300
-
 return {
 	"folke/which-key.nvim",
 	event = "VeryLazy",
 
 	config = function()
-		local whickkey = require("whick-key")
+		local whichkey = require("which-key")
 
-		whickkey.setup({
+		whichkey.setup({
 
 			icons = {
 				breadcrumb = "»", -- symbol used in the command line area that shows your active key combo
@@ -21,8 +18,8 @@ return {
 			},
 		})
 		-- whick key
-local wk = require("which-key")
-wk.register(mappings, opts)
-
+		whichkey.register(mappings, opts)
+		vim.o.timeout = true
+		vim.o.timeoutlen = 300
 	end,
 }

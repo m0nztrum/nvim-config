@@ -15,15 +15,15 @@ require("lazy").setup({
 	install = {
 		missing = true,
 	},
-	spec = "plugins",
+    spec = "plugins",
 	checker = {
 		enabled = true,
 		notify = true,
 	},
 	ui = {
 		icons = {
-			task = "",
 			border = "rounded",
+			task = "",
 		},
 	},
 })

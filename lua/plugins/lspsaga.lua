@@ -2,7 +2,7 @@ return {
 	"nvimdev/lspsaga.nvim", -- LSP UIs
 
 	config = function()
-		local saga = require("saga")
+		local saga = require("lspsaga")
 		saga.setup({
 			symbol_in_winbar = {
 				enable = true,

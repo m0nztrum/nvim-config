@@ -1,8 +1,4 @@
 return {
-	"davidosomething/vim-colors-meh",
-	"rebelot/kanagawa.nvim",
-	"lunarvim/horizon.nvim",
-	"rose-pine/neovim",
 
 	"nvim-tree/nvim-web-devicons",
 

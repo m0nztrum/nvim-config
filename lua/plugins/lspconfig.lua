@@ -90,13 +90,6 @@ return {
 			on_attach = on_attach,
 		})
 
-		vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
-			underline = true,
-			update_in_insert = false,
-			virtual_text = { spacing = 1, prefix = "\u{ea71}" },
-			severity_sort = true,
-		})
-
 		-- Diagnostic symbols in the sign column (gutter)
 		local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
 		for severity, icon in pairs(signs) do
@@ -105,10 +98,13 @@ return {
 		end
 
 		vim.diagnostic.config({
+			virtual_text = { spacing = 1, prefix = "\u{ea71}" },
 			float = {
 				border = "rounded",
 				source = "if_many",
 			},
+			update_in_insert = true,
+			underline = true,
 		})
 	end,
 }

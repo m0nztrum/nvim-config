@@ -27,6 +27,7 @@ return {
 				"lua_ls",
 				"pyright",
 				"html",
+				"tsserver",
 				"cssls",
 				"clangd",
 				"biome",

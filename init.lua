@@ -1,4 +1,4 @@
-require("core.settings")
-require("core.autocmds")
-require("core.keymap")
-require("core.lazy")
+require("core.settings") -- nvim settings
+require("core.autocmds") -- autocmds
+require("core.keymap") --  keymaps
+require("core.lazy") -- lazynvim setup

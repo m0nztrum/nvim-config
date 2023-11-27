@@ -13,4 +13,6 @@ return {
 	"psliwka/vim-smoothie",
 
 	"tpope/vim-commentary",
+
+	"Jezda1337/nvim-html-css",
 }

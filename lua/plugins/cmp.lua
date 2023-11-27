@@ -10,6 +10,7 @@ return {
 		"hrsh7th/cmp-path",
 		"hrsh7th/cmp-nvim-lua",
 		"hrsh7th/cmp-nvim-lsp-signature-help",
+		"Jezda1337/nvim-html-css",
 	},
 	event = "InsertEnter",
 	config = function()

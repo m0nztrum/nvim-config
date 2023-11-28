@@ -90,13 +90,6 @@ return {
 			on_attach = on_attach,
 		})
 
-		-- Diagnostic symbols in the sign column (gutter)
-		local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
-		for severity, icon in pairs(signs) do
-			local hl = "DiagnosticSign" .. severity:sub(1, 1) .. severity:sub(2):lower()
-			vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
-		end
-
 		vim.diagnostic.config({
 			virtual_text = { spacing = 1, prefix = "\u{ea71}" },
 			float = {
@@ -106,5 +99,17 @@ return {
 			update_in_insert = true,
 			underline = true,
 		})
+		vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
+			underline = true,
+			virtual_text = { spacing = 1, prefix = "\u{ea71}" },
+			severity_sort = true,
+		})
+
+		-- Diagnostic symbols in the sign column (gutter)
+		local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
+		for severity, icon in pairs(signs) do
+			local hl = "DiagnosticSign" .. severity:sub(1, 1) .. severity:sub(2):lower()
+			vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
+		end
 	end,
 }

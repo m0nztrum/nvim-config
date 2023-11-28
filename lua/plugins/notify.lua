@@ -10,10 +10,11 @@ return {
 				DEBUG = "",
 				ERROR = "",
 				INFO = "",
-				TRACE = "",
-				WARN = "",
+				TRACE = "✎",
+				WARN = "",
 			},
 			timeout = 1500,
+			stages = "slide",
 		})
 		vim.notify = notify
 	end,

@@ -34,11 +34,24 @@ return {
 		end
 
 		--  server configurations
-		--      [Lua]
-		nvim_lsp.lua_ls.setup({
-			capabilities = capabilities,
-			on_attach = on_attach,
-		})
+		local servers = {
+			"bashls",
+			"pyright",
+			"html",
+			"cssls",
+			"tsserver",
+			"lua_ls",
+			"marksman",
+			"tailwindcss",
+			"pyright",
+		}
+
+		for _, lsp in ipairs(servers) do
+			nvim_lsp[lsp].setup({
+				on_attach = on_attach,
+				capabilities = capabilities,
+			})
+		end
 
 		--      [C/C++]
 		nvim_lsp.clangd.setup({
@@ -48,46 +61,6 @@ return {
 			},
 			on_attach = on_attach,
 			cmd = { "clangd" },
-		})
-
-		--      [css]
-		nvim_lsp.cssls.setup({
-			capabilities = capabilities,
-			on_attach = on_attach,
-		})
-
-		--      [typescript]
-		nvim_lsp.tsserver.setup({
-			capabilities = capabilities,
-			on_attach = on_attach,
-		})
-
-		nvim_lsp.tailwindcss.setup({
-			capabilities = capabilities,
-			on_attach = on_attach,
-		})
-
-		nvim_lsp.marksman.setup({
-			capabilities = capabilities,
-			on_attach = on_attach,
-		})
-
-		--      [html]
-		nvim_lsp.html.setup({
-			capabilities = capabilities,
-			on_attach = on_attach,
-		})
-
-		--      [bash]
-		nvim_lsp.bashls.setup({
-			capabilities = capabilities,
-			on_attach = on_attach,
-		})
-
-		--      [python]
-		nvim_lsp.pyright.setup({
-			capabilities = capabilities,
-			on_attach = on_attach,
 		})
 
 		vim.diagnostic.config({

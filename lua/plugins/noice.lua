@@ -2,6 +2,7 @@ return {
 	"folke/noice.nvim",
 	event = "VeryLazy",
 	dependencies = { "MunifTanjim/nui.nvim", "rcarriga/nvim-notify" },
+	enabled = false,
 
 	config = function()
 		local noice = require("noice")
@@ -12,7 +13,7 @@ return {
 			},
 			popupmenu = {
 				enabled = true,
-				backend = "nui",
+				backend = "cmp",
 			},
 			notify = {
 				enabled = true,

@@ -96,6 +96,6 @@ opt.swapfile = false
 opt.encoding = "utf-8"
 opt.fileencoding = "utf-8"
 
-g.python3_host_prog = "/usr/bin/python3"
+-- g.python3_host_prog = "/usr/bin/python3"
 
 vim.o.background = "dark"

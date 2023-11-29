@@ -31,6 +31,7 @@ return {
 				"tsserver",
 				"cssls",
 				"clangd",
+				"pylsp",
 				"biome",
 				"tailwindcss",
 			},

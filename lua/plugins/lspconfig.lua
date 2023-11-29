@@ -21,7 +21,7 @@ return {
 			keymap.set("n", "<leader>d", vim.diagnostic.open_float, opts) -- shows diagnostics for a line
 
 			opts.desc = "Show available code actions"
-			keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts) -- see available code actions
+			keymap.set({ "n", "v" }, "<leader>ca", "<cmd>Lspsaga code_action <cr>", opts) -- see available code actions
 
 			opts.desc = "Go to previous diagnostic"
 			keymap.set("n", "[d", vim.diagnostic.goto_prev, opts) -- jump to previous diagnostic in buffer
@@ -36,14 +36,14 @@ return {
 		--  server configurations
 		local servers = {
 			"bashls",
-			"pyright",
 			"html",
 			"cssls",
 			"tsserver",
 			"lua_ls",
 			"marksman",
 			"tailwindcss",
-			"pyright",
+			"pylsp",
+			"rust_analyzer",
 		}
 
 		for _, lsp in ipairs(servers) do
@@ -69,7 +69,7 @@ return {
 				border = "rounded",
 				source = "if_many",
 			},
-			update_in_insert = true,
+			update_in_insert = false,
 			underline = true,
 		})
 		vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {

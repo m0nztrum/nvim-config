@@ -2,7 +2,11 @@ return {
 
 	{
 		"catppuccin/nvim",
+		lazy = false,
 		priority = 1000,
+		config = function()
+			vim.cmd.colorscheme("catppuccin-mocha")
+		end,
 	},
 
 	{
@@ -18,7 +22,8 @@ return {
 
 	{
 		"ellisonleao/gruvbox.nvim",
-		priority = 500,
+		lazy = false,
+		priority = 1000,
 
 		config = function()
 			local gruv = require("gruvbox")
@@ -44,7 +49,28 @@ return {
 				dim_inactive = true,
 				transparent_mode = true,
 			})
-			vim.cmd.colorscheme("catppuccin-mocha")
+			-- vim.cmd.colorscheme("gruvbox")
+		end,
+	},
+	{
+		"craftzdog/solarized-osaka.nvim",
+		lazy = false,
+		priority = 1000,
+		config = function()
+			local solarized = require("solarized-osaka")
+			solarized.setup({
+				transparent_ = true,
+				styles = {
+					-- Style to be applied to different syntax groups
+					-- Value is any valid attr-list value for `:help nvim_set_hl`
+					comments = { italic = true },
+					keywords = { italic = true },
+
+					-- Background styles. Can be "dark", "transparent" or "normal"
+					sidebars = "transparent", -- style for sidebars, see below
+					floats = "transparent", -- style for floating windows
+				},
+			})
 		end,
 	},
 }

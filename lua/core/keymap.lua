@@ -38,4 +38,3 @@ keymap.set("n", "<leader>q", "<cmd>q<CR>", { desc = "quit current buffer" })
 keymap.set("n", "<C-s>", "gg<S-v>G")
 
 -- diffview
-keymap.set("n", "<leader>gd", "<cmd>DiffviewOpen<CR>", { desc = "Open diffview" })

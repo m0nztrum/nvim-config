@@ -1,6 +1,6 @@
 return {
 	"lervag/vimtex",
-
+	enabled = false,
 	config = function()
 		vim.cmd([[ 
 		filetype plugin indent on

@@ -28,8 +28,8 @@
 
 Simply run the following command on your terminal(I expect you already have `git` installed.)
 
-```
-git clone https://github.com/datsfilipe/datsnvim.git ~/.config/nvim && nvim
+```shell
+git clone https://github.com/Dragonixj/nvim-config.git ~/.config/nvim && nvim
 ```
 
 <h1 align='center'>

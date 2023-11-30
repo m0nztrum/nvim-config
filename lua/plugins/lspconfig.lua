@@ -77,6 +77,9 @@ return {
 			virtual_text = { spacing = 1, prefix = "\u{ea71}" },
 			severity_sort = true,
 		})
+		vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
+			border = "rounded",
+		})
 
 		-- Diagnostic symbols in the sign column (gutter)
 		local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }

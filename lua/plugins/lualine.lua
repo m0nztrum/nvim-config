@@ -30,7 +30,15 @@ return {
 				lualine_a = { { "mode", icons_enabled = true, icon = { "" } } },
 				lualine_b = {
 					{ "branch", icon = "\u{e725}" },
-					{ "diff", colored = true },
+					{
+						"diff",
+						colored = true,
+						symbols = {
+							added = " ",
+							modified = "柳",
+							removed = " ",
+						},
+					},
 					{
 						"diagnostics",
 						always_visible = false,

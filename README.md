@@ -32,9 +32,9 @@ Simply run the following command on your terminal(I expect you already have `git
 git clone https://github.com/Dragonixj/nvim-config.git ~/.config/nvim && nvim
 ```
 
-<h1 align='center'>
+<h2 align='center'>
     Plugins
-</h1>
+</h2>
 
 My config uses [lazy](https://github.com/folke/lazy.nvim) to manage plugins.<br>
 Needed Dependencies

@@ -24,6 +24,14 @@
 | **wilder menu**                                   | **cmp**                                              |
 | <img alt='wilder menu' src='./Images/wilder.png'> | <img alt='cmp' src='./Images/cmp.png'>               |
 
+# Installation
+
+Simply run the following command on your terminal(I expect you already have `git` installed.)
+
+```
+git clone https://github.com/datsfilipe/datsnvim.git ~/.config/nvim && nvim
+```
+
 <h1 align='center'>
     Plugins
 </h1>

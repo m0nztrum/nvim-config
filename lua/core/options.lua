@@ -1,5 +1,3 @@
--- VIM SETTINGS
----------------
 local wo = vim.wo
 local opt = vim.opt -- for conciseness
 local g = vim.g

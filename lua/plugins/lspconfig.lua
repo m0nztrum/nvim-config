@@ -1,5 +1,6 @@
 return {
 	"neovim/nvim-lspconfig", -- Required
+	enabled = true,
 	config = function()
 		local nvim_lsp = require("lspconfig")
 		local keymap = vim.keymap
@@ -31,6 +32,12 @@ return {
 
 			opts.desc = "Show documentation for what is under cursor"
 			keymap.set("n", "K", vim.lsp.buf.hover, opts)
+
+			opts.desc = "Rename all ref of symbol under cursor"
+			keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
+
+			opts.desc = "Sig help"
+			keymap.set("n", "<C-h>", vim.lsp.buf.signature_help, opts)
 		end
 
 		--  server configurations

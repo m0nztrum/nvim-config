@@ -41,7 +41,7 @@ return {
 		end)
 
 		-- call non customized servers here
-		lsp_zero.setup_servers({ "lua_ls", "rust_analyzer", "tsserver", "pyright" })
+		lsp_zero.setup_servers({ "lua_ls", "rust_analyzer", "tsserver" })
 		--]]
 
 		--if you want mason to handle the servers

@@ -8,7 +8,8 @@ return {
 		local lint_aurogroup = vim.api.nvim_create_augroup("lint", { clear = true })
 
 		lint.linters_by_ft = {
-			python = { "pylint" },
+			-- python = { "pylint" },
+			python = { "flake8" },
 			javascript = { "biomejs" },
 		}
 

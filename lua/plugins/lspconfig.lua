@@ -49,7 +49,7 @@ return {
 			"lua_ls",
 			"marksman",
 			"tailwindcss",
-			"pylsp",
+			"pyright",
 			"rust_analyzer",
 		}
 

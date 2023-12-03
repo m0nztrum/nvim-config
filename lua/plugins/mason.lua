@@ -26,12 +26,10 @@ return {
 			ensure_installed = {
 				"lua_ls",
 				"pyright",
-				"html",
 				"marksman",
 				"tsserver",
 				"cssls",
 				"clangd",
-				"pylsp",
 				"biome",
 				"tailwindcss",
 			},

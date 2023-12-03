@@ -6,10 +6,8 @@ vim.g.mapleader = " "
 -- Toggle line numbers
 keymap.set("n", "<leader>n", ":set invnumber invrelativenumber<CR>")
 
--- Run the current line as a shell command, replace with the output
-keymap.set("n", "Q", "!!zsh<CR>")
-
 --vim.keymap.set("n", "<leader><TAB>", ":set invlist<CR>")
+
 -- Disable the arrow keys
 keymap.set("n", "<Left>", ":echo 'use h twat'<CR>")
 keymap.set("n", "<Right>", ":echo 'use l twat'<CR>")
@@ -36,5 +34,3 @@ keymap.set("n", "<leader>q", "<cmd>q<CR>", { desc = "quit current buffer" })
 
 -- select all
 keymap.set("n", "<C-s>", "gg<S-v>G")
-
--- diffview

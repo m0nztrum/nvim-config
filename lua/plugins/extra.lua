@@ -11,4 +11,15 @@ return {
 	"psliwka/vim-smoothie",
 
 	"tpope/vim-commentary",
+	{
+		"folke/flash.nvim",
+		opts = {
+			search = {
+				foward = true,
+				multi_window = false,
+				wrap = false,
+				incremental = true,
+			},
+		},
+	},
 }

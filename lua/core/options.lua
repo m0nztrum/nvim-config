@@ -2,8 +2,8 @@ local wo = vim.wo
 local opt = vim.opt -- for conciseness
 local g = vim.g
 local o = vim.o
+
 opt.autoread = true
-opt.autowrite = true
 
 --Netrw
 g.netrw_liststyle = 1

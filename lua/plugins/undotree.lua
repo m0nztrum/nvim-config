@@ -5,6 +5,6 @@ return {
 		local keymap = vim.keymap
 
 		-- Toggle undotree
-		keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle, { desc = "Toggle undotree" })
+		keymap.set("n", "<leader>ud", vim.cmd.UndotreeToggle, { desc = "Toggle undotree" })
 	end,
 }

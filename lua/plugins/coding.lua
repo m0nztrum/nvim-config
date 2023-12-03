@@ -1,6 +1,35 @@
 return {
 
-	"smjonas/inc-rename.nvim",
-	cmd = "IncRename",
-	config = true,
+	--      Incremental rename
+	{
+		"smjonas/inc-rename.nvim",
+		cmd = "IncRename",
+		config = true,
+	},
+	{ "tpope/vim-commentary" },
+
+	{ "nvim-tree/nvim-web-devicons" },
+
+	{
+		"folke/flash.nvim",
+		enabled = false,
+		---@type Flash.Config
+		opts = {
+			search = {
+				foward = true,
+				multi_window = false,
+				wrap = false,
+				incremental = true,
+			},
+		},
+	},
+
+	{
+		"simrat39/symbols-outline.nvim",
+		keys = { { "<leader>cs", "<cmd>SymbolsOutline<cr>", desc = "Symbols Outline" } },
+		cmd = "SymbolsOutline",
+		opts = {
+			position = "right",
+		},
+	},
 }

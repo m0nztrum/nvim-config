@@ -34,3 +34,9 @@ keymap.set("n", "<leader>q", "<cmd>q<CR>", { desc = "quit current buffer" })
 
 -- select all
 keymap.set("n", "<C-s>", "gg<S-v>G")
+
+--  Resizing windows
+keymap.set("n", "<C-w><left>", "<C-w><")
+keymap.set("n", "<C-w><right>", "<C-w>>")
+keymap.set("n", "<C-w><up>", "<C-w>+")
+keymap.set("n", "<C-w><down>", "<C-w>-")

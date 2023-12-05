@@ -18,11 +18,14 @@ keymap.set("n", "H", "^")
 keymap.set("n", "L", "$")
 
 -- window management
-keymap.set("n", "<leader>to", "<cmd>tabnew<CR>", { desc = "Open new tab" }) -- open new tab
-keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Close current tab" }) -- close current tab
-keymap.set("n", "<leader>se", "<C-w>=", { desc = "Make splits equal size" })
-keymap.set("n", "<leader>ss", ":vsplit<Return><C-w>w", { desc = "Split current window" }, { silent = true })
--- keymap.set("n", "f", "<C-w>w")
+keymap.set("n", "to", "<cmd>tabnew<CR>", { desc = "Open new tab" }) -- open new tab
+keymap.set("n", "tx", "<cmd>tabclose<CR>", { desc = "Close current tab" }) -- close current tab
+keymap.set("n", "se", "<C-w>=", { desc = "Make splits equal size" })
+keymap.set("n", "ss", ":vsplit<Return><C-w>w", { desc = "Split current window" }, { silent = true })
+keymap.set("n", "sh", "<C-w>h", { desc = "Move window left" })
+keymap.set("n", "sk", "<C-w>k", { desc = "Move window up" })
+keymap.set("n", "sj", "<C-w>j", { desc = "Move window down" })
+keymap.set("n", "sl", "<C-w>l", { desc = "Move window right" })
 
 --  Lazy UI and Mason UI
 keymap.set("n", "<leader>L", "<cmd>Lazy<CR>", { desc = "Open Lazy UI" })

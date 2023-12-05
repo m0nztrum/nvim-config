@@ -41,7 +41,7 @@ return {
 				"stylua", -- lua formatter
 				"isort", -- formatter for sorting import python
 				"black", -- formatter for python
-				"pylint", -- linter for python
+				"flake8",
 				"prettier", -- formatter
 			},
 		})

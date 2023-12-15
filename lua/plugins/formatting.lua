@@ -11,13 +11,10 @@ return {
 				python = { "isort", "black" },
 				javascript = { "prettier" },
 				typescript = { "prettier" },
-				typescriptreact = { "prettier" },
-				javascriptreact = { "prettier" },
 				markdown = { "prettier" },
 				html = { "prettier" },
 				css = { "prettier" },
 				json = { "prettier" },
-				-- c = { "clang_format" }, -- commented out since builtin into clang server
 			},
 
 			format_on_save = {
@@ -36,7 +33,7 @@ return {
 			notify_on_error = false,
 		})
 		--  special config for prettier
-		require("conform.formatters.prettier").args = function(ctx)
+		require("conform.formatters.prettier").args = function(self, ctx)
 			local args = { "--stdin-filepath", "$FILENAME" }
 			local localPrettierConfig = vim.fs.find(".prettierrc.json", {
 				upward = true,

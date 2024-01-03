@@ -39,9 +39,9 @@ git clone https://github.com/Dragonixj/nvim-config.git ~/.config/nvim && nvim
 My config uses [lazy](https://github.com/folke/lazy.nvim) to manage plugins.<br>
 Needed Dependencies
 
--   fd
--   ripgrep
--   chafa
+-   **fd**
+-   **ripgrep**
+-   **chafa**
 
 ## status line and colorschemes
 
@@ -80,10 +80,6 @@ Needed Dependencies
 -   [cmp-buffer](https://github.com/hrsh7th/cmp-buffer) - Buffer source for nvim-cmp.
 -   [cmp-nvim-lsp-signature-help](https://github.com/hrsh7th/cmp-nvim-lsp-signature-help) - Signature help source for nvim-cmp.
 -   [cmp_luasnip](https://github.com/saadparwaiz1/cmp_luasnip) - Luasnip completion source for nvim-cmp
-
-## Keymaps
-
-_TODO_
 
 ## Contributing
 

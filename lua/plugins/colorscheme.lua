@@ -5,7 +5,7 @@ return {
 		lazy = false,
 		priority = 1000,
 		config = function()
-			vim.cmd.colorscheme("catppuccin-mocha")
+			-- vim.cmd.colorscheme("catppuccin-mocha")
 		end,
 	},
 
@@ -17,7 +17,13 @@ return {
 		end,
 	},
 	{ "rebelot/kanagawa.nvim", priority = 1000 },
-	{ "lunarvim/horizon.nvim", priority = 1000 },
+	{
+		"lunarvim/horizon.nvim",
+		priority = 1000,
+		config = function()
+			vim.cmd.colorscheme("horizon")
+		end,
+	},
 	{ "rose-pine/neovim", priority = 1000 },
 
 	{

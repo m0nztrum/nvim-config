@@ -13,7 +13,6 @@ return {
 			-- A list of parser names, or "all"
 			ensure_installed = {
 				"c",
-				"cpp",
 				"markdown",
 				"python",
 				"markdown_inline",
@@ -24,7 +23,6 @@ return {
 				"css",
 				"bash",
 				"json",
-				"regex",
 				"tsx",
 				"gitignore",
 			},

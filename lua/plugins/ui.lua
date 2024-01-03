@@ -97,4 +97,15 @@ return {
 	{ "xiyaowong/nvim-transparent" },
 
 	{ "psliwka/vim-smoothie" },
+	{
+		"folke/twilight.nvim",
+		config = function()
+			local twilight = require("twilight")
+			twilight.setup({
+				dimming = {
+					alpha = 0.6,
+				},
+			})
+		end,
+	},
 }

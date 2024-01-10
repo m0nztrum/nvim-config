@@ -21,7 +21,7 @@ return {
 		"lunarvim/horizon.nvim",
 		priority = 1000,
 		config = function()
-			vim.cmd.colorscheme("horizon")
+			-- vim.cmd.colorscheme("horizon")
 		end,
 	},
 	{ "rose-pine/neovim", priority = 1000 },
@@ -49,13 +49,13 @@ return {
 				invert_tabline = false,
 				invert_intend_guides = false,
 				inverse = true, -- invert background for search, diffs, statuslines and errors
-				contrast = "", -- can be "hard", "soft" or empty string
-				palette_overrides = {},
+				contrast = "soft", -- can be "hard", "soft" or empty string
+				paletteoverrides = {},
 				overrides = {},
 				dim_inactive = true,
 				transparent_mode = true,
 			})
-			-- vim.cmd.colorscheme("gruvbox")
+			vim.cmd.colorscheme("gruvbox")
 		end,
 	},
 	{

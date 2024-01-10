@@ -12,6 +12,10 @@ return {
 			dashboard.button("u", "  Update plugins", ":Lazy sync<CR>"),
 			dashboard.button("q", "  Quit", ":qa<cr>"),
 		}
+		dashboard.section.buttons.opts = {
+			spacing = 1,
+			position = "center",
+		}
 
 		alpha.setup(dashboard.opts)
 	end,

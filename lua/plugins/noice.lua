@@ -1,55 +1,26 @@
 return {
 	"folke/noice.nvim",
 	event = "VeryLazy",
+	opts = {},
 	dependencies = { "MunifTanjim/nui.nvim", "rcarriga/nvim-notify" },
 	enabled = false,
-	opts = function(_, opts)
-		table.insert(opts.routes, {
-			filter = {
-				event = "notify",
-				find = "No information available",
-			},
-			opts = { skip = true },
-		})
-		local focused = true
-		vim.api.nvim_create_autocmd("FocusGained", {
-			callback = function()
-				focused = true
-			end,
-		})
-		vim.api.nvim_create_autocmd("FocusLost", {
-			callback = function()
-				focused = false
-			end,
-		})
-		table.insert(opts.routes, 1, {
-			filter = {
-				cond = function()
-					return not focused
-				end,
-			},
-			view = "notify_send",
-			opts = { stop = false },
-		})
 
-		opts.commands = {
-			all = {
-				-- options for the message history that you get with `:Noice`
-				view = "split",
-				opts = { enter = true, format = "details" },
-				filter = {},
+	config = function()
+		local noice = require("noice")
+		noice.setupe({
+			lsp = {
+				override = {
+					["vim.lsp.util.stylize_markdown"] = true,
+				},
 			},
-		}
 
-		vim.api.nvim_create_autocmd("FileType", {
-			pattern = "markdown",
-			callback = function(event)
-				vim.schedule(function()
-					require("noice.text.markdown").keys(event.buf)
-				end)
-			end,
+			presets = {
+				bottom_search = true,
+				command_palette = true,
+				long_message_to_split = true,
+				inc_rename = false,
+				lsp_doc_border = false,
+			},
 		})
-
-		opts.presets.lsp_doc_border = true
 	end,
 }

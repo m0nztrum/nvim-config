@@ -72,7 +72,7 @@ return {
 			formatting = {
 				fields = { "abbr", "kind" },
 				format = lspkind.cmp_format({
-					maxwidth = 50,
+					maxwidth = 40,
 					ellipsis_char = "...",
 					with_text = true,
 				}),

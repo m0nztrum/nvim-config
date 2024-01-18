@@ -11,6 +11,7 @@ return {
 			-- python = { "pylint" },
 			python = { "flake8" },
 			javascript = { "biomejs" },
+			htmldjango = { "djlint" },
 		}
 
 		vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost", "InsertLeave" }, {

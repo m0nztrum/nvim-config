@@ -9,7 +9,7 @@ return {
 		dashboard.section.buttons.val = {
 			dashboard.button("e", " File Explorer", ":Telescope find_files<CR>"),
 			dashboard.button("r", " Old Files", ":Telescope oldfiles<CR>"),
-			dashboard.button("u", "  Update plugins", ":Lazy sync<CR>"),
+			dashboard.button("u", "  Update plugins", ":Lazy sync<CR>"),
 			dashboard.button("q", "  Quit", ":qa<cr>"),
 		}
 		dashboard.section.buttons.opts = {

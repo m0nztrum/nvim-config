@@ -45,7 +45,7 @@ return {
 		})
 		telescope.load_extension("fzf")
 
-		--  [Keymaps]
+		--                      [Keymaps]
 		--      files and buffers
 		keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Find files" }) --find files
 		keymap.set("n", "<leader><leader>", builtin.oldfiles, { desc = "Show old files" }) --olf files

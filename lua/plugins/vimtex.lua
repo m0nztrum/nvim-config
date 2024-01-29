@@ -16,7 +16,7 @@ return {
 		" supported backends and further explanation is provided in the documentation,
 		" see ":help vimtex-compiler".
 
-		"let g:vimtex_compiler_method = 'latexrun'
+		let g:vimtex_compiler_method = 'latexmk'
 
 		let g:vimtex_compiler_latexmk = {
 		    \ 'build_dir' : 'build',

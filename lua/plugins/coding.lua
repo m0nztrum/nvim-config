@@ -13,7 +13,6 @@ return {
 	{
 		"folke/flash.nvim",
 		enabled = false,
-		---@type Flash.Config
 		opts = {
 			search = {
 				foward = true,

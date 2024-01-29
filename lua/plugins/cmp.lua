@@ -54,13 +54,13 @@ return {
 			}),
 
 			sources = cmp.config.sources({
-				{ name = "nvim_lsp", keyword_length = 2 },
+				{ name = "nvim_lsp" },
+				{ name = "luasnip" },
 				{ name = "nvim_lsp_signature_help" },
-				{ name = "buffer", keyword_length = 3 }, -- text within current buffer
-				{ name = "path", keyword_length = 2 }, -- file system paths
-				{ name = "luasnip", keyword_length = 2 },
+				{ name = "buffer" }, -- text within current buffer
+				{ name = "path" }, -- file system paths
 				{ name = "nvim_lua" },
-				{ name = "npm", keyword_length = 4 },
+				{ name = "npm" },
 				{ name = "html-css" },
 			}),
 

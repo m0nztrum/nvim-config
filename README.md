@@ -26,7 +26,7 @@
 
 # Installation
 
-Simply run the following command on your terminal(I expect you already have `git` installed.)
+Simply run the following command on your terminal (I expect you already have `git` installed.)
 
 ```shell
 git clone https://github.com/Dragonixj/nvim-config.git ~/.config/nvim && nvim

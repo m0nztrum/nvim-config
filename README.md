@@ -52,6 +52,10 @@ Needed Dependencies
 -   [horizon](https://github.com/akinsho/horizon.nvim)
 -   [rose-pine](https://github.com/rose-pine/neovim)
 -   [kanagawa](https://github.com/rebelot/kanagawa.nvim)
+-   [catppuccin](https://github.com/catppuccin/nvim)
+-   [meh](https://github.com/davidosomething/vim-colors-meh)
+-   [gruvbox](https://github.com/ellisonleao/gruvbox.nvim)
+-   [solarized-osaka](https://github.com/craftzdog/solarized-osaka.nvim)
 
 ## Utilities & UI stuff
 

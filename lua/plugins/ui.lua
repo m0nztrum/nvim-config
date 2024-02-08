@@ -1,24 +1,4 @@
 return {
-	{
-		"rcarriga/nvim-notify",
-		config = function()
-			local notify = require("notify")
-			notify.setup({
-				background_colour = "#808080",
-				fps = 30,
-				icons = {
-					DEBUG = "",
-					ERROR = "",
-					INFO = "",
-					TRACE = "✎",
-					WARN = "",
-				},
-				timeout = 1500,
-				stages = "slide",
-			})
-			vim.notify = notify
-		end,
-	},
 
 	{
 
@@ -35,7 +15,7 @@ return {
 	--      wilder
 	{
 		"gelguy/wilder.nvim",
-		enabled = true,
+		enabled = false,
 		config = function()
 			local wilder = require("wilder")
 			wilder.setup({

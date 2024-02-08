@@ -59,5 +59,6 @@ return {
 				Search = { bg = "gold", inherit = true },
 			},
 		})
+		-- vim.cmd.colorscheme("rose-pine")
 	end,
 }

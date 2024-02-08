@@ -16,7 +16,13 @@ return {
 			-- vim.cmd.colorscheme("meh")
 		end,
 	},
-	{ "rebelot/kanagawa.nvim", priority = 1000 },
+	{
+		"rebelot/kanagawa.nvim",
+		priority = 1000,
+		config = function()
+			vim.cmd.colorscheme("kanagawa")
+		end,
+	},
 	{
 		"lunarvim/horizon.nvim",
 		priority = 1000,
@@ -24,7 +30,6 @@ return {
 			-- vim.cmd.colorscheme("horizon")
 		end,
 	},
-	{ "rose-pine/neovim", priority = 1000 },
 
 	{
 		"ellisonleao/gruvbox.nvim",
@@ -55,7 +60,7 @@ return {
 				dim_inactive = true,
 				transparent_mode = true,
 			})
-			vim.cmd.colorscheme("gruvbox")
+			-- vim.cmd.colorscheme("gruvbox")
 		end,
 	},
 	{

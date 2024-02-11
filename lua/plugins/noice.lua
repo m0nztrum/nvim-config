@@ -12,6 +12,7 @@ return {
 				lsp = {
 					override = {
 						["vim.lsp.util.stylize_markdown"] = true,
+						["cmp.entry.get_documentation"] = false,
 					},
 					hover = { enabled = false },
 					progress = {
@@ -19,6 +20,7 @@ return {
 						throttle = 1000 / 30, -- frequency to update lsp progress message
 						view = "mini",
 					},
+					signature = { enabled = false },
 				},
 
 				presets = {

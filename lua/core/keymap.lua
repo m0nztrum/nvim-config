@@ -1,6 +1,6 @@
 local keymap = vim.keymap -- for conciseness
 
--- Set leader key
+-- Set leader key to space
 vim.g.mapleader = " "
 
 -- Toggle line numbers
@@ -13,6 +13,7 @@ keymap.set("n", "<Left>", ":echo 'use h twat'<CR>")
 keymap.set("n", "<Right>", ":echo 'use l twat'<CR>")
 keymap.set("n", "<Up>", ":echo 'use k twat'<CR>")
 keymap.set("n", "<Down>", ":echo 'use j twat'<CR>")
+
 -- some line movement
 keymap.set("n", "H", "^")
 keymap.set("n", "L", "$")
@@ -43,3 +44,9 @@ keymap.set("n", "<C-w><left>", "<C-w><")
 keymap.set("n", "<C-w><right>", "<C-w>>")
 keymap.set("n", "<C-w><up>", "<C-w>+")
 keymap.set("n", "<C-w><down>", "<C-w>-")
+
+-- Do not yank when x is pressed
+keymap.set("n", "x", '"_x')
+
+-- Render markdown using Markdown preview
+keymap.set("n", "<leader>md", "<cmd>MarkdownPreview<CR>", { desc = "Render current markdown file" })

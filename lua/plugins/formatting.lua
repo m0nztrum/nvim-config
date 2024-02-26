@@ -16,6 +16,7 @@ return {
 				css = { "prettier" },
 				json = { "prettier" },
 				htmldjango = { "djlint" },
+				jsonc = { "prettier" },
 			},
 
 			format_on_save = {

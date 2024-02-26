@@ -14,15 +14,15 @@
     Some screenshots
 </h3>
 
-| Mason Ui                                          | Whickkey UI                                          |
-| ------------------------------------------------- | ---------------------------------------------------- |
-| <img alt='mason page' src='./Images/mason.png'>   | <img src='./Images/whichkey.png'>                    |
-| **Nvim tree**                                     | **Telescope UI**                                     |
-| <img alt='tree' src = './Images/tree.png'>        | <img alt='telescope' src='./Images/telescope.png'>   |
-| **diffview**                                      | **toggleterm**                                       |
-| <img alt='diffview' src='./Images/diffview.png'>  | <img alt='toggleterm' src='./Images/toggleterm.png'> |
-| **wilder menu**                                   | **cmp**                                              |
-| <img alt='wilder menu' src='./Images/wilder.png'> | <img alt='cmp' src='./Images/cmp.png'>               |
+| Mason Ui                                         | Whickkey UI                                          |
+| ------------------------------------------------ | ---------------------------------------------------- |
+| <img alt='mason page' src='./Images/mason.png'>  | <img src='./Images/whichkey.png'>                    |
+| **Nvim tree**                                    | **Telescope UI**                                     |
+| <img alt='tree' src = './Images/tree.png'>       | <img alt='telescope' src='./Images/telescope.png'>   |
+| **diffview**                                     | **toggleterm**                                       |
+| <img alt='diffview' src='./Images/diffview.png'> | <img alt='toggleterm' src='./Images/toggleterm.png'> |
+| **lazy nvim**                                    | **cmp**                                              |
+| <img alt='wilder menu' src='./Images/lazy.png'>  | <img alt='cmp' src='./Images/cmp.png'>               |
 
 # Installation
 

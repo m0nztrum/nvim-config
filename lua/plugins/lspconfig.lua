@@ -48,7 +48,7 @@ return {
 			"tsserver",
 			"lua_ls",
 			"marksman",
-			"tailwindcss",
+			-- "tailwindcss",
 			"pyright",
 			"rust_analyzer",
 			"texlab",

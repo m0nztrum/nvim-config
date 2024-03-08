@@ -16,7 +16,6 @@ return {
 				html = { "prettier" },
 				css = { "prettier" },
 				json = { "prettier" },
-				htmldjango = { "djlint" },
 				jsonc = { "prettier" },
 			},
 

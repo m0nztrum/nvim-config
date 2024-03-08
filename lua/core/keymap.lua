@@ -1,3 +1,6 @@
+-- Set leader key to space
+vim.g.mapleader = " "
+
 local keymap = vim.keymap -- for conciseness
 
 -- Set leader key to space
@@ -15,10 +18,6 @@ keymap.set("n", "<Down>", ":echo 'use j twat'<CR>")
 -- some line movement
 keymap.set("n", "H", "^")
 keymap.set("n", "L", "$")
-
--- window management
-keymap.set("n", "to", "<cmd>tabnew<CR>", { desc = "Open new tab" }) -- open new tab
-keymap.set("n", "tx", "<cmd>tabclose<CR>", { desc = "Close current tab" }) -- close current tab
 
 -- Split window
 keymap.set("n", "se", "<C-w>=", { desc = "Make splits equal size" })

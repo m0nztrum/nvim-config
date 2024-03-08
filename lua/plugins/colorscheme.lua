@@ -20,7 +20,7 @@ return {
 		"rebelot/kanagawa.nvim",
 		priority = 1000,
 		config = function()
-			vim.cmd.colorscheme("kanagawa")
+			-- vim.cmd.colorscheme("kanagawa")
 		end,
 	},
 	{
@@ -60,7 +60,7 @@ return {
 				dim_inactive = true,
 				transparent_mode = true,
 			})
-			-- vim.cmd.colorscheme("gruvbox")
+			vim.cmd.colorscheme("gruvbox")
 		end,
 	},
 	{

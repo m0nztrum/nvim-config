@@ -10,6 +10,7 @@ return {
 				lua = { "stylua" },
 				python = { "isort", "black" },
 				javascript = { "prettier" },
+				javascriptreact = { "prettier" },
 				typescript = { "prettier" },
 				markdown = { "prettier" },
 				html = { "prettier" },

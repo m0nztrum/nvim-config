@@ -45,11 +45,4 @@ return {
 	{ "xiyaowong/nvim-transparent" },
 
 	{ "psliwka/vim-smoothie" },
-	{
-		"AlphaTechnolog/pywal.nvim",
-		config = function()
-			local pywal = require("pywal")
-			pywal.setup()
-		end,
-	},
 }

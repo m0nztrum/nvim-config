@@ -26,7 +26,7 @@ return {
 					tabline = 1000,
 					winbar = 1000,
 				},
-				theme = "pywal-nvim",
+				theme = "auto",
 			},
 			sections = {
 				lualine_a = { { "mode", icons_enabled = true, icon = { "" } } },

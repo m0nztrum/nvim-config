@@ -11,7 +11,7 @@ return {
 			dashboard.button("r", " Old Files", ":Telescope oldfiles<CR>"),
 			dashboard.button("u", "  Update plugins", ":Lazy sync<CR>"),
 			dashboard.button("m", "  Update Mason tools", ":MasonUpdate<CR>"),
-			dashboard.button("q", "  Quit", ":qa<cr>"),
+			dashboard.button("x", "  Quit", ":qa<cr>"),
 		}
 		dashboard.section.buttons.opts = {
 			spacing = 1,

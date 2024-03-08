@@ -6,8 +6,6 @@ vim.g.mapleader = " "
 -- Toggle line numbers
 keymap.set("n", "<leader>n", ":set invnumber invrelativenumber<CR>")
 
---vim.keymap.set("n", "<leader><TAB>", ":set invlist<CR>")
-
 -- Disable the arrow keys
 keymap.set("n", "<Left>", ":echo 'use h twat'<CR>")
 keymap.set("n", "<Right>", ":echo 'use l twat'<CR>")
@@ -21,8 +19,13 @@ keymap.set("n", "L", "$")
 -- window management
 keymap.set("n", "to", "<cmd>tabnew<CR>", { desc = "Open new tab" }) -- open new tab
 keymap.set("n", "tx", "<cmd>tabclose<CR>", { desc = "Close current tab" }) -- close current tab
+
+-- Split window
 keymap.set("n", "se", "<C-w>=", { desc = "Make splits equal size" })
-keymap.set("n", "ss", ":vsplit<Return><C-w>w", { desc = "Split current window" }, { silent = true })
+keymap.set("n", "sv", ":vsplit<Return><C-w>w", { desc = "Make vertical split" }, { silent = true })
+keymap.set("n", "ss", ":split<Return>", { desc = "Make horizontal split" }, { silent = true })
+
+-- Move to window
 keymap.set("n", "sh", "<C-w>h", { desc = "Move window left" })
 keymap.set("n", "sk", "<C-w>k", { desc = "Move window up" })
 keymap.set("n", "sj", "<C-w>j", { desc = "Move window down" })

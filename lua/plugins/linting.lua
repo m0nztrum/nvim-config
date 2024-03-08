@@ -10,7 +10,7 @@ return {
 		lint.linters_by_ft = {
 			-- python = { "pylint" },
 			python = { "flake8" },
-			javascript = { "biomejs" },
+			-- javascript = { "biomejs" },
 			htmldjango = { "djlint" },
 		}
 

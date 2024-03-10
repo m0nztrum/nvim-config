@@ -28,6 +28,8 @@ return {
 				"pyright",
 				"marksman",
 				"tsserver",
+				"eslint",
+				"bashls",
 				"cssls",
 				"clangd",
 				"biome",
@@ -41,7 +43,6 @@ return {
 				"stylua", -- lua formatter
 				"isort", -- formatter for sorting import python
 				"black", -- formatter for python
-				"flake8",
 				"prettier", -- formatter
 			},
 		})

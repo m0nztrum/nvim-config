@@ -1,10 +1,6 @@
 -- Set leader key to space
-vim.g.mapleader = " "
 
 local keymap = vim.keymap -- for conciseness
-
--- Set leader key to space
-vim.g.mapleader = " "
 
 -- Toggle line numbers
 keymap.set("n", "<leader>n", ":set invnumber invrelativenumber<CR>")

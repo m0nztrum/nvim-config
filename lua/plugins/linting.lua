@@ -8,10 +8,7 @@ return {
 		local lint_aurogroup = vim.api.nvim_create_augroup("lint", { clear = true })
 
 		lint.linters_by_ft = {
-			-- python = { "pylint" },
 			python = { "flake8" },
-			-- javascript = { "biomejs" },
-			htmldjango = { "djlint" },
 		}
 
 		vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost", "InsertLeave" }, {

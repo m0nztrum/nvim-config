@@ -1,5 +1,3 @@
--- Set leader key to space
-
 local keymap = vim.keymap -- for conciseness
 
 -- Toggle line numbers

@@ -30,10 +30,10 @@ return {
 				"marksman",
 				"tsserver",
 				"eslint",
+				"html",
 				"bashls",
 				"cssls",
 				"clangd",
-				"biome",
 				"tailwindcss",
 			},
 			automatic_installation = true,
@@ -45,6 +45,7 @@ return {
 				"isort", -- formatter for sorting import python
 				"black", -- formatter for python
 				"prettier", -- formatter
+				"flake8", -- linting for python
 			},
 		})
 	end,

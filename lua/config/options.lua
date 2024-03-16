@@ -7,6 +7,7 @@ opt.autoread = true
 
 -- Set leader key to space
 vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
 --Netrw
 g.netrw_liststyle = 1

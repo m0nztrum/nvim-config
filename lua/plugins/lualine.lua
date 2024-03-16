@@ -76,7 +76,7 @@ return {
 			},
 			tabline = {},
 			inactive_winbar = {},
-			extensions = { "fugitive", "nvim-tree" },
+			extensions = { "fugitive", "nvim-tree", "toggleterm", "mason", "lazy" },
 		})
 	end,
 }

@@ -1,4 +1,4 @@
-require("core.options") -- nvim settings
-require("core.autocmds") -- autocmds
-require("core.keymap") --  keymaps
-require("core.lazy") -- lazynvim setup
+require("config.options") -- nvim settings
+require("config.autocmds") -- autocmds
+require("config.keymap") --  keymaps
+require("config.lazy") -- lazynvim setup

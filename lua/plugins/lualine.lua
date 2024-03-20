@@ -1,82 +1,51 @@
 return {
-	"nvim-lualine/lualine.nvim",
-	config = function()
-		local lualine = require("lualine")
+	{
+		"nvim-lualine/lualine.nvim",
+		event = "VeryLazy",
+		config = function()
+			local lualine = require("lualine")
 
-		lualine.setup({
-			options = {
-				icons_enabled = true,
-				component_separators = { left = "|", right = "|" },
-				section_separators = { left = "", right = "" },
-				-- component_separators = { left = "", right = "" },
-				-- section_separators = { left = "", right = "" },
-				disabled_filetypes = {
-					statusline = {
-						"NvimTree",
-					},
-					winbar = {
-						"NvimTree",
+			lualine.setup({
+				options = {
+					icons_enabled = true,
+					globalstatus = false,
+					theme = "pywal",
+					refresh = {
+						statusline = 1000,
+						tabline = 1000,
+						winbar = 1000,
 					},
 				},
-				ignore_focus = {},
-				always_divide_middle = true,
-				globalstatus = false,
-				refresh = {
-					statusline = 1000,
-					tabline = 1000,
-					winbar = 1000,
-				},
-				theme = "auto",
-			},
-			sections = {
-				lualine_a = { { "mode", icons_enabled = true, icon = { "" } } },
-				lualine_b = {
-					{ "branch", icon = "\u{e725}" },
-					{
-						"diff",
-						colored = true,
-						symbols = {
-							added = " ",
-							modified = "柳",
-							removed = " ",
+				sections = {
+					lualine_a = { "mode" },
+					lualine_b = {
+						"branch",
+						{ "diff", colored = true },
+						{
+							"diagnostics",
+							update_in_insert = true,
+							symbols = { error = " " },
 						},
 					},
-					{
-						"diagnostics",
-						always_visible = false,
-						update_in_insert = true,
-						symbols = { error = " " },
-						-- symbols = { error = " ", warn = " ", info = " ", hint = "" },
+					lualine_c = { "filename", { "searchcount" } },
+					lualine_x = {
+						"encoding",
+						"filetype",
+						"fileformat",
 					},
+					lualine_y = { "progress" },
+					lualine_z = { "location" },
 				},
-				lualine_c = {
-					{
-						"filename",
-						file_status = true,
-						path = 1,
-						newfile_status = true,
-					},
-					{ "searchcount" },
+				inactive_sections = {
+					lualine_a = {},
+					lualine_b = {},
+					lualine_c = { { "filename", file_status = true, path = 1 } },
+					lualine_x = { "location" },
+					lualine_y = {},
+					lualine_z = {},
 				},
-				lualine_x = {
-					-- "encoding",
-					{ "filetype", icon_only = false, colored = true },
-					"fileformat",
-				},
-				lualine_y = { { "progress", icon = { "", align = "left" } } },
-				lualine_z = { { "location", icon = { "", align = "left" } } },
-			},
-			inactive_sections = {
-				lualine_a = {},
-				lualine_b = {},
-				lualine_c = { { "filename", file_status = true, path = 1 } },
-				lualine_x = { "location" },
-				lualine_y = {},
-				lualine_z = {},
-			},
-			tabline = {},
-			inactive_winbar = {},
-			extensions = { "fugitive", "nvim-tree", "toggleterm", "mason", "lazy" },
-		})
-	end,
+				extensions = { "fugitive", "nvim-tree" },
+			})
+		end,
+	},
 }

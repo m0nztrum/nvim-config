@@ -1,8 +1,7 @@
 return {
-
 	"nvim-treesitter/nvim-treesitter",
 	dependencies = {
-		{ "windwp/nvim-ts-autotag" },
+		"windwp/nvim-ts-autotag",
 	},
 	build = ":TSUpdate",
 
@@ -24,6 +23,7 @@ return {
 				"bash",
 				"json",
 				"tsx",
+				"regex",
 				"gitignore",
 			},
 

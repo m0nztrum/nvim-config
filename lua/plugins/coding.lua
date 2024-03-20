@@ -1,18 +1,27 @@
 return {
+	{ "nvim-tree/nvim-web-devicons" },
 
-	--      Incremental rename
-	{
-		"smjonas/inc-rename.nvim",
-		cmd = "IncRename",
-		config = true,
-	},
 	{ "tpope/vim-commentary" },
 
-	{ "nvim-tree/nvim-web-devicons" },
+	{
+		"smjonas/inc-rename.nvim",
+		config = true,
+		keys = { { "<leader>rw", ":IncRename " } },
+	},
+
+	-- nvim surround
+	{
+		"kylechui/nvim-surround",
+		version = "*",
+		event = "VeryLazy",
+		config = function()
+			require("nvim-surround").setup({})
+		end,
+	},
 
 	{
 		"folke/flash.nvim",
-		enabled = false,
+		enabled = true,
 		opts = {
 			search = {
 				foward = true,
@@ -20,15 +29,6 @@ return {
 				wrap = false,
 				incremental = true,
 			},
-		},
-	},
-
-	{
-		"simrat39/symbols-outline.nvim",
-		keys = { { "<leader>cs", "<cmd>SymbolsOutline<cr>", desc = "Symbols Outline" } },
-		cmd = "SymbolsOutline",
-		opts = {
-			position = "right",
 		},
 	},
 
@@ -45,12 +45,21 @@ return {
 		end,
 	},
 
+	-- Refactoring tool
 	{
-		"kylechui/nvim-surround",
-		version = "*",
-		event = "VeryLazy",
-		config = function()
-			require("nvim-surround").setup({})
-		end,
+		"ThePrimeagen/refactoring.nvim",
+		keys = {
+			{
+				"<leader>r",
+				function()
+					require("refactoring").select_refactor()
+				end,
+				mode = "v",
+				noremap = true,
+				silent = true,
+				expr = false,
+			},
+		},
+		opts = {},
 	},
 }

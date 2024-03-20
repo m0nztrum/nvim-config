@@ -1,5 +1,6 @@
 {
-    "diagnostics.globals": [
-        "hooks"
-    ]
+	"diagnostics.globals":[
+		"hooks",
+        "vim"
+	]
 }

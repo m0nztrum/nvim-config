@@ -1,11 +1,9 @@
 local wo = vim.wo
-local opt = vim.opt -- for conciseness
+local opt = vim.opt
 local g = vim.g
 local o = vim.o
 
-opt.autoread = true
-
--- Set leader key to space
+-- set leader key to space
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
@@ -21,6 +19,8 @@ opt.numberwidth = 1
 
 -- Disable error bells
 opt.errorbells = false
+
+-- Disable mouse
 opt.mouse = ""
 
 -- Tabs widths
@@ -51,7 +51,7 @@ opt.incsearch = true
 -- Default to case insensitive search
 opt.ignorecase = true
 
--- Use case sensitive search if pattern includes uppercase letter
+-- Use case sensitive search if the pattern includes uppercase letter
 opt.smartcase = true
 
 -- Better colors

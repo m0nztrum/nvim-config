@@ -1,10 +1,16 @@
 return {
 	{ "nvim-tree/nvim-web-devicons" },
 
-	{ "tpope/vim-commentary" },
-
+	-- add this to your lua/plugins.lua, lua/plugins/init.lua,  or the file you keep your other plugins:
+	{
+		"numToStr/Comment.nvim",
+		opts = {
+			-- add any options here
+		},
+	},
 	{
 		"smjonas/inc-rename.nvim",
+		enabled = false,
 		config = true,
 		keys = { { "<leader>rw", ":IncRename " } },
 	},
@@ -17,19 +23,6 @@ return {
 		config = function()
 			require("nvim-surround").setup({})
 		end,
-	},
-
-	{
-		"folke/flash.nvim",
-		enabled = true,
-		opts = {
-			search = {
-				foward = true,
-				multi_window = false,
-				wrap = false,
-				incremental = true,
-			},
-		},
 	},
 
 	{

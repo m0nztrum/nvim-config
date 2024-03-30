@@ -35,7 +35,6 @@ return {
 					{ filter = { event = "msg_show", find = "written" }, skip = true },
 					{ filter = { event = "msg_show", find = "search hit TOP" }, skip = true },
 					{ filter = { event = "msg_show", find = "^E486: Pattern not found" }, view = "mini" },
-					{ view = "cmdline", filter = { event = "msg_showmode" } },
 				},
 				views = {
 					mini = {
@@ -93,8 +92,8 @@ return {
 					TRACE = "✎",
 					WARN = "",
 				},
-				timeout = 1500,
-				stages = "slide",
+				timeout = 200,
+				stages = "fade_in_slide_out",
 			})
 			vim.notify = notify
 		end,

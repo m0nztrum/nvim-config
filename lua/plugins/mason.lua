@@ -46,6 +46,7 @@ return {
 				"black", -- formatter for python
 				"prettier", -- formatter
 				"flake8", -- linting for python
+				"beautysh", -- for bash
 			},
 		})
 	end,

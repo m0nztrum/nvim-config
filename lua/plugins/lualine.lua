@@ -1,15 +1,16 @@
 return {
 	{
 		"nvim-lualine/lualine.nvim",
-		event = "VeryLazy",
+		-- event = "VeryLazy",
 		config = function()
 			local lualine = require("lualine")
+			local lazy_status = require("lazy.status")
 
 			lualine.setup({
 				options = {
 					icons_enabled = true,
 					globalstatus = false,
-					theme = "pywal",
+					theme = "auto",
 					refresh = {
 						statusline = 1000,
 						tabline = 1000,
@@ -29,11 +30,28 @@ return {
 					},
 					lualine_c = { "filename", { "searchcount" } },
 					lualine_x = {
+						{
+							lazy_status.updates,
+							cond = lazy_status.has_updates,
+							color = { fg = "#ff9e65" },
+						},
+						{
+							function()
+								local reg = vim.fn.reg_recording()
+								if reg == "" then
+									return ""
+								end -- not recording
+								return "recording@" .. reg
+							end,
+						},
+
 						"encoding",
 						"filetype",
 						"fileformat",
 					},
-					lualine_y = { "progress" },
+					lualine_y = {
+						"progress",
+					},
 					lualine_z = { "location" },
 				},
 				inactive_sections = {

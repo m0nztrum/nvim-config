@@ -6,9 +6,9 @@
     Startup page
 </h3>
 
-| <img alt='startup page 1' src='./Images/startup1.png'> | <img alt='startup page 2' src='./Images/startup2.png'> |
+| <img alt='startup page 1' src='./assets/startup1.png'> | <img alt='startup page 2' src='./assets/startup2.png'> |
 | ------------------------------------------------------ | ------------------------------------------------------ |
-| <img alt='startup page 3' src='./Images/startup3.png'> | <img alt='startup page 4' src='./Images/startup4.png'> |
+| <img alt='startup page 3' src='./assets/startup3.png'> | <img alt='startup page 4' src='./assets/startup4.png'> |
 
 <h3 align=center>
     Some screenshots
@@ -16,13 +16,13 @@
 
 | Mason Ui                                         | Whickkey UI                                          |
 | ------------------------------------------------ | ---------------------------------------------------- |
-| <img alt='mason page' src='./Images/mason.png'>  | <img src='./Images/whichkey.png'>                    |
+| <img alt='mason page' src='./assets/mason.png'>  | <img src='./assets/whichkey.png'>                    |
 | **Nvim tree**                                    | **Telescope UI**                                     |
-| <img alt='tree' src = './Images/tree.png'>       | <img alt='telescope' src='./Images/telescope.png'>   |
+| <img alt='tree' src = './assets/tree.png'>       | <img alt='telescope' src='./assets/telescope.png'>   |
 | **diffview**                                     | **toggleterm**                                       |
-| <img alt='diffview' src='./Images/diffview.png'> | <img alt='toggleterm' src='./Images/toggleterm.png'> |
+| <img alt='diffview' src='./assets/diffview.png'> | <img alt='toggleterm' src='./assets/toggleterm.png'> |
 | **lazy nvim**                                    | **cmp**                                              |
-| <img alt='wilder menu' src='./Images/lazy.png'>  | <img alt='cmp' src='./Images/cmp.png'>               |
+| <img alt='wilder menu' src='./assets/lazy.png'>  | <img alt='cmp' src='./assets/cmp.png'>               |
 
 # Installation
 

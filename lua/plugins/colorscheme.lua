@@ -17,13 +17,27 @@ return {
 			-- vim.cmd.colorscheme("horizon")
 		end,
 	},
+	{
+		"ellisonleao/gruvbox.nvim",
+		priority = 1000,
+		config = function()
+			-- vim.cmd.colorscheme('gruvbox')
+		end,
+	},
 
 	{
 		"bluz71/vim-nightfly-guicolors",
 		priority = 1000, -- make sure to load this before all the other start plugins
 		config = function()
-			-- load the colorscheme here
-			vim.cmd([[colorscheme nightfly]])
+			-- vim.cmd([[colorscheme nightfly]])
+		end,
+	},
+
+	{
+		"olimorris/onedarkpro.nvim",
+		priority = 1000, -- Ensure it loads first
+		config = function()
+			vim.cmd.colorscheme("onedark_vivid")
 		end,
 	},
 
@@ -89,6 +103,13 @@ return {
 				},
 			})
 			-- vim.cmd.colorscheme("rose-pine")
+		end,
+	},
+	{
+		"lunarvim/synthwave84.nvim",
+		priority = 1000,
+		config = function()
+			-- vim.cmd.colorscheme("synthwave84")
 		end,
 	},
 }

@@ -18,14 +18,28 @@ return {
 
 		"folke/zen-mode.nvim",
 		opts = {
+			plugins = {
 
-			kitty = {
-				enabled = false,
-				font = "+4",
+				kitty = {
+					enabled = true,
+					font = "+4",
+				},
+				options = {
+					laststatus = 0,
+				},
+			},
+			window = {
+				options = {
+					signcolumn = "no",
+					number = false,
+					relativenumber = false,
+				},
 			},
 		},
 		keys = { { "<leader>z", "<cmd>ZenMode<cr>", desc = "Zen Mode" } },
 	},
+
+	-- indent blankline
 	{
 		"lukas-reineke/indent-blankline.nvim",
 		enabled = true,
@@ -37,5 +51,15 @@ return {
 				scope = { enabled = true },
 			})
 		end,
+	},
+
+	-- Twilight
+	{
+		"folke/twilight.nvim",
+		opts = {
+			-- your configuration comes here
+			-- or leave it empty to use the default settings
+			-- refer to the configuration section below
+		},
 	},
 }

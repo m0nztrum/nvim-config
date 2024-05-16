@@ -1,5 +1,6 @@
 return {
 	"hrsh7th/nvim-cmp",
+	event = "InsertEnter",
 	dependencies = {
 		"hrsh7th/cmp-nvim-lsp",
 		"L3MON4D3/LuaSnip",
@@ -12,7 +13,6 @@ return {
 		"hrsh7th/cmp-nvim-lsp-signature-help",
 		"Jezda1337/nvim-html-css",
 	},
-	event = "InsertEnter",
 	config = function()
 		local cmp = require("cmp")
 		local luasnip = require("luasnip")
@@ -57,9 +57,10 @@ return {
 				{ name = "nvim_lsp" },
 				{ name = "luasnip" },
 				{ name = "nvim_lsp_signature_help" },
+				{ name = "nvim_lua" },
+			}, {
 				{ name = "buffer" }, -- text within current buffer
 				{ name = "path" }, -- file system paths
-				{ name = "nvim_lua" },
 				{ name = "npm" },
 				{ name = "html-css" },
 			}),

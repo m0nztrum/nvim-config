@@ -1,7 +1,7 @@
 return {
 	{
 		"lewis6991/gitsigns.nvim",
-		event = "BufEnter",
+		event = "BufReadPre",
 		config = function()
 			local gitsigns = require("gitsigns")
 
@@ -22,15 +22,6 @@ return {
 	{ "tpope/vim-fugitive" },
 	{
 
-		"airblade/vim-gitgutter", -- gitgutter
-		config = function()
-			local keymap = vim.keymap
-			-- Keybindings
-			keymap.set("n", "<leader>gg", "<cmd>GitGutterToggle<CR>")
-		end,
-	},
-	{
-
 		"tanvirtin/vgit.nvim",
 		dependencies = {
 			"nvim-lua/plenary.nvim",
@@ -48,4 +39,24 @@ return {
 	},
 
 	{ "tpope/vim-rhubarb" },
+	{
+		"kdheepak/lazygit.nvim",
+
+		cmd = {
+			"LazyGit",
+			"LazyGitConfig",
+			"LazyGitCurrentFile",
+			"LazyGitFilter",
+			"LazyGitFilterCurrentFile",
+		},
+		-- optional for floating window border decoration
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+		},
+		-- setting the keybinding for LazyGit with 'keys' is recommended in
+		-- order to load the plugin when the command is run for the first time
+		keys = {
+			{ "<leader>gg", "<cmd>LazyGit<cr>", desc = "LazyGit" },
+		},
+	},
 }

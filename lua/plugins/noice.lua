@@ -15,7 +15,7 @@ return {
 					hover = { enabled = false },
 					signature = { enabled = false },
 					progress = {
-						enabled = true,
+						enabled = false,
 						throttle = 1000 / 30,
 						view = "mini",
 					},

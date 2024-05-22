@@ -5,7 +5,8 @@ return {
 		local alpha = require("alpha")
 		local dashboard = require("alpha.themes.dashboard")
 
-		dashboard.section.header.val = require("utils.logos")["random"]
+		-- dashboard.section.header.val = require("utils.logos")["random"]
+		dashboard.section.header.val = require("ascii-headers")["random"]
 		dashboard.section.buttons.val = {
 			dashboard.button("e", " File Explorer", ":Telescope find_files<CR>"),
 			dashboard.button("r", " Old Files", ":Telescope oldfiles<CR>"),

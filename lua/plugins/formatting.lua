@@ -55,27 +55,27 @@ return {
 				vim.list_extend(args, { "--config", globalPrettierConfig })
 			end
 
-			-- local isUsingTailwind = vim.fs.find("tailwind.config.js", {
-			-- 	upward = true,
-			-- 	path = ctx.dirname,
-			-- 	type = "file",
-			-- })[1]
-			-- local localTailwindcssPlugin = vim.fs.find("node_modules/prettier-plugin-tailwindcss/dist/index.mjs", {
-			-- 	upward = true,
-			-- 	path = ctx.dirname,
-			-- 	type = "file",
-			-- })[1]
+			local isUsingTailwind = vim.fs.find("tailwind.config.js", {
+				upward = true,
+				path = ctx.dirname,
+				type = "file",
+			})[1]
+			local localTailwindcssPlugin = vim.fs.find("node_modules/prettier-plugin-tailwindcss/dist/index.mjs", {
+				upward = true,
+				path = ctx.dirname,
+				type = "file",
+			})[1]
 
-			-- if localTailwindcssPlugin then
-			-- 	vim.list_extend(args, { "--plugin", localTailwindcssPlugin })
-			-- else
-			-- 	if isUsingTailwind then
-			-- 		vim.notify(
-			-- 			"Tailwind was detected for your project. You can really benefit from automatic class sorting. Please run npm i -D prettier-plugin-tailwindcss",
-			-- 			vim.log.levels.WARN
-			-- 		)
-			-- 	end
-			-- end
+			if localTailwindcssPlugin then
+				vim.list_extend(args, { "--plugin", localTailwindcssPlugin })
+			else
+				if isUsingTailwind then
+					vim.notify(
+						"Tailwind was detected for your project. You can really benefit from automatic class sorting. Please run npm i -D prettier-plugin-tailwindcss",
+						vim.log.levels.WARN
+					)
+				end
+			end
 
 			return args
 		end

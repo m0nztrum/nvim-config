@@ -1,5 +1,6 @@
 return {
 	"hrsh7th/nvim-cmp",
+	event = "InsertEnter",
 	dependencies = {
 		"hrsh7th/cmp-nvim-lsp",
 		"L3MON4D3/LuaSnip",
@@ -11,12 +12,13 @@ return {
 		"hrsh7th/cmp-nvim-lua",
 		"hrsh7th/cmp-nvim-lsp-signature-help",
 		"Jezda1337/nvim-html-css",
+		{ "roobert/tailwindcss-colorizer-cmp.nvim", config = true },
 	},
-	event = "InsertEnter",
 	config = function()
 		local cmp = require("cmp")
 		local luasnip = require("luasnip")
 		local lspkind = require("lspkind")
+		local cmp_tailwind = require("tailwindcss-colorizer-cmp")
 		--  load vscode style snippets from installed plugins(e.g. friendly snippets)
 		require("luasnip.loaders.from_vscode").lazy_load()
 
@@ -57,9 +59,10 @@ return {
 				{ name = "nvim_lsp" },
 				{ name = "luasnip" },
 				{ name = "nvim_lsp_signature_help" },
+				{ name = "nvim_lua" },
+			}, {
 				{ name = "buffer" }, -- text within current buffer
 				{ name = "path" }, -- file system paths
-				{ name = "nvim_lua" },
 				{ name = "npm" },
 				{ name = "html-css" },
 			}),
@@ -76,6 +79,10 @@ return {
 					mode = "symbol_text",
 					maxwidth = 40,
 					ellipsis_char = "...",
+					before = function(entry, vim_item)
+						cmp_tailwind.formatter(entry, vim_item)
+						return vim_item
+					end,
 					with_text = true,
 				}),
 			},

@@ -42,15 +42,11 @@ return {
 	-- indent blankline
 	{
 		"lukas-reineke/indent-blankline.nvim",
-		enabled = true,
-		opts = {},
-		config = function()
-			local ibl = require("ibl")
-
-			ibl.setup({
-				scope = { enabled = true },
-			})
-		end,
+		event = { "BufReadPre", "BufNewFile" },
+		main = "ibl",
+		opts = {
+			scope = { enabled = true },
+		},
 	},
 
 	-- Twilight

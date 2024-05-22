@@ -12,11 +12,13 @@ return {
 		"hrsh7th/cmp-nvim-lua",
 		"hrsh7th/cmp-nvim-lsp-signature-help",
 		"Jezda1337/nvim-html-css",
+		{ "roobert/tailwindcss-colorizer-cmp.nvim", config = true },
 	},
 	config = function()
 		local cmp = require("cmp")
 		local luasnip = require("luasnip")
 		local lspkind = require("lspkind")
+		local cmp_tailwind = require("tailwindcss-colorizer-cmp")
 		--  load vscode style snippets from installed plugins(e.g. friendly snippets)
 		require("luasnip.loaders.from_vscode").lazy_load()
 
@@ -77,6 +79,10 @@ return {
 					mode = "symbol_text",
 					maxwidth = 40,
 					ellipsis_char = "...",
+					before = function(entry, vim_item)
+						cmp_tailwind.formatter(entry, vim_item)
+						return vim_item
+					end,
 					with_text = true,
 				}),
 			},

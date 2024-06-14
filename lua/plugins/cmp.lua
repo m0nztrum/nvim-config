@@ -19,6 +19,10 @@ return {
 		local luasnip = require("luasnip")
 		local lspkind = require("lspkind")
 		local cmp_tailwind = require("tailwindcss-colorizer-cmp")
+
+		cmp_tailwind.setup({
+			color_square_width = 2,
+		})
 		--  load vscode style snippets from installed plugins(e.g. friendly snippets)
 		require("luasnip.loaders.from_vscode").lazy_load()
 
@@ -83,6 +87,7 @@ return {
 						cmp_tailwind.formatter(entry, vim_item)
 						return vim_item
 					end,
+					-- before = require("tailwind-tools.cmp").lspkind_format,
 					with_text = true,
 				}),
 			},

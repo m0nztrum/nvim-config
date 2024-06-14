@@ -3,7 +3,7 @@ return {
 		"folke/trouble.nvim",
 		config = function()
 			require("trouble").setup({
-				icons = false,
+				icons = true,
 			})
 
 			vim.keymap.set("n", "<leader>tt", function()

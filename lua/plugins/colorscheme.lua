@@ -21,7 +21,21 @@ return {
 		"ellisonleao/gruvbox.nvim",
 		priority = 1000,
 		config = function()
-			-- vim.cmd.colorscheme('gruvbox')
+			local gruvbox = require("gruvbox")
+			gruvbox.setup({
+				undercurl = true,
+				underline = true,
+				bold = true,
+				italic = {
+					strings = true,
+					emphasis = true,
+					comments = true,
+					operators = true,
+					folds = true,
+				},
+				strikethrough = true,
+			})
+			vim.cmd.colorscheme("gruvbox")
 		end,
 	},
 
@@ -37,7 +51,7 @@ return {
 		"olimorris/onedarkpro.nvim",
 		priority = 1000, -- Ensure it loads first
 		config = function()
-			vim.cmd.colorscheme("onedark")
+			-- vim.cmd.colorscheme("onedark")
 		end,
 	},
 

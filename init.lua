@@ -1,4 +1,4 @@
-require("config.options") -- nvim settings
-require("config.autocmds") -- autocmds
-require("config.keymap") --  keymaps
-require("config.lazy") -- lazynvim setup
+require("config.options") -- nvim options/settings
+require("config.keymap") -- keymaps
+require("config.lazy")
+require("config.autocmds")

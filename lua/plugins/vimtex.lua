@@ -1,8 +1,8 @@
 return {
-	"lervag/vimtex",
-	enabled = false,
-	config = function()
-		vim.cmd([[ 
+    "lervag/vimtex",
+    lazy = false,
+    config = function()
+        vim.cmd([[ 
 		filetype plugin indent on
 		syntax enable
 
@@ -39,5 +39,5 @@ return {
 
 
 		]])
-	end,
+    end,
 }

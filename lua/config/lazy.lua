@@ -23,7 +23,4 @@ require("lazy").setup({
 		enabled = true,
 		notify = true,
 	},
-	colorscheme = {
-		"catppuccin",
-	},
 })

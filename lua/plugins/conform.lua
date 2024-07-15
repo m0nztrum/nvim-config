@@ -11,6 +11,7 @@ return {
                 python = { "isort", "black" },
                 javascript = { "prettier" },
                 javascriptreact = { "prettier" },
+                typescriptreact = { "prettier" },
                 typescript = { "prettier" },
                 markdown = { "prettier" },
                 html = { "prettier" },

@@ -1,54 +1,88 @@
 return {
-    {
-        "folke/noice.nvim",
-        event = "VeryLazy",
-        dependencies = {
-            "MunifTanjim/nui.nvim",
-            "rcarriga/nvim-notify",
-        },
-        opts = {
 
-            -- you can enable a preset for easier configuration
-            presets = {
-                inc_rename = true,
-                lsp_doc_border = false,
-                long_message_to_split = true,
+    "folke/noice.nvim",
+    event = "VeryLazy",
+    dependencies = {
+        "MunifTanjim/nui.nvim",
+    },
+    opts = {
+        presets = {
+            inc_rename = false,
+            command_palette = true,
+        },
+        cmdline = {
+            format = {
+                search_replace = { kind = "search", pattern = "^:%%s/", icon = "󰛔", lang = "regex" },
             },
-            lsp = {
-                signature = { enabled = false },
-                hover = { enabled = false },
-                overide = {
-                    ["vim.lsp.util.stylize_markdown"] = true,
-                    ["cmp.entry.get_documentation"] = false,
+        },
+        lsp = {
+            signature = { enabled = false },
+            hover = { enabled = false },
+            progress = { enabled = false },
+            overide = {
+                ["vim.lsp.util.convert_input_to_markdown_lines"] = true,
+                ["vim.lsp.util.stylize_markdown"] = true,
+            },
+        },
+        routes = {
+            {
+                view = "mini",
+                filter = {
+                    event = "notify",
+                    any = {
+                        { find = "hidden" },
+                        { find = "clipboard" },
+                        { find = "Deleted" },
+                        { find = "Renamed" },
+                        { find = "file_browser" },
+                        { find = "No information available" },
+                    },
                 },
-                progress = {
-                    enabled = false,
-                    throttle = 1000 / 30,
-                    view = "mini",
-                },
             },
-            cmdline = {
-                format = {
-                    cmdline = { icon = ">" },
-                    search_down = { icon = "🔍⌄" },
-                    search_up = { icon = "🔍⌃" },
-                    filter = { icon = "$" },
-                    lua = { icon = "☾" },
-                    help = { icon = "?" },
-                },
-            },
-            routes = {
-                { filter = { event = "msg_show", find = "written" }, view = "mini" },
-                { filter = { event = "notify", find = "No information available" }, skip = true },
-                { filter = { event = "msg_show", find = "search hit TOP" }, skip = true },
-                { filter = { event = "msg_show", find = "^E486: Pattern not found" }, view = "mini" },
-                { filter = { event = "msg_show", find = "search hit BOTTOM" }, skip = true },
-            },
-            views = {
-                mini = {
-                    win_options = { winblend = 0 },
+            {
+                view = "mini",
+                filter = {
+                    event = "msg_show",
+                    any = {
+                        { find = "written" },
+                        { find = "search hit TOP" },
+                        { find = "search hit BOTTOM" },
+                        { find = "^E486: Pattern not found" },
+                        { find = "fewer lines" },
+                    },
                 },
             },
         },
+        views = {
+            mini = {
+                win_options = { winblend = 0 },
+            },
+            cmdline_popup = {
+                position = {
+                    row = 3,
+                    col = "50%",
+                },
+            },
+            popup = {
+                size = {
+                    width = "80%",
+                    height = "70%",
+                },
+                border = {
+                    style = "single",
+                },
+                win_options = {
+                    wrap = true,
+                },
+            },
+        },
+        messages = {
+            enabled = true,
+            view_history = "popup",
+        },
+    },
+    keys = {
+        { "<leader>nt", "<cmd>NoiceTelescope<cr>", desc = "Noice Telescope" },
+        { "<leader>nl", "<cmd>NoiceLast<cr>", desc = "Noice Last" },
     },
 }

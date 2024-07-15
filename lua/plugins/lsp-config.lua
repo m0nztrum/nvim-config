@@ -86,16 +86,19 @@ return {
         vim.diagnostic.config({
             virtual_text = { spacing = 1, prefix = "\u{ea71}" },
             float = {
+                focusable = true,
+                style = "minimal",
                 border = "rounded",
                 source = "if_many",
+                header = "  Diagnostics",
             },
             update_in_insert = false,
+            severity_sort = true,
             underline = true,
         })
         vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
             underline = true,
             virtual_text = { spacing = 1, prefix = "\u{ea71}" },
-            severity_sort = true,
         })
         vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
             border = "rounded",

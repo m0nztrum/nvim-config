@@ -1,6 +1,21 @@
 return {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
+    dependencies = {
+        {
+            "nvim-treesitter/nvim-treesitter-context",
+            opts = {},
+            enabled = false,
+            config = function()
+                vim.keymap.set(
+                    "n",
+                    "<leader>oc",
+                    "<cmd>TSContextToggle<cr>",
+                    { desc = "Treesitter | Toggle Context", silent = true }
+                )
+            end,
+        },
+    },
 
     config = function()
         local treesitter = require("nvim-treesitter.configs")
@@ -9,12 +24,14 @@ return {
             -- A list of parser names, or "all"
             ensure_installed = {
                 "c",
+                "cpp",
                 "markdown",
                 "python",
                 "markdown_inline",
                 "html",
                 "vim",
                 "javascript",
+                "typescript",
                 "lua",
                 "css",
                 "bash",
@@ -23,10 +40,8 @@ return {
                 "regex",
                 "gitignore",
             },
-
-            -- Install parsers synchronously (only applied to `ensure_installed`)
             sync_install = true,
-            auto_install = false,
+            auto_install = true,
             highlight = {
                 enable = true,
             },

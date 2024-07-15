@@ -19,6 +19,9 @@ return {
                 icons_enabled = true,
                 globalstatus = false,
                 theme = "auto",
+                component_separators = "",
+                section_separators = "",
+                always_divide_middle = true,
                 refresh = {
                     statusline = 1000,
                     tabline = 1000,

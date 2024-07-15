@@ -19,6 +19,7 @@ return {
                 mode = "background",
                 method = "lsp",
                 virtualtext = "■",
+                always_update = true,
             },
         })
     end,

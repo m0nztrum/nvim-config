@@ -46,6 +46,7 @@ return {
                 Event = "",
                 Operator = "󰆕",
                 TypeParameter = "",
+                Copilot = "",
             },
         })
     end,

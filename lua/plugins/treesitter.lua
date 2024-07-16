@@ -1,6 +1,7 @@
 return {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
+    event = { "BufReadPre", "BufNewFile" },
     dependencies = {
         {
             "nvim-treesitter/nvim-treesitter-context",
@@ -21,7 +22,7 @@ return {
         local treesitter = require("nvim-treesitter.configs")
 
         treesitter.setup({
-            -- A list of parser names, or "all"
+            -- ensure these language parsers are installed
             ensure_installed = {
                 "c",
                 "cpp",
@@ -42,8 +43,16 @@ return {
             },
             sync_install = true,
             auto_install = true,
-            highlight = {
+            highlight = { enable = true },
+            indent = { enable = true },
+            incremental_selection = {
                 enable = true,
+                keymaps = {
+                    init_selection = "<C-space>",
+                    node_incremental = "<C-space>",
+                    scope_incremental = false,
+                    node_decremental = "<bs>",
+                },
             },
         })
     end,

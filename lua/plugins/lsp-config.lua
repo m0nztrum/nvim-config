@@ -56,6 +56,7 @@ return {
             "bashls",
             "html",
             "cssls",
+            "clangd",
             "tsserver",
             "lua_ls",
             "eslint",

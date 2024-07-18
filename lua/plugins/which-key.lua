@@ -10,5 +10,15 @@ return {
                 title_pos = "center",
             },
         })
+        whichkey.add({
+            {
+                mode = { "n", "v" },
+                { "<leader>g", group = "git" },
+                { "<leader>t", group = "toggle" },
+                { "<leader>c", group = "code" },
+                { "<leader>f", group = "file/find" },
+                { "<leader>r", group = "lsp rename" },
+            },
+        })
     end,
 }

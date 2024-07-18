@@ -49,13 +49,19 @@ return {
 
             opts.desc = "Sig help"
             keymap.set("n", "<C-h>", vim.lsp.buf.signature_help, opts)
+
+            if client.server_capabilities.inlayHintProvider then
+                -- vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
+                vim.lsp.inlay_hint.enable(true)
+            else
+                vim.lsp.inlay_hint.enable(false)
+            end
         end
 
-        --  server configurations
+        --  default server configurations
         local servers = {
             "bashls",
             "html",
-            "cssls",
             "clangd",
             "tsserver",
             "lua_ls",
@@ -84,6 +90,13 @@ return {
             cmd = { "clangd" },
         })
 
+        -- [CSS]
+        nvim_lsp.cssls.setup({
+            capabilities = capabilities,
+            on_attach = on_attach,
+            filetypes = { "css", "less", "scss", "sass" },
+        })
+
         vim.diagnostic.config({
             virtual_text = { spacing = 1, prefix = "\u{ea71}" },
             float = {
@@ -109,6 +122,14 @@ return {
             border = "single",
             title = "Sig help",
         })
+
+        -- INLAY HINTS
+        -- vim.api.nvim_set_hl(0, "LspInlayHint", { fg = "#a0a0a0", italic = true })
+        if vim.lsp.inlay_hint then
+            vim.keymap.set("n", "<Space>ih", function()
+                vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
+            end, { desc = "Toggle Inlay Hints" })
+        end
 
         -- Diagnostic symbols in the sign column (gutter)
         local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }

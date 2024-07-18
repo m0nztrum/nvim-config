@@ -20,6 +20,6 @@ return {
                 border = "curved",
             },
         })
-        keymap.set("n", "<leader>ft", vim.cmd.ToggleTerm, { desc = "Open floating term" })
+        keymap.set("n", "<leader>tf", vim.cmd.ToggleTerm, { desc = "Toggle floating term" })
     end,
 }

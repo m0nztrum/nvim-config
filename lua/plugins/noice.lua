@@ -36,6 +36,7 @@ return {
                         { find = "Renamed" },
                         { find = "file_browser" },
                         { find = "No information available" },
+                        { find = "No code actions available" },
                     },
                 },
             },
@@ -49,8 +50,19 @@ return {
                         { find = "search hit BOTTOM" },
                         { find = "^E486: Pattern not found" },
                         { find = "fewer lines" },
+                        { find = "No more valid diagnostics to move to" },
                     },
                 },
+            },
+            {
+                filter = {
+                    event = "msg_show",
+                    kind = "",
+                    any = {
+                        { find = "catalog" },
+                    },
+                },
+                opts = { skip = true },
             },
         },
         views = {

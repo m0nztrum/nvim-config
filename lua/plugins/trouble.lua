@@ -8,7 +8,7 @@ return {
 
             vim.keymap.set("n", "<leader>tt", function()
                 require("trouble").toggle()
-            end)
+            end, { desc = "toggle trouble" })
 
             vim.keymap.set("n", "[t", function()
                 require("trouble").next({ skip_groups = true, jump = true })

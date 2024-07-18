@@ -63,14 +63,14 @@ return {
 
         --  help tags & man pages
         keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Help tags" })
-        keymap.set("n", "<leader>man", builtin.man_pages, { desc = "Show builtin man-pages" })
-        keymap.set("n", "<leader>com", builtin.commands, { desc = "Show vim builtin commands" })
+        keymap.set("n", "<leader>fm", builtin.man_pages, { desc = "Show builtin man-pages" })
+        keymap.set("n", "<leader>fco", builtin.commands, { desc = "Show vim builtin commands" })
 
         -- git stuff
         keymap.set("n", "<leader>gf", builtin.git_files, { desc = "Show git files" })
         keymap.set("n", "<leader>gs", builtin.git_status, { desc = "Show git status" })
 
         --  view colorschemes
-        keymap.set("n", "<leader>cs", builtin.colorscheme, { desc = "Show available colorschemes" })
+        keymap.set("n", "<leader>fcs", builtin.colorscheme, { desc = "Show available colorschemes" })
     end,
 }

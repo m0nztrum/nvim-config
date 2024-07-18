@@ -1,11 +1,11 @@
 local keymap = vim.keymap -- for conciseness
-local opts = {silent = true }
+local opts = { silent = true }
 
 -- Disable the arrow keys
-keymap.set("n", "<Left>", ":echo 'use h'<CR>")
-keymap.set("n", "<Right>", ":echo 'use l'<CR>")
-keymap.set("n", "<Up>", ":echo 'use k'<CR>")
-keymap.set("n", "<Down>", ":echo 'use j'<CR>")
+-- keymap.set("n", "<Left>", ":echo 'use h'<CR>")
+-- keymap.set("n", "<Right>", ":echo 'use l'<CR>")
+-- keymap.set("n", "<Up>", ":echo 'use k'<CR>")
+-- keymap.set("n", "<Down>", ":echo 'use j'<CR>")
 
 --  Some base stuff: exit and quit
 keymap.set("n", "<leader>ws", "<cmd>w<CR>", { desc = "Save current buffer" })

@@ -9,22 +9,18 @@ vim.opt.relativenumber = true
 -- Disable mouse
 vim.opt.mouse = ""
 
--- Tab widths
+-- Tab widths, indents and spaces
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
-
--- Use spaces for indents
 vim.opt.expandtab = true
-
--- Smart auto indenting
 vim.opt.smartindent = true
 vim.opt.autoindent = true
 
 -- Don't line wrap
 vim.opt.wrap = false
 
--- Sync clipboard between OS and NeoVim
+--clipboard
 vim.opt.clipboard = "unnamedplus"
 
 -- Search
@@ -85,7 +81,7 @@ vim.opt.whichwrap = "<,>,h,l,[,]"
 vim.o.updatetime = 100
 
 -- always show signcolumn
-vim.opt.signcolumn = 'yes'
+vim.opt.signcolumn = "yes"
 
 -- turn of swapfile
 vim.opt.swapfile = false

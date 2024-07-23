@@ -18,13 +18,24 @@
 
 -   Neovim >= 0.10.0
 -   Git
+-   Curl
+-   nodejs
+-   npm
+-   ripgrep
+-   fd
 
 ## 🛠️ Installation
 
-Simply run the following command on your terminal (I expect you already have `git` installed.)
+1. Clone the repository into your NeoVim config directory.
 
 ```shell
-git clone https://github.com/Dragonixj/nvim-config.git ~/.config/nvim && nvim
+git clone https://github.com/m0nztrum/nvim-config.git ~/.config/nvim
+```
+
+2. Run a checkhealth inside nvim
+
+```
+:checkhealth
 ```
 
 ## 📁 Folder and File Structure
@@ -124,5 +135,6 @@ git clone https://github.com/Dragonixj/nvim-config.git ~/.config/nvim && nvim
 
 ## Contributing
 
-This is a personal config, mostly with things that seem to work best for me. However, the repo is always open to good suggestions.
+This is a personal config, mostly with things that seem to work best for me.
+However, the repo is always open to good suggestions.
 Feel free to fork it and customize it to your own liking, or to create PRs with improvements.

@@ -1,30 +1,25 @@
 <h1 align=center>
-    Dragonixj's Nvim Config
+    m0nztrum's Nvim Config
 </h1>
-
-<h3 align=center>
-    Startup page
-</h3>
-
-| <img alt='startup page 1' src='./assets/startup1.png'> | <img alt='startup page 2' src='./assets/startup2.png'> |
-| ------------------------------------------------------ | ------------------------------------------------------ |
-| <img alt='startup page 3' src='./assets/startup3.png'> | <img alt='startup page 4' src='./assets/startup4.png'> |
 
 <h3 align=center>
     Some screenshots
 </h3>
 
-| Mason Ui                                         | Whickkey UI                                          |
-| ------------------------------------------------ | ---------------------------------------------------- |
-| <img alt='mason page' src='./assets/mason.png'>  | <img src='./assets/whichkey.png'>                    |
-| **Nvim tree**                                    | **Telescope UI**                                     |
-| <img alt='tree' src = './assets/tree.png'>       | <img alt='telescope' src='./assets/telescope.png'>   |
-| **diffview**                                     | **toggleterm**                                       |
-| <img alt='diffview' src='./assets/diffview.png'> | <img alt='toggleterm' src='./assets/toggleterm.png'> |
-| **lazy nvim**                                    | **cmp**                                              |
-| <img alt='wilder menu' src='./assets/lazy.png'>  | <img alt='cmp' src='./assets/cmp.png'>               |
+| Mason Ui                                         | Whickkey UI                                        |
+| ------------------------------------------------ | -------------------------------------------------- |
+| <img alt='mason page' src='./assets/mason.png'>  | <img src='./assets/whichkey.png'>                  |
+| **Nvim tree**                                    | **Telescope UI**                                   |
+| <img alt='tree' src = './assets/tree.png'>       | <img alt='telescope' src='./assets/telescope.png'> |
+| **diffview**                                     | **lazy UI**                                        |
+| <img alt='diffview' src='./assets/diffview.png'> | <img alt='toggleterm' src='./assets/lazy.png'>     |
 
-# Installation
+## ⚡️ Requiremets
+
+-   Neovim >= 0.10.0
+-   Git
+
+## 🛠️ Installation
 
 Simply run the following command on your terminal (I expect you already have `git` installed.)
 
@@ -32,30 +27,47 @@ Simply run the following command on your terminal (I expect you already have `gi
 git clone https://github.com/Dragonixj/nvim-config.git ~/.config/nvim && nvim
 ```
 
+## 📁 Folder and File Structure
+
+```shell
+~/.config/nvim
+├── lua
+│   ├── core
+│   │   ├── autocmds.lua        # File for all autocmds
+│   │   ├── keymaps.lua         # File for keybindings
+│   │   ├── lazy.lua            # Lazy bootstrap
+│   │   └── options.lua         # All neovim options
+│   ├── plugins                 # All plugins
+│   │   ├── plugin-1.lua
+│   │   ├── plugin-2.lua
+│   │   ├── **
+│   │   └── plugin-x.lua
+│   ├── ascii-headers.lua       # ascii for startup page
+│   └── .luarc.json
+├── init.lua
+├── .prettierrc.json            # for defaults (conform)
+└─.stylua.toml
+```
+
 <h2 align='center'>
-    Plugins
+   🔌 Plugins
 </h2>
 
-My config uses [lazy](https://github.com/folke/lazy.nvim) to manage plugins.<br>
-Needed Dependencies
+## Package Manager
 
--   **fd**
--   **ripgrep**
--   **chafa**
+-   [lazy.nvim](https://github.com/folke/lazy.nvim) - A modern plugin manager.
 
 ## status line and colorschemes
 
 -   [lualine](https://github.com/catppuccin/nvim) - A customizable status line
 
-**colorschemes**
+## colorschemes
 
--   [horizon](https://github.com/akinsho/horizon.nvim)
--   [rose-pine](https://github.com/rose-pine/neovim)
 -   [kanagawa](https://github.com/rebelot/kanagawa.nvim)
 -   [catppuccin](https://github.com/catppuccin/nvim)
--   [meh](https://github.com/davidosomething/vim-colors-meh)
 -   [gruvbox](https://github.com/ellisonleao/gruvbox.nvim)
 -   [solarized-osaka](https://github.com/craftzdog/solarized-osaka.nvim)
+-   [nightfox](https://github.com/EdenEast/nightfox.nvim.git)
 
 ## Utilities & UI stuff
 
@@ -65,18 +77,31 @@ Needed Dependencies
 -   [telescope](https://github.com/nvim-telescope/telescope.nvim) - A highly extendable fuzzy finder
 -   [nvim-tree](https://github.com/nvim-tree/nvim-tree.lua) - A files system navigator
 -   [undo-tree](https://github.com/mbbill/undotree) - Enhanced undo history management
--   [gitgutter](https://github.com/airblade/vim-gitgutter) - Show Git changes in the sign column.
--   [vim fugitive](https://github.com/tpope/vim-fugitive) - Git integration for Neovim.
--   [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) - Git integration for buffers
--   [vim commentary](https://github.com/tpope/vim-commentary) - Easily comment and uncomment lines.
 -   [indent-blankline](https://github.com/lukas-reineke/indent-blankline.nvim) - Show indent guides.
 -   [nvim autopairs](https://github.com/windwp/nvim-autopairs) - Auto-pairs for Neovim.
 
-## Lsp Tools(formatting,linting,completion etc.)
+## Treesitter
 
--   [mason](https://github.com/williamboman/mason.nvim) - Easily install and manage LSP servers,linters and formatters
+-   [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) - Neovim Treesitter configurations and abstraction layer.
+-   [nvim-treesitter-context](https://github.com/nvim-treesitter/nvim-treesitter-context) - Shows the context of the currently visible buffer contents.
+-   [nvim-treesitter-textobjects](https://github.com/nvim-treesitter/nvim-treesitter-textobjects) - Syntax aware text-objects, select, move, swap, and peek support.
+
+## Git integration
+
+-   [diffview.nvim](https://github.com/sindrets/diffview.nvim) - Interface for easily cycling through diffs.
+-   [gitsigns](https://github.com/lewis6991/gitsigns.nvim) - Git integration: signs, hunk actions, blame, etc.
+
+## Lsp Tools(formatting,linting)
+
+-   [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig) - Configurations for the LSP client.
+-   [mason](https://github.com/williamboman/mason.nvim) - Install and manage LSP servers.
+-   [mason-lspconfig](https://github.com/williamboman/mason-lspconfig.nvim) - Bridge between mason and lsp-ocnfig.
+-   [trouble.nvim](https://github.com/folke/trouble.nvim) - A pretty diagnostics, references, telescope results, quickfix and location list.
 -   [conform.nvim](https://github.com/stevearc/conform.nvim) - Lightweight yet powerful formatter plugin for neovim
 -   [lspkind.nvim](https://github.com/onsails/lspkind.nvim) - LSP Icons
+
+## Completion
+
 -   [nvim-cmp](https://github/com/hrsh7th/nvim-cmp) - A fast and poweful completion tool
 -   [cmp-nvim-lsp](https://github.com/hrsh7th/cmp-nvim-lsp) - LSP completion source for nvim cmp
 -   [cmp-nvim-lua](https://github.com/hrsh7th/cmp-nvim-lua) - Lua completion source for nvim-cmp
@@ -84,6 +109,18 @@ Needed Dependencies
 -   [cmp-buffer](https://github.com/hrsh7th/cmp-buffer) - Buffer source for nvim-cmp.
 -   [cmp-nvim-lsp-signature-help](https://github.com/hrsh7th/cmp-nvim-lsp-signature-help) - Signature help source for nvim-cmp.
 -   [cmp_luasnip](https://github.com/saadparwaiz1/cmp_luasnip) - Luasnip completion source for nvim-cmp
+-   [tailwind-colorizer-cmp](https://github.com/roobert/tailwindcss-colorizer-cmp.nvim.git) Color hints for tailwind
+
+## Comments
+
+-   [Comment.nvim](https://github.com/numToStr/Comment.nvim) - Smart and powerful comment plugin.
+-   [todo-comments.nvim](https://github.com/folke/todo-comments.nvim) - Highlight, list and search todo comments in your projects.
+-   [ts-comments](https://github.com/folke/ts-comments.nvim.git)
+-   [nvim-ts-context-commentstring](https://github.com/JoosepAlviste/nvim-ts-context-commentstring.git)
+
+## Writing
+
+-   [markdown-preview](https://github.com/iamcco/markdown-preview.nvim) - Preview markdown on your browser.
 
 ## Contributing
 

@@ -70,18 +70,12 @@ vim.opt.errorbells = false
 vim.o.timeout = true
 vim.o.timeoutlen = 300
 
--- neovide options
-vim.g.neovide_transparency = 0.8
-
 -- Whitespace chars
 vim.opt.listchars = { tab = "» ", trail = "~", space = "·", eol = "↵" }
 vim.opt.whichwrap = "<,>,h,l,[,]"
 
 -- faster completion
 vim.o.updatetime = 100
-
--- always show signcolumn
-vim.opt.signcolumn = "yes"
 
 -- turn of swapfile
 vim.opt.swapfile = false

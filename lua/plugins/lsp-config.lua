@@ -7,7 +7,6 @@ return {
 
         local keymap = vim.keymap
 
-        -- Set up completion using nvim_cmp with LSP source
         local capabilities = require("cmp_nvim_lsp").default_capabilities()
         local opts = { noremap = true, silent = true }
 
@@ -18,7 +17,7 @@ return {
             keymap.set("n", "<leader>rs", ":LspRestart<CR>", opts) -- mapping to restart lsp if necessary
 
             opts.desc = "Show buffer diagnostics"
-            keymap.set("n", "<leader>D", "<cmd>Telescope  diagnostics bufnr=0<CR>", opts) -- show diagnostics for file
+            keymap.set("n", "<leader>D", "<cmd>Telescope diagnostics bufnr=0<CR>", opts) -- show diagnostics for file
 
             opts.desc = "Show line diagnostics"
             keymap.set("n", "<leader>d", vim.diagnostic.open_float, opts) -- shows diagnostics for a line
@@ -27,13 +26,10 @@ return {
             keymap.set("n", "gR", "<cmd>Telescope lsp_references<CR>", opts) -- show definition, references
 
             opts.desc = "Show available code actions"
-            keymap.set({ "n", "v" }, "<leader>ca", "<cmd>Lspsaga code_action <cr>", opts) -- see available code actions
+            keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts) -- see available code actions
 
             opts.desc = "Show lsp definitions"
-            keymap.set("n", "gi", "<cmd>Lspsaga goto_definition <cr>", opts)
-
-            opts.desc = "Show Lsp type definitions"
-            keymap.set("n", "gt", "<cmd>Lspsaga goto_type_definition <cr>", opts)
+            keymap.set("n", "gD", "<cmd>Lspsaga goto_definition <cr>", opts)
 
             opts.desc = "Go to previous diagnostic"
             keymap.set("n", "[d", vim.diagnostic.goto_prev, opts) -- jump to previous diagnostic in buffer
@@ -98,7 +94,8 @@ return {
         })
 
         vim.diagnostic.config({
-            virtual_text = { spacing = 1, prefix = "\u{ea71}" },
+            virtual_text = { spacing = 1, prefix = "󰊠 " },
+
             float = {
                 focusable = true,
                 style = "minimal",
@@ -112,7 +109,7 @@ return {
         })
         vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
             underline = true,
-            virtual_text = { spacing = 1, prefix = "\u{ea71}" },
+            virtual_text = { spacing = 1, prefix = "󰊠 " },
         })
         vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
             border = "rounded",

@@ -39,7 +39,7 @@ return {
                         symbols = { error = " " },
                     },
                 },
-                lualine_c = { "filename", "searchcount" },
+                lualine_c = { { "filename", padding = 1 }, "searchcount" },
                 lualine_x = {
                     {
                         lazy_status.updates,

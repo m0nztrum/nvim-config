@@ -4,15 +4,24 @@ return {
     config = function()
         local saga = require("lspsaga")
         saga.setup({
+            ui = {
+                theme = "round",
+                border = "rounded",
+                winblend = 0,
+                expand = "",
+                collaspe = "",
+                preview = " ",
+                code_action = "󱧣 ",
+                diagnostic = " ",
+                hover = " ",
+            },
             symbol_in_winbar = {
                 enable = true,
                 separator = " > ",
                 show_file = true,
-                delay = 400,
+                delay = 300,
                 color_mode = true,
-            },
-            ui = {
-                border = "rounded",
+                folder_level = 1,
             },
             outline = {
                 layout = "float",
@@ -20,6 +29,7 @@ return {
             lightbulb = {
                 enable = true,
                 sign = true,
+                virtual_text = true,
             },
         })
     end,

@@ -9,6 +9,11 @@ return {
             -- char = "┊",
             repeat_linebreak = false,
         },
-        scope = { enabled = true },
+        scope = {
+            enabled = true,
+            show_start = true,
+            show_end = true,
+            injected_languages = true,
+        },
     },
 }

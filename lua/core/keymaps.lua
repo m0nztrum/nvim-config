@@ -23,10 +23,10 @@ keymap.set("n", "<C-j>", "<C-w>j", { desc = "Move window down" })
 keymap.set("n", "<C-l>", "<C-w>l", { desc = "Move window right" })
 
 --  Resizing windows
-keymap.set("n", "<C-w><left>", "<C-w><")
-keymap.set("n", "<C-w><right>", "<C-w>>")
-keymap.set("n", "<C-w><up>", "<C-w>+")
-keymap.set("n", "<C-w><down>", "<C-w>-")
+keymap.set("n", "<C-Up>", ":vertical resize +2<CR>", opts)
+keymap.set("n", "<C-Down>", ":resize +2<CR>", opts)
+keymap.set("n", "<C-Left>", ":resize -2<CR>", opts)
+keymap.set("n", "<C-Right>", ":vertical resize -2<CR>", opts)
 
 -- select all
 keymap.set("n", "<C-s>", "gg<S-v>G")

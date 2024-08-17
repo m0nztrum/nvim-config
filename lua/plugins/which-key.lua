@@ -16,7 +16,7 @@ return {
                 { "<leader>g", group = "git" },
                 { "<leader>t", group = "toggle" },
                 { "<leader>c", group = "code" },
-                { "<leader>s", group = "file/find" },
+                { "<leader>f", group = "file/find" },
                 { "<leader>r", group = "lsp rename" },
             },
         })

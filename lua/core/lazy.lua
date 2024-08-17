@@ -15,7 +15,7 @@ require("lazy").setup({
     install = {
         missing = true,
     },
-    spec = "plugins",
+    spec = { { import = "plugins" }, { import = "plugins.themes" } },
     ui = {
         border = "single",
     },

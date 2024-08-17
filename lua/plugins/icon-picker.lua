@@ -6,9 +6,9 @@ return {
         local opts = { noremap = true, silent = true }
 
         opts.desc = "Insert Emoji"
-        vim.keymap.set("n", "<leader>se", "<cmd>IconPickerInsert emoji<cr>", opts)
+        vim.keymap.set("n", "<leader>fe", "<cmd>IconPickerInsert emoji<cr>", opts)
 
         opts.desc = "Insert Symbol"
-        vim.keymap.set("n", "<leader>si", "<cmd>IconPickerInsert symbols<cr>", opts)
+        vim.keymap.set("n", "<leader>fi", "<cmd>IconPickerInsert symbols<cr>", opts)
     end,
 }

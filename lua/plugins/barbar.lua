@@ -1,6 +1,7 @@
 return {
 
     "romgrk/barbar.nvim",
+    event = { "BufReadPost", "BufAdd", "BufNewFile" },
     config = function()
         local bar = require("barbar")
         local diagnostic = vim.diagnostic --for cleanliness
@@ -37,7 +38,7 @@ return {
                     [diagnostic.severity.ERROR] = { enabled = true, icon = " " },
                     [diagnostic.severity.WARN] = { enabled = true, icon = " " },
                     [diagnostic.severity.INFO] = { enabled = true, icon = " " },
-                    [diagnostic.severity.HINT] = { enabled = true, icon = " " },
+                    [diagnostic.severity.HINT] = { enabled = true, icon = " " },
                 },
                 gitsigns = {
                     added = { enabled = true, icon = "+" },

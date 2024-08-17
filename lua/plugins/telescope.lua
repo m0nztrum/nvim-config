@@ -12,6 +12,7 @@ return {
         local builtin = require("telescope.builtin")
         local telescope = require("telescope")
         local actions = require("telescope.actions")
+        local action_layout = require("telescope.actions.layout")
         local keymap = vim.keymap
 
         telescope.setup({
@@ -24,22 +25,35 @@ return {
                 selection_caret = " ",
                 file_ignore_patterns = {
                     "%git/",
+                    "node_modules",
                 },
                 mappings = {
                     i = {
                         ["<C-k>"] = actions.move_selection_previous, -- move to prev result
                         ["<C-j>"] = actions.move_selection_next, -- move to next result
+                        ["<M-p>"] = action_layout.toggle_preview, -- toggle preview
                     },
                 },
             },
             pickers = {
+                -- theme = ivy , dropdown, cursor
                 buffers = {
                     sort_lastused = true,
+                    previewer = false,
+                    theme = "dropdown",
                     mappings = {
                         i = {
                             ["<c-d>"] = "delete_buffer",
                         },
                     },
+                    initial_mode = "normal",
+                },
+                help_tags = {
+                    theme = "ivy",
+                    previewer = false,
+                },
+                live_grep = {
+                    theme = "ivy",
                 },
             },
 
@@ -56,23 +70,20 @@ return {
         telescope.load_extension("ui-select")
 
         --                      [Keymaps]
-        --      files and buffers
-        keymap.set("n", "<leader>sf", builtin.find_files, { desc = "Find files" }) --find files
-        keymap.set("n", "<leader>so", builtin.oldfiles, { desc = "Show old files" }) --olf files
-        keymap.set("n", "<leader>sg", builtin.live_grep, { desc = "Live grep" })
+        keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Find files" }) --find files
+        keymap.set("n", "<leader>fo", builtin.oldfiles, { desc = "Show old files" }) --olf files
+        keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "Live grep" })
         keymap.set("n", "<leader><leader>", builtin.buffers, { desc = "Show buffers" })
         keymap.set("n", "<leader>/", builtin.current_buffer_fuzzy_find, { desc = "Fzf Current Buffer" })
 
-        --  help tags & man pages
-        keymap.set("n", "<leader>sh", builtin.help_tags, { desc = "Help tags" })
-        keymap.set("n", "<leader>sm", builtin.man_pages, { desc = "Show builtin man-pages" })
-        keymap.set("n", "<leader>sco", builtin.commands, { desc = "Show vim builtin commands" })
+        keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Help tags" })
+        keymap.set("n", "<leader>fm", builtin.man_pages, { desc = "Show builtin man-pages" })
+        keymap.set("n", "<leader>fco", builtin.commands, { desc = "Show vim builtin commands" })
+        keymap.set("n", "<leader>fk", builtin.keymaps, { desc = "Show Keymaps" })
 
-        -- git stuff
         keymap.set("n", "<leader>gf", builtin.git_files, { desc = "Show git files" })
         keymap.set("n", "<leader>gs", builtin.git_status, { desc = "Show git status" })
 
-        --  view colorschemes
-        keymap.set("n", "<leader>scs", builtin.colorscheme, { desc = "Show available colorschemes" })
+        keymap.set("n", "<leader>fcs", builtin.colorscheme, { desc = "Show available colorschemes" })
     end,
 }

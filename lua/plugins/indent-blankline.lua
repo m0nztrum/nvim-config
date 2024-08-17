@@ -1,6 +1,6 @@
 return {
     "lukas-reineke/indent-blankline.nvim",
-    event = { "BufReadPre", "BufNewFile" },
+    event = "BufReadPost",
     enabled = true,
     main = "ibl",
     opts = {

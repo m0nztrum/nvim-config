@@ -19,7 +19,7 @@ return {
                 icons_enabled = true,
                 globalstatus = false,
                 theme = "auto",
-                component_separators = "",
+                component_separators = { left = "│", right = "│" },
                 section_separators = "",
                 always_divide_middle = true,
                 refresh = {
@@ -31,12 +31,23 @@ return {
             sections = {
                 lualine_a = { "mode" },
                 lualine_b = {
-                    "branch",
-                    { "diff", colored = true },
+                    {
+                        "branch",
+                        color = { fg = "#a9a1e1" },
+                        icon = "",
+                        -- icon = "",
+                    },
+                    {
+                        "diff",
+                        symbols = { added = " ", modified = " ", removed = " " },
+                    },
                     {
                         "diagnostics",
                         update_in_insert = true,
-                        symbols = { error = " " },
+                        symbols = { error = " ", warn = " ", hint = " ", info = " " },
+                        diagnostics_color = {
+                            error = { fg = "red" },
+                        },
                     },
                 },
                 lualine_c = { { "filename", padding = 1 }, "searchcount" },
@@ -46,13 +57,17 @@ return {
                         cond = lazy_status.has_updates,
                         color = { fg = "#ff9e75" },
                     },
-                    { "macro-recording", fmt = show_macro_recording },
+                    {
+                        "macro_recording",
+                        fmt = show_macro_recording,
+                        color = { fg = "red" },
+                    },
                     "encoding",
                     "filetype",
                     "fileformat",
                 },
                 lualine_y = { "progress" },
-                lualine_z = { "location" },
+                lualine_z = { { "location", icon = { "󰍒", align = "right" } } },
             },
             inactive_sections = {
                 lualine_a = {},

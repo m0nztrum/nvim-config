@@ -1,6 +1,7 @@
 return {
-    "nvimdev/lspsaga.nvim", -- LSP UIs
-
+    "nvimdev/lspsaga.nvim",
+    lazy = true,
+    event = "LspAttach",
     config = function()
         local saga = require("lspsaga")
         saga.setup({

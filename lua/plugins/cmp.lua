@@ -85,6 +85,7 @@ return {
                         nvim_lsp = "[LSP]",
                         luasnip = "[LuaSnip]",
                         nvim_lua = "[Lua]",
+                        path = "[Path]",
                     },
                     maxwidth = 40,
                     ellipsis_char = "...",

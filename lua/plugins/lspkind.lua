@@ -1,6 +1,6 @@
 return {
     "onsails/lspkind-nvim", -- vscode like pictograms
-
+    event = "InsertEnter",
     config = function()
         local lspkind = require("lspkind")
 
@@ -8,7 +8,7 @@ return {
             -- enables text annotations
             --
             -- default: true
-            mode = "symbol",
+            mode = "symbol_text",
 
             -- default symbol map
             -- can be either 'default' (requires nerd-fonts font) or
@@ -21,32 +21,34 @@ return {
             --
             -- default: {}
             symbol_map = {
-                Text = "󰉿",
-                Method = "󰆧",
-                Function = "󰊕",
+                Array = "",
+                Boolean = "",
                 Constructor = "",
+                Color = "󰏘",
+                Constant = "󰏿",
+                Class = "",
+                EnumMember = "",
+                Enum = "",
+                Function = "󰊕",
+                File = "",
                 Field = "󰜢",
-                Variable = "",
-                Class = "󰠱",
+                Folder = "󰉋",
                 Interface = "",
+                Method = "󰆧",
                 Module = "",
                 Property = "󰜢",
                 Unit = "󰑭",
                 Value = "󰎠",
-                Enum = "",
                 Keyword = "󰌋",
                 Snippet = "",
-                Color = "󰏘",
-                File = "󰈙",
+                Number = "",
                 Reference = "󰈇",
-                Folder = "󰉋",
-                EnumMember = "",
-                Constant = "󰏿",
                 Struct = "󰙅",
                 Event = "",
+                Text = "󰉿",
+                Variable = "󰀫",
                 Operator = "󰆕",
                 TypeParameter = "",
-                Copilot = "",
             },
         })
     end,

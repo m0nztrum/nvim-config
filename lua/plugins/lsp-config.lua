@@ -129,7 +129,7 @@ return {
         end
 
         -- Diagnostic symbols in the sign column (gutter)
-        local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
+        local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
         for severity, icon in pairs(signs) do
             local hl = "DiagnosticSign" .. severity:sub(1, 1) .. severity:sub(2):lower()
             vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })

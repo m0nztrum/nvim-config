@@ -48,7 +48,7 @@ vim.opt.cmdheight = 1
 -- Persistent undo
 vim.opt.undofile = true
 
--- Improve sidescroll
+-- Improve side scroll
 vim.opt.sidescroll = 1
 
 -- cursor line
@@ -57,7 +57,7 @@ vim.opt.cursorline = false
 -- Preview substitutions live, as you type!
 vim.opt.inccommand = "split"
 
--- Configue how split windows should open
+-- Configure how split windows should open
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 
@@ -89,4 +89,4 @@ vim.opt.fileencoding = "utf-8"
 -- complete the longest common match, tab the results to fully complete them
 vim.opt.wildmode = "longest:full,full"
 
--- vim.g.yuck_lisp_indentation = 4
+vim.opt.spelllang = { "en" }

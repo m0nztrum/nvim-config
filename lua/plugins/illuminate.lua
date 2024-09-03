@@ -9,6 +9,16 @@ return {
             large_file_overrides = {
                 providers = { "lsp" },
             },
+            filetypes_denylist = {
+                "mason",
+                "neo-tree",
+                "NvimTree",
+                "lazy",
+                "Trouble",
+                "toggleterm",
+                "TelescopePrompt",
+                "DiffviewFiles",
+            },
         })
     end,
     keys = {

@@ -5,5 +5,6 @@ return {
         require("transparent").clear_prefix("WhichKey")
         require("transparent").clear_prefix("Noice")
         require("transparent").clear_prefix("Notify")
+        require("transparent").clear_prefix("Telescope")
     end,
 }

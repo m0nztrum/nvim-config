@@ -52,6 +52,10 @@ return {
                 -- to close completion menu
                 ["<C-e>"] = cmp.mapping.close(),
 
+                -- Select next/prev item on the list
+                ["<Tab>"] = cmp.mapping.select_next_item({ behavior = cmp.ConfirmBehavior.Insert }),
+                ["<S-Tab>"] = cmp.mapping.select_prev_item({ behavior = cmp.ConfirmBehavior.Insert }),
+
                 -- 'Enter' key to confirm completion
                 ["<CR>"] = cmp.mapping.confirm({
                     behavior = cmp.ConfirmBehavior.Replace,

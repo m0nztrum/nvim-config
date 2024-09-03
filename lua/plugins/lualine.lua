@@ -19,7 +19,7 @@ return {
                 icons_enabled = true,
                 globalstatus = false,
                 theme = "auto",
-                component_separators = { left = "│", right = "│" },
+                component_separators = "",
                 section_separators = "",
                 always_divide_middle = true,
                 refresh = {
@@ -40,6 +40,11 @@ return {
                     {
                         "diff",
                         symbols = { added = " ", modified = " ", removed = " " },
+                        diff_color = {
+                            added = { fg = "#98be65" },
+                            modified = { fg = "orange" },
+                            removed = { fg = "red" },
+                        },
                     },
                     {
                         "diagnostics",
@@ -50,7 +55,7 @@ return {
                         },
                     },
                 },
-                lualine_c = { { "filename", padding = 1 }, "searchcount" },
+                lualine_c = { { "filename", color = { gui = "bold" } }, "searchcount" },
                 lualine_x = {
                     {
                         lazy_status.updates,

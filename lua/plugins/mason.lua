@@ -27,7 +27,7 @@ return {
                 "lua_ls",
                 "pyright",
                 "marksman",
-                "tsserver",
+                "ts_ls",
                 "html",
                 "bashls",
                 "cssls",

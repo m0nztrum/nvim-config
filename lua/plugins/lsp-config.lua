@@ -14,7 +14,10 @@ return {
             opts.buffer = bufnr
 
             opts.desc = "Restart Lsp"
-            keymap.set("n", "<leader>rs", ":LspRestart<CR>", opts) -- mapping to restart lsp if necessary
+            keymap.set("n", "<leader>ls", ":LspRestart<CR>", opts) -- mapping to restart lsp if necessary
+
+            opts.desc = "Lsp Info"
+            keymap.set("n", "<leader>li", "<cmd>LspInfo<cr>", opts)
 
             opts.desc = "Show buffer diagnostics"
             keymap.set("n", "<leader>D", "<cmd>Telescope diagnostics bufnr=0<CR>", opts) -- show diagnostics for file
@@ -23,13 +26,13 @@ return {
             keymap.set("n", "<leader>d", vim.diagnostic.open_float, opts) -- shows diagnostics for a line
 
             opts.desc = "Show LSP references"
-            keymap.set("n", "gR", "<cmd>Telescope lsp_references<CR>", opts) -- show definition, references
+            keymap.set("n", "<leader>lR", "<cmd>Telescope lsp_references<CR>", opts) -- show definition, references
 
             opts.desc = "Show available code actions"
             keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts) -- see available code actions
 
             opts.desc = "Show lsp definitions"
-            keymap.set("n", "gD", "<cmd>Lspsaga goto_definition <cr>", opts)
+            keymap.set("n", "<leader>lD", "<cmd>Lspsaga goto_definition <cr>", opts)
 
             opts.desc = "Go to previous diagnostic"
             keymap.set("n", "[d", vim.diagnostic.goto_prev, opts) -- jump to previous diagnostic in buffer
@@ -41,7 +44,7 @@ return {
             keymap.set("n", "K", vim.lsp.buf.hover, opts)
 
             opts.desc = "Rename all ref of symbol under cursor"
-            keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
+            keymap.set("n", "<leader>lrn", vim.lsp.buf.rename, opts)
 
             opts.desc = "Sig help"
             keymap.set("n", "<C-h>", vim.lsp.buf.signature_help, opts)
@@ -59,7 +62,7 @@ return {
             "bashls",
             "html",
             "clangd",
-            "tsserver",
+            "ts_ls",
             "lua_ls",
             "eslint",
             "marksman",

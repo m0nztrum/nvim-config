@@ -52,7 +52,7 @@ vim.opt.undofile = true
 vim.opt.sidescroll = 1
 
 -- cursor line
-vim.opt.cursorline = false
+vim.opt.cursorline = true
 
 -- Preview substitutions live, as you type!
 vim.opt.inccommand = "split"
@@ -90,3 +90,5 @@ vim.opt.fileencoding = "utf-8"
 vim.opt.wildmode = "longest:full,full"
 
 vim.opt.spelllang = { "en" }
+
+vim.g.base46_cache = vim.fn.stdpath("data") .. "/base46_cache/"

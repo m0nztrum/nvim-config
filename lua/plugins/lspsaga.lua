@@ -25,7 +25,11 @@ return {
                 folder_level = 1,
             },
             outline = {
-                layout = "float",
+                win_position = "right",
+                show_detail = true,
+                auto_preview = true,
+                auto_refresh = true,
+                auto_close = true,
             },
             lightbulb = {
                 enable = true,

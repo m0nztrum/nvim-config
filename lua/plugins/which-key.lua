@@ -17,7 +17,7 @@ return {
                 { "<leader>t", group = "toggle" },
                 { "<leader>c", group = "code" },
                 { "<leader>f", group = "file/find" },
-                { "<leader>r", group = "lsp rename" },
+                { "<leader>l", group = "LSP", icon = "" },
             },
         })
     end,

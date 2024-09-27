@@ -85,5 +85,7 @@ return {
         keymap.set("n", "<leader>gs", builtin.git_status, { desc = "Show git status" })
 
         keymap.set("n", "<leader>fcs", builtin.colorscheme, { desc = "Show available colorschemes" })
+
+        keymap.set("n", "<leader>fs", builtin.spell_suggest, { desc = "Show Spelling Suggestion" })
     end,
 }

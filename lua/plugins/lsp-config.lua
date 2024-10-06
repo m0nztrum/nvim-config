@@ -70,6 +70,7 @@ return {
             "pyright",
             "rust_analyzer",
             "texlab",
+            "jsonls",
         }
 
         for _, lsp in ipairs(servers) do

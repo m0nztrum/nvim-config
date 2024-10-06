@@ -60,12 +60,14 @@ vim.opt.inccommand = "split"
 -- Configure how split windows should open
 vim.opt.splitright = true
 vim.opt.splitbelow = true
+vim.opt.splitkeep = "cursor"
 
 -- Netrw
 vim.g.netrw_liststyle = 1
 
 -- Disable error bells
 vim.opt.errorbells = false
+vim.opt.visualbell = false
 
 vim.o.timeout = true
 vim.o.timeoutlen = 300

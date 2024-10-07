@@ -10,7 +10,7 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 
 -- QUIT SOME WINDOWS WITH Q
 vim.api.nvim_create_autocmd("FileType", {
-    pattern = { "help", "qf", "checkhealth", "man", "query", "notify" },
+    pattern = { "help", "qf", "checkhealth", "man", "query", "notify", "git" },
     callback = function()
         vim.keymap.set("n", "q", "<cmd>bd<cr>", { silent = true, buffer = true })
     end,

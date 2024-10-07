@@ -8,6 +8,18 @@ local function show_macro_recording()
     end
 end
 
+local function virtual_env()
+    if vim.bo.filetype ~= "python" then
+        return ""
+    end
+
+    local venv_path = os.getenv("VIRTUAL_ENV")
+    if venv_path then
+        local venv_name = vim.fn.fnamemodify(venv_path, ":t")
+        return string.format(" %s", venv_name)
+    end
+end
+
 return {
     "nvim-lualine/lualine.nvim",
     event = "VeryLazy",
@@ -54,8 +66,15 @@ return {
                             error = { fg = "red" },
                         },
                     },
+                    {
+                        virtual_env,
+                        color = { fg = "grey" },
+                    },
                 },
-                lualine_c = { { "filename", color = { gui = "bold" } }, "searchcount" },
+                lualine_c = {
+                    { "filename", color = { gui = "bold" }, symbols = { readonly = " " } },
+                    "searchcount",
+                },
                 lualine_x = {
                     {
                         lazy_status.updates,

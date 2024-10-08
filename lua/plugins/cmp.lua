@@ -54,7 +54,9 @@ return {
 
                 -- Select next/prev item on the list
                 ["<Tab>"] = cmp.mapping.select_next_item({ behavior = cmp.ConfirmBehavior.Insert }),
-                ["<S-Tab>"] = cmp.mapping.select_prev_item({ behavior = cmp.ConfirmBehavior.Insert }),
+                ["<S-Tab>"] = cmp.mapping.select_prev_item({
+                    behavior = cmp.ConfirmBehavior.Insert,
+                }),
 
                 -- 'Enter' key to confirm completion
                 ["<CR>"] = cmp.mapping.confirm({
@@ -68,6 +70,7 @@ return {
                 { name = "luasnip" },
                 { name = "nvim_lsp_signature_help" },
                 { name = "nvim_lua" },
+                { name = "copilot" },
             }, {
                 { name = "buffer" }, -- text within current buffer
                 { name = "path" }, -- file system paths

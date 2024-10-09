@@ -87,7 +87,7 @@ return {
                 capabilities, -- for cmp stuff
             },
             on_attach = on_attach,
-            cmd = { "clangd" },
+            cmd = { "clangd", "-j=4", "--inlay-hints" },
         })
 
         -- [CSS]
@@ -95,6 +95,52 @@ return {
             capabilities = capabilities,
             on_attach = on_attach,
             filetypes = { "css", "less", "scss", "sass" },
+        })
+
+        nvim_lsp.tailwindcss.setup({
+            capabilities = capabilities,
+            on_attach = on_attach,
+            filetypes = {
+                "html",
+                "css",
+                "javascript",
+                "javascriptreact",
+                "javascript",
+                "typescript",
+                "typescriptreact",
+                "jsx",
+                "tsx",
+            },
+        })
+
+        nvim_lsp.ts_ls.setup({
+            capabilities = capabilities,
+            on_attach = on_attach,
+            filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
+            settings = {
+                typescript = {
+                    inlayHints = {
+                        includeInlayEnumMemberValueHints = true,
+                        includeInlayFunctionLikeReturnTypeHints = true,
+                        includeInlayFunctionParameterTypeHints = true,
+                        includeInlayParameterNameHints = "all", -- 'none' | 'literals' | 'all';
+                        includeInlayParameterNameHintsWhenArgumentMatchesName = true,
+                        includeInlayPropertyDeclarationTypeHints = true,
+                        includeInlayVariableTypeHints = true,
+                    },
+                },
+                javascript = {
+                    inlayHints = {
+                        includeInlayEnumMemberValueHints = true,
+                        includeInlayFunctionLikeReturnTypeHints = true,
+                        includeInlayFunctionParameterTypeHints = true,
+                        includeInlayParameterNameHints = "all", -- 'none' | 'literals' | 'all';
+                        includeInlayParameterNameHintsWhenArgumentMatchesName = true,
+                        includeInlayPropertyDeclarationTypeHints = true,
+                        includeInlayVariableTypeHints = true,
+                    },
+                },
+            },
         })
 
         vim.diagnostic.config({
@@ -112,18 +158,20 @@ return {
             severity_sort = true,
             underline = true,
         })
-        vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
-            underline = true,
-            virtual_text = { spacing = 1, prefix = "💀" },
-        })
+        vim.lsp.handlers["textDocument/publishDiagnostics"] =
+            vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
+                underline = true,
+                virtual_text = { spacing = 1, prefix = "💀" },
+            })
         vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
             border = "rounded",
             title = "hover",
         })
-        vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {
-            border = "single",
-            title = "Sig help",
-        })
+        vim.lsp.handlers["textDocument/signatureHelp"] =
+            vim.lsp.with(vim.lsp.handlers.signature_help, {
+                border = "single",
+                title = "Sig help",
+            })
 
         -- INLAY HINTS
         -- vim.api.nvim_set_hl(0, "LspInlayHint", { fg = "#a0a0a0", italic = true })

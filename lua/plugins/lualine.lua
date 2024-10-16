@@ -51,7 +51,7 @@ return {
                     },
                     {
                         "diff",
-                        symbols = { added = " ", modified = " ", removed = " " },
+                        symbols = { added = " ", modified = " ", removed = " " },
                         diff_color = {
                             added = { fg = "#98be65" },
                             modified = { fg = "orange" },
@@ -72,7 +72,11 @@ return {
                     },
                 },
                 lualine_c = {
-                    { "filename", color = { gui = "bold" }, symbols = { readonly = " " } },
+                    {
+                        "filename",
+                        symbols = { readonly = " " },
+                        icon = "",
+                    },
                     "searchcount",
                 },
                 lualine_x = {

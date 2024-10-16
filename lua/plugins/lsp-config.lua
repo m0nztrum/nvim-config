@@ -47,7 +47,7 @@ return {
             keymap.set("n", "<leader>lrn", vim.lsp.buf.rename, opts)
 
             opts.desc = "Sig help"
-            keymap.set("n", "<C-h>", vim.lsp.buf.signature_help, opts)
+            keymap.set("n", "<C-s>", vim.lsp.buf.signature_help, opts)
 
             if client.server_capabilities.inlayHintProvider then
                 -- vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
@@ -112,6 +112,11 @@ return {
                 "tsx",
             },
         })
+        nvim_lsp.html.setup({
+            capabilities = capabilities,
+            on_attach = on_attach,
+            filetypes = { "html", "javascriptreact", "typescriptreact" },
+        })
 
         nvim_lsp.ts_ls.setup({
             capabilities = capabilities,
@@ -119,6 +124,7 @@ return {
             filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
             settings = {
                 typescript = {
+                    updateImportsOnFileMove = { enabled = "always" },
                     inlayHints = {
                         includeInlayEnumMemberValueHints = true,
                         includeInlayFunctionLikeReturnTypeHints = true,
@@ -130,6 +136,7 @@ return {
                     },
                 },
                 javascript = {
+                    updateImportsOnFileMove = { enabled = "always" },
                     inlayHints = {
                         includeInlayEnumMemberValueHints = true,
                         includeInlayFunctionLikeReturnTypeHints = true,

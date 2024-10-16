@@ -29,7 +29,7 @@ keymap.set("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap.set("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
 -- select all
-keymap.set("n", "<C-s>", "gg<S-v>G")
+keymap.set("n", "<C-a>", "gg<S-v>G")
 
 -- Do not yank when x is pressed
 keymap.set("n", "x", '"_x')

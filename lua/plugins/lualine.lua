@@ -22,7 +22,7 @@ end
 
 return {
     "nvim-lualine/lualine.nvim",
-    event = "VeryLazy",
+    event = { "BufReadPost", "BufAdd", "BufNewFile" },
     config = function()
         local lualine = require("lualine")
         local lazy_status = require("lazy.status")
@@ -41,13 +41,23 @@ return {
                 },
             },
             sections = {
-                lualine_a = { "mode" },
-                lualine_b = {
+                lualine_a = {
                     {
                         "branch",
-                        color = { fg = "#a9a1e1" },
-                        icon = "",
-                        -- icon = "",
+                        icon = { "", color = { fg = "#fc5603" } },
+                    },
+                    {
+                        "diagnostics",
+                        update_in_insert = true,
+                        symbols = { error = " ", warn = " ", hint = " ", info = " " },
+                        diagnostics_color = {
+                            error = { fg = "red" },
+                        },
+                    },
+                },
+                lualine_b = {
+                    {
+                        "mode",
                     },
                     {
                         "diff",
@@ -56,14 +66,6 @@ return {
                             added = { fg = "#98be65" },
                             modified = { fg = "orange" },
                             removed = { fg = "red" },
-                        },
-                    },
-                    {
-                        "diagnostics",
-                        update_in_insert = true,
-                        symbols = { error = " ", warn = " ", hint = " ", info = " " },
-                        diagnostics_color = {
-                            error = { fg = "red" },
                         },
                     },
                     {
@@ -105,6 +107,7 @@ return {
                 lualine_y = {},
                 lualine_z = {},
             },
+            disabled_filetypes = { "alpha", "NvimTree" },
             extensions = { "fugitive", "nvim-tree", "lazy" },
         })
     end,

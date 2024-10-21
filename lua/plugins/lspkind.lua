@@ -49,7 +49,7 @@ return {
                 Unit = "󰑭",
                 Value = "󰎠",
                 Variable = "󰀫",
-                Copilot = "",
+                Copilot = "",
             },
         })
     end,

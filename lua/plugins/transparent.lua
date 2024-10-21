@@ -41,5 +41,6 @@ return {
         require("transparent").clear_prefix("whichkey")
         require("transparent").clear_prefix("Lazy")
         require("transparent").clear_prefix("Mason")
+        -- require("transparent").clear_prefix("LuaLine")
     end,
 }

@@ -15,17 +15,39 @@ return {
             },
             view = {
                 adaptive_size = true,
-                -- relativenumber = true,
             },
             renderer = {
+                root_folder_label = false,
+                highlight_git = true,
                 indent_markers = {
                     enable = true,
                 },
                 icons = {
-                    glyphs = {
+                    modified_placement = "after",
+                    web_devicons = {
+                        file = {
+                            enable = true,
+                            color = true,
+                        },
                         folder = {
-                            arrow_closed = "",
-                            arrow_open = "",
+                            enable = true,
+                            color = false,
+                        },
+                    },
+                    glyphs = {
+                        symlink = "",
+                        folder = {
+                            arrow_closed = "",
+                            arrow_open = "",
+                        },
+
+                        git = {
+                            staged = "",
+                            unmerged = "",
+                            renamed = "󰁕",
+                            untracked = "",
+                            deleted = "",
+                            ignored = "",
                         },
                     },
                 },

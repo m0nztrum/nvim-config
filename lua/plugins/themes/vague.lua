@@ -1,12 +1,13 @@
 return {
     "vague2k/vague.nvim",
+    priority = 1000,
     config = function()
         require("vague").setup({
             transparent = true,
             style = {
                 comments = "italic",
                 headings = "bold",
-                functions = "bold",
+                functions = "italic",
             },
             colors = {
                 func = "#bc96b0",

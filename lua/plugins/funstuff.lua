@@ -4,13 +4,13 @@ return {
         config = function()
             vim.keymap.set("n", "<leader>mdd", function()
                 require("duck").hatch()
-            end, {})
+            end, { desc = "Hatch Duck" })
             vim.keymap.set("n", "<leader>mdk", function()
                 require("duck").cook()
-            end, {})
+            end, { desc = "Cook Duck" })
             vim.keymap.set("n", "<leader>mda", function()
                 require("duck").cook_all()
-            end, {})
+            end, { desc = "Cook All Ducks" })
         end,
     },
 }

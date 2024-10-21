@@ -3,23 +3,19 @@ vim.cmd([[tnoremap <ESC> <C-\><C-n>]])
 return {
     "akinsho/toggleterm.nvim",
     config = function()
-        local keymap = vim.keymap
         local toggleterm = require("toggleterm")
-        local Direction = {
-            horizontal = "horizontal",
-            vertical = "vertical",
-            tab = "tab",
-            float = "float",
-        }
         toggleterm.setup({
-            direction = Direction.float,
+            direction = "float", -- float | vertical | horizontal | tab
             hide_numbers = true,
             start_in_insert = true,
             close_on_exit = true,
             float_opts = {
-                border = "curved",
+                width = 125,
+                height = 35,
+                border = "single",
+                title_pos = "center",
             },
         })
-        keymap.set("n", "<leader>tf", vim.cmd.ToggleTerm, { desc = "Toggle floating term" })
+        vim.keymap.set("n", "<leader>tf", vim.cmd.ToggleTerm, { desc = "Toggle floating term" })
     end,
 }

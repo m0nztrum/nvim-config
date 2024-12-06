@@ -20,6 +20,7 @@ return {
                 json = { "prettier" },
                 jsonc = { "prettier" },
                 sh = { "beautysh" },
+                c = { "clang-format" },
             },
 
             format_on_save = {
@@ -62,11 +63,12 @@ return {
                 path = ctx.dirname,
                 type = "file",
             })[1]
-            local localTailwindcssPlugin = vim.fs.find("node_modules/prettier-plugin-tailwindcss/dist/index.mjs", {
-                upward = true,
-                path = ctx.dirname,
-                type = "file",
-            })[1]
+            local localTailwindcssPlugin =
+                vim.fs.find("node_modules/prettier-plugin-tailwindcss/dist/index.mjs", {
+                    upward = true,
+                    path = ctx.dirname,
+                    type = "file",
+                })[1]
 
             if localTailwindcssPlugin then
                 vim.list_extend(args, { "--plugin", localTailwindcssPlugin })

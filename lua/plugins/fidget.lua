@@ -1,8 +1,9 @@
 return {
     "j-hui/fidget.nvim",
-    event = "VeryLazy",
+    event = "LspAttach",
     opts = {
         progress = {
+            suppress_on_insert = true,
             display = {
                 progress_icon = { pattern = "moon" },
             },

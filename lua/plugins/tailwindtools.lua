@@ -1,5 +1,6 @@
 return {
     "luckasRanarison/tailwind-tools.nvim",
+    event = { 'VeryLazy' },
     dependencies = { "nvim-treesitter/nvim-treesitter" },
     opts = {
         document_color = {

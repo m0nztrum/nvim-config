@@ -46,14 +46,6 @@ return {
                         "branch",
                         icon = { "", color = { fg = "#fc5603" } },
                     },
-                    {
-                        "diagnostics",
-                        update_in_insert = true,
-                        symbols = { error = " ", warn = " ", hint = " ", info = " " },
-                        diagnostics_color = {
-                            error = { fg = "red" },
-                        },
-                    },
                 },
                 lualine_b = {
                     {
@@ -79,6 +71,15 @@ return {
                         symbols = { readonly = " " },
                         icon = "",
                     },
+                    {
+                        "diagnostics",
+                        update_in_insert = true,
+                        symbols = { error = " ", warn = " ", hint = " ", info = " " },
+                        diagnostics_color = {
+                            error = { fg = "red" },
+                        },
+                    },
+
                     "searchcount",
                 },
                 lualine_x = {

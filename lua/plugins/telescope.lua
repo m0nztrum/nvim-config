@@ -1,7 +1,7 @@
 return {
     "nvim-telescope/telescope.nvim",
-    event = "VimEnter",
     branch = "0.1.x",
+    lazy = true,
     dependencies = {
         "nvim-lua/plenary.nvim",
         "nvim-telescope/telescope-ui-select.nvim",
@@ -30,8 +30,8 @@ return {
                 mappings = {
                     i = {
                         ["<C-k>"] = actions.move_selection_previous, -- move to prev result
-                        ["<C-j>"] = actions.move_selection_next, -- move to next result
-                        ["<M-p>"] = action_layout.toggle_preview, -- toggle preview
+                        ["<C-j>"] = actions.move_selection_next,     -- move to next result
+                        ["<M-p>"] = action_layout.toggle_preview,    -- toggle preview
                     },
                 },
             },
@@ -70,7 +70,7 @@ return {
         telescope.load_extension("ui-select")
 
         --                      [Keymaps]
-        keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Find files" }) --find files
+        keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Find files" })   --find files
         keymap.set("n", "<leader>fo", builtin.oldfiles, { desc = "Show old files" }) --olf files
         keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "Live grep" })
         keymap.set("n", "<leader><leader>", builtin.buffers, { desc = "Show buffers" })

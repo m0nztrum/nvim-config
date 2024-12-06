@@ -4,7 +4,7 @@ return {
     config = function()
         require("mini.animate").setup({
             cursor = {
-                enable = true,
+                enable = false,
             },
             open = {
                 enable = true,

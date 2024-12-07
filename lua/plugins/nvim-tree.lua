@@ -24,6 +24,12 @@ return {
                 },
                 icons = {
                     modified_placement = "after",
+                    show = {
+                        git = true,
+                        folder = true,
+                        file = true,
+                        folder_arrow = true,
+                    },
                     web_devicons = {
                         file = {
                             enable = true,
@@ -31,7 +37,7 @@ return {
                         },
                         folder = {
                             enable = true,
-                            color = false,
+                            color = true,
                         },
                     },
                     glyphs = {
@@ -42,10 +48,11 @@ return {
                         },
 
                         git = {
-                            staged = "",
+                            unstaged = "✗",
+                            staged = "✓",
                             unmerged = "",
                             renamed = "󰁕",
-                            untracked = "",
+                            untracked = "★",
                             deleted = "",
                             ignored = "",
                         },

@@ -1,20 +1,14 @@
-<h1 align=center>
+<div align=center>
+
+![Last commit](https://img.shields.io/github/last-commit/m0nztrum/nvim-config?style=for-the-badge&logo=git&color=000F10&logoColor=dark%20orange&labelColor=302D41)
+
+[![](https://img.shields.io/badge/Neovim-0.10+-blueviolet.svg?style=for-the-badge&color=000F10&logo=Neovim&logoColor=green&labelColor=302D41)](https://github.com/neovim/neovim)
+
     m0nztrum's Nvim Config
-</h1>
 
-<h3 align=center>
-    Some screenshots
-</h3>
+</div>
 
-| Mason Ui                                         | Whickkey UI                                        |
-| ------------------------------------------------ | -------------------------------------------------- |
-| <img alt='mason page' src='./assets/mason.png'>  | <img src='./assets/whichkey.png'>                  |
-| **Nvim tree**                                    | **Telescope UI**                                   |
-| <img alt='tree' src = './assets/tree.png'>       | <img alt='telescope' src='./assets/telescope.png'> |
-| **diffview**                                     | **lazy UI**                                        |
-| <img alt='diffview' src='./assets/diffview.png'> | <img alt='toggleterm' src='./assets/lazy.png'>     |
-
-## ⚡️ Requiremets
+## ⚡️ Requirements
 
 -   Neovim >= 0.10.0
 -   Git

@@ -4,7 +4,9 @@
 
 [![](https://img.shields.io/badge/Neovim-0.10+-blueviolet.svg?style=for-the-badge&color=000F10&logo=Neovim&logoColor=green&labelColor=302D41)](https://github.com/neovim/neovim)
 
-m0nztrum's Nvim Config
+![startpage]('./assets/start.png')
+![telescope]('./assets/tele.png')
+![file]('./assets/file.png')
 
 </div>
 

@@ -4,10 +4,9 @@
 
 [![](https://img.shields.io/badge/Neovim-0.10+-blueviolet.svg?style=for-the-badge&color=000F10&logo=Neovim&logoColor=green&labelColor=302D41)](https://github.com/neovim/neovim)
 
-![startpage]('./assets/start.png')
-![telescope]('./assets/tele.png')
-![file]('./assets/file.png')
-
+<img alt='opened file' src="./assets/file.png"/>
+<img alt='startpage' src="./assets/start.png"/>
+<img alt='telescope' src="./assets/tele.png"/>
 </div>
 
 ## ⚡️ Requirements

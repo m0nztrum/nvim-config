@@ -1,6 +1,6 @@
 return {
     "ribru17/bamboo.nvim",
-    enabled = false,
+    enabled = true,
     priority = 1000,
     config = function()
         require("bamboo").setup({
@@ -14,6 +14,6 @@ return {
             },
             lualine = { transparent = true },
         })
-        vim.cmd.colorscheme("bamboo")
+        -- vim.cmd.colorscheme("bamboo")
     end,
 }

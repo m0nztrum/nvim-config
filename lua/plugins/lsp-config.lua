@@ -71,6 +71,7 @@ return {
             "rust_analyzer",
             "texlab",
             "jsonls",
+            "gopls",
         }
 
         for _, lsp in ipairs(servers) do
